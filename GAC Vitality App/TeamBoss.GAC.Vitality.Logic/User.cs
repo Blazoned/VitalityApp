@@ -21,6 +21,10 @@ namespace TeamBoss.GAC.Vitality.Logic
         /// Gets the user's total score.
         /// </summary>
         public int TotalScore { get; private set; }
+        /// <summary>
+        /// The user's settings.
+        /// </summary>
+        public Settings Settings { get; private set; }
         #endregion
 
         #region Constructors
@@ -34,7 +38,7 @@ namespace TeamBoss.GAC.Vitality.Logic
         /// <summary>
         /// Create a brand new challenge.
         /// </summary>
-        public void CreateChallenge()
+        public void CreateChallenge(params string[] args)
         {
             throw new NotImplementedException();
         }
@@ -49,8 +53,48 @@ namespace TeamBoss.GAC.Vitality.Logic
         /// <summary>
         /// Accept a challenge invitation.
         /// </summary>
-        /// <param name="invite">An invitation they received.</param>
-        public void AcceptInvite(Invite invite)
+        /// <param name="invite">An invitation they want to accept.</param>
+        /// <returns>Returns false if the user attempt to accept someone elses invite.</returns>
+        public bool AcceptInvite(Invite invite)
+        {
+            if (invite.recipient != this)
+                return false;
+
+            throw new NotImplementedException();
+        }
+        /// <summary>
+        /// Decline a challenge invitation.
+        /// </summary>
+        /// <param name="invite">An invitation they want to decline.</param>
+        /// <returns>Returns false if the user attempt to decline someone elses invite.</returns>
+        public bool DeclineInvite(Invite invite)
+        {
+            if (invite.recipient != this)
+                return false;
+
+            throw new NotImplementedException();
+        }
+        /// <summary>
+        /// Get the user's challenge invites.
+        /// </summary>
+        /// <returns>Returns the user's pending invites.</returns>
+        public IEnumerable<Invite> GetInvites()
+        {
+            throw new NotImplementedException();
+        }
+        /// <summary>
+        /// Get's the available public challenges.
+        /// </summary>
+        /// <returns>Returns a list of publicly available challenges</returns>
+        public IEnumerable<Challenge> GetPublicChallenges()
+        {
+            throw new NotImplementedException();
+        }
+        /// <summary>
+        /// Get's the user's personal challenges.
+        /// </summary>
+        /// <returns>Returns the challenges the user is participating in.</returns>
+        public IEnumerable<Challenge> GetPrivateChallenge()
         {
             throw new NotImplementedException();
         }
