@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TeamBoss.GAC.Vitality.Logic
 {
-    public class Class1
+    public class Challenge
     {
     }
 }
