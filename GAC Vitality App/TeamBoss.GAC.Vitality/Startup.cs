@@ -38,6 +38,8 @@ namespace TeamBoss.GAC.Vitality
                 }
             );
 
+            app.UseExceptionHandler("/Home/Error");
+
             app.Run(async (context) =>
             {
                 await context.Response.WriteAsync("Something went wrong! Mvc not found. Please contact the developers of this website.");

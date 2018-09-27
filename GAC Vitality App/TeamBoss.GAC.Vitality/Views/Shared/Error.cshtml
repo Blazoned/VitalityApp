@@ -1,0 +1,12 @@
+﻿@model Exception
+
+@{ 
+    ViewBag.Title = "Oops!";
+}
+
+<h1>Whoops! An error occured!</h1>
+<h2>While processing your request we encountered an issue.</h2>
+@if(Model != null)
+{
+    @Html.ValueFor(model => model.Message)
+}

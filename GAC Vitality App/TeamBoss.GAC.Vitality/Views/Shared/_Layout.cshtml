@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    @if (ViewBag.Title != null)
+    {
+        <title>VitalityApp - @ViewBag.Title</title>
+    }
+    else
+    {
+        <title>VitalityApp</title>
+    }
+    <link rel="stylesheet" type="text/css" href="" />
+    @RenderSection("stylesheets", required: false)
+    <script type="text/javascript" src=""></script>
+    @RenderSection("scripts", required: false)
+</head>
+    <body>
+        <h1>Base Layout</h1>
+        <div id="mainFrame">
+            @RenderBody()
+        </div>
+    </body>
+</html>
