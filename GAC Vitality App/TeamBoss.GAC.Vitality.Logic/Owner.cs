@@ -15,6 +15,10 @@ namespace TeamBoss.GAC.Vitality.Logic
         public List<Challenge> ownerChallengeList { get; private set; }
         #endregion
 
+        #region Constructor
+        public Owner() { }
+        #endregion
+
         #region Methods
         /// <summary>
         /// Allows for the invitation of a user to the challenge of the owner by username.

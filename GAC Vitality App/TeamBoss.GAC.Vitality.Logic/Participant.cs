@@ -15,6 +15,10 @@ namespace TeamBoss.GAC.Vitality.Logic
         public List<Challenge> participantChallengeList { get; private set; }
         #endregion
 
+        #region Constructor
+        public Participant() { }
+        #endregion
+
         #region Methods
         /// <summary>
         /// Allows the participant to leave a challenge.
