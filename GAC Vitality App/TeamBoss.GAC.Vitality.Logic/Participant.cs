@@ -9,10 +9,6 @@ namespace TeamBoss.GAC.Vitality.Logic
     public class Participant : User
     {
         #region Fields
-        /// <summary>
-        /// A list containing all of the challenges the participant is participating in but not the owner of.
-        /// </summary>
-        public List<Challenge> participantChallengeList { get; private set; }
         #endregion
 
         #region Constructor

@@ -9,6 +9,15 @@ namespace TeamBoss.GAC.Vitality.Logic
     public class User
     {
         #region Fields
+        #region Variables
+        private ChallengeManager _challengeManager;
+        #endregion
+
+        #region Properties
+        /// <summary>
+        /// Gets the user id.
+        /// </summary>
+        public int UserId { get; private set; }
         /// <summary>
         /// Gets the username.
         /// </summary>
@@ -26,15 +35,19 @@ namespace TeamBoss.GAC.Vitality.Logic
         /// </summary>
         public Settings Settings { get; private set; }
         #endregion
+        #endregion
 
         #region Constructors
+        /// <summary>
+        /// Creates an instance of a user.
+        /// </summary>
         public User()
         {
-
+            _challengeManager = new ChallengeManager(this);
         }
         #endregion
 
-        #region Methods
+        #region Functions
         /// <summary>
         /// Create a brand new challenge.
         /// </summary>
@@ -78,25 +91,25 @@ namespace TeamBoss.GAC.Vitality.Logic
         /// Get the user's challenge invites.
         /// </summary>
         /// <returns>Returns the user's pending invites.</returns>
-        public IEnumerable<Invite> GetInvites()
+        public List<Invite> GetInvites()
         {
-            throw new NotImplementedException();
+            return _challengeManager.Invites;
         }
         /// <summary>
         /// Get's the available public challenges.
         /// </summary>
         /// <returns>Returns a list of publicly available challenges</returns>
-        public IEnumerable<Challenge> GetPublicChallenges()
+        public List<Challenge> GetPublicChallenges()
         {
-            throw new NotImplementedException();
+            return _challengeManager.PublicChallenges;
         }
         /// <summary>
         /// Get's the user's personal challenges.
         /// </summary>
         /// <returns>Returns the challenges the user is participating in.</returns>
-        public IEnumerable<Challenge> GetPrivateChallenge()
+        public List<Challenge> GetPersonalChallenge()
         {
-            throw new NotImplementedException();
+            return _challengeManager.PersonalChallenges;
         }
         #endregion
     }

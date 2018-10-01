@@ -41,6 +41,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Challenge.cs" />
+    <Compile Include="ChallengeManager.cs" />
     <Compile Include="ERepeat.cs" />
     <Compile Include="Invite.cs" />
     <Compile Include="Owner.cs" />
