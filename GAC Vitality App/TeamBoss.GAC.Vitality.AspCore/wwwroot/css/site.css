@@ -56,6 +56,7 @@
     height: 40px;
     /*background-color: lightcoral;*/
     bottom: 2px;
+    margin-bottom: 20px; 
 }
 
 .buttons-wrapper {
@@ -101,6 +102,8 @@
     float: left;
     width: 100%;
     margin-top: 20px; 
+    overflow: scroll; 
+    height: 124px; 
 }
 
 .optionprivacy{
@@ -121,3 +124,17 @@
 .container.text-wrapper{
     padding-top:20px;
 }
+
+h1 {
+    margin-top: 0px; 
+}
+
+.btnspecial {
+    display: flex; 
+    margin-bottom: 20px; 
+}
+
+.btnspecial .btn{
+    flex: 1; 
+}
+
