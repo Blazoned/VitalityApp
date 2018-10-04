@@ -39,6 +39,8 @@ namespace TeamBoss.GAC.Vitality.AspCore
 
             app.UseStaticFiles();
 
+            app.UseExceptionHandler("/Home/Error");
+
             app.UseMvc(routes =>
             {
                 routes.MapRoute(
