@@ -33,3 +33,61 @@
         display: none;
     }
 }
+
+.buttonchallenge {
+    margin-top: 15px;
+    display: block;
+    width: 100%;
+    background-color: red; 
+}
+
+.challenge-wrapper {
+    width: 100%; 
+    height: auto;
+    background-color: #fcfcfc;
+    -webkit-box-shadow: 0px -1px 35px -11px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px -1px 35px -11px rgba(0,0,0,0.75);
+    box-shadow: 0px -1px 35px -11px rgba(0,0,0,0.75);
+    margin-top: 15px; 
+    position: relative; 
+}
+
+.challenge-options {
+    width: 100%;
+    height: 40px;
+    /*background-color: lightcoral;*/
+    bottom: 2px;
+}
+
+.buttons-wrapper {
+    width: 98%;
+    height: 40px;
+    /*background-color: lightgreen; */
+    margin: 0 auto;
+}
+
+.buttonyoleft{
+    margin-top: 3px; 
+    position: relative; 
+    width: 32%; 
+    margin-right: 1%; 
+}
+
+.buttonyoright {
+    margin-top: 3px;
+    position: relative;
+    width: 32%;
+    margin-left: 1%;
+    float: right; 
+}
+
+.buttonyomiddle {
+    margin-top: 3px;
+    position: relative;
+    width: 32%;
+}
+
+.text-wrapper{
+
+}
+
