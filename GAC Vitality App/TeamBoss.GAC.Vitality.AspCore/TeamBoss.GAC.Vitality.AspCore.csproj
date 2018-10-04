@@ -14,6 +14,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Include="wwwroot\css\Challenge.css" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\TeamBoss.GAC.Vitality.Logic\TeamBoss.GAC.Vitality.Logic.csproj" />
   </ItemGroup>
 

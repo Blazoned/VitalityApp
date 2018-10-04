@@ -1,0 +1,82 @@
+﻿.body{
+}
+
+#challengeTypeDropdownButton{
+    margin-top:5%;
+    width:100%;
+    text-align:center;
+}
+
+#challengeTypeDropdownMenu{
+    width:100%;
+    text-align:center;
+    margin:auto;
+}
+
+#vereiste1FormGroup{
+    margin:auto;
+    margin-top:5%;
+}
+
+#vereiste1Input{
+    width:100%;
+}
+
+#isPubliekButton{
+    margin-top:5%;
+    background-color:green;
+    width:100%;
+}
+
+#genereerWillekeurigeChallengeButton{
+    margin-top:5%;
+    width:100%;
+    text-align:center;
+}
+
+#startTijd{
+    margin-top:5%;
+    text-align:center;
+}
+
+#challengeHerhalingDropdown{
+    margin-top:5%;
+}
+
+#challengeHerhalingDropdownButton {
+    width: 100%;
+    text-align: center;
+}
+
+#challengeHerhalingDropdownMenu {
+    width: 100%;
+    text-align: center;
+    margin: auto;
+}
+
+#socialMediaButtonGroup {
+    margin-top: 5%;
+    width:100%;
+    text-align:center;
+}
+
+#difficultyProgress{
+    margin-top:5%;
+    width:100%;
+}
+
+#difficultyProgressBar{
+    text-align:center;
+    width:50%;
+}
+
+#difficultyLabel{
+    margin-left:90%;
+    color:black;
+}
+
+#accepteerChallengeButton {
+    margin-top: 5%;
+    width: 100%;
+    text-align: center;
+}
