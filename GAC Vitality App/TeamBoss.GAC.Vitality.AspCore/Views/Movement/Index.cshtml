@@ -6,7 +6,8 @@
 
 <div class="container-fluid">
     <div class="row">
-        <a class="btn btn-primary buttonchallenge" role="button" href="~/Challenge/Index">Maak een challenge</a>
+        <a class="col-xs-8 pr-xs-1 btn btn-primary buttonchallenge" role="button" href="~/Challenge/Index">Maak een challenge</a>
+        <a class="col-xs-4 pl-xs-2 btn btn-primary buttoninvite" role="button" href="#">7 invites</a>
     </div>
 
     <div class="row">
@@ -21,6 +22,21 @@
             </div>
 
             <div class="container centerbutton">
+
+                <div class="input-group progressinput">
+                    <input class="form-control" type="text" placeholder="Geef aantal km" />
+                    <span class="input-group-btn">
+                        <button class="btn btn-group">
+                            <span class="glyphicon glyphicon-plus"></span>
+                        </button>
+                    </span>
+                </div>
+
+                <div class="progress" style="height: 30px;">
+                    <div class="progress-bar" style="width: 40%; background-color: #3fc661; line-height: 240%;" aria-valuenow="4" aria-valuemin="0" aria-valuemax="10">4 km</div>
+                    <div class="progress-bar" style="width: 60%; background-color: #e9ecef; line-height: 240%; color: black" aria-valuenow="6" aria-valuemin="0" aria-valuemax="10">6 km</div>
+                </div>
+
                 <div class="btn-group btnspecial">
                     <button type="button" class="btn btn-info">Pas aan</button>
                     <button type="button" class="btn btn-info">Daag uit</button>
@@ -33,27 +49,27 @@
     <div class="row">
         <div class="challenge-wrapper2">
             <div class="container text-wrapper">
-               <div class="form-group">
-                <select class="form-control selectprivacy">
-                    <option class="optionprivacy">Prive</option>
-                    <option class="optionprivacy">Publiek</option>
-                </select>
+                <div class="form-group">
+                    <select class="form-control selectprivacy">
+                        <option class="optionprivacy">Prive</option>
+                        <option class="optionprivacy">Publiek</option>
+                    </select>
 
-                <input class="datefield form-control" data-val="true" data-val-required="Date is required"
-                       id="ReleaseDate" name="ReleaseDate" type="date" value="1/11/1989" />
-            </div>
+                    <input class="datefield form-control" data-val="true" data-val-required="Date is required"
+                           id="ReleaseDate" name="ReleaseDate" type="date" value="1/11/1989" />
+                </div>
 
-               <div class="list-group listyo">
-                   <a href="#" class="list-group-item">45x opdrukken</a>
-                   <a href="#" class="list-group-item">30 minuten zwemmen</a>
-                   <a href="#" class="list-group-item">3x 10 min lopen</a>
-                   <a href="#" class="list-group-item">Touwtje springen</a>
-                   <a href="#" class="list-group-item">15km marathon</a>
-                   <a href="#" class="list-group-item">20x opdrukken</a>
-               </div>
-            </div>
+                <div class="list-group listyo" id="challenge-listing">
+                    <a href="#" class="list-group-item">45x opdrukken</a>
+                    <a href="#" class="list-group-item">30 minuten zwemmen</a>
+                    <a href="#" class="list-group-item">3x 10 min lopen</a>
+                    <a href="#" class="list-group-item">Touwtje springen</a>
+                    <a href="#" class="list-group-item">15km marathon</a>
+                    <a href="#" class="list-group-item">20x opdrukken</a>
+                </div>
             </div>
         </div>
+    </div>
 </div>
 
 

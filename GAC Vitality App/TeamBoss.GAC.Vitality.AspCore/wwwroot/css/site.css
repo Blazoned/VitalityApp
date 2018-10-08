@@ -1,6 +1,7 @@
 ﻿body {
     padding-top: 50px;
     padding-bottom: 20px;
+    background-color: #f6f7f9; 
 }
 
 /* Wrapping element */
@@ -36,8 +37,18 @@
 
 .buttonchallenge {
     margin-top: 15px;
-    display: block;
-    width: 100%;
+    width: 65%;
+    background-color: #00a1ff;
+    border: none; 
+    float: left; 
+}
+
+.buttoninvite {
+    margin-top: 15px;
+    width: 34%;
+    background-color: #00a1ff;
+    border: none; 
+    float: right; 
 }
 
 .challenge-wrapper {
@@ -132,9 +143,22 @@ h1 {
 .btnspecial {
     display: flex; 
     margin-bottom: 20px; 
+
 }
 
-.btnspecial .btn{
-    flex: 1; 
+    .btnspecial .btn {
+        flex: 1;
+        background-color: #ff6100;
+        border-color: #ff6100;
+    }
+
+    .btnspecial .btn:active {
+        flex: 1;
+        background-color: #ff6100;
+        border-color: #ff6100;
+    }
+
+.progressinput {
+    margin-bottom: 20px; 
 }
 
