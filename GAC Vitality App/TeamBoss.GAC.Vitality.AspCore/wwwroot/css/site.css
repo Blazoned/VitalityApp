@@ -190,18 +190,18 @@ h1 {
     }
 
 .backBtnGroup {
-    background-color: #fcfcfc;
-    border-color: #fcfcfc;
+    color: #000000 !important;
+    background-color: #fcfcfc !important;
+    border-color: #fcfcfc !important;
     margin-left:5px;
     margin-top:5px;
 }
 
-    .backBtnGroup .btn {
-        background-color: #fcfcfc;
-        border-color: #fcfcfc;
-    }
+.state-icon {
+    left: -5px;
+}
 
-    .backBtnGroup .btn:active {
-        background-color: #fcfcfc;
-        border-color: #fcfcfc;
-    }
+.list-group-item-primary {
+    color: rgb(255, 255, 255);
+    background-color: rgb(66, 139, 202);
+}

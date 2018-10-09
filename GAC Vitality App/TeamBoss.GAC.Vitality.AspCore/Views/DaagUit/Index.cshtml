@@ -3,38 +3,41 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script src="~/lib/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="~/js/DaagUit.js"></script>
+
 <div class="container-fluid">
     <div class="row">
         <div class="challenge-wrapper">
-            <form action="~/Movement/Index">
-                <button class="btn btn-group backBtnGroup">
-                    <span class="glyphicon glyphicon-chevron-left"></span>
-                </button>
-            </form>
+            <a class="btn btn-info backBtnGroup" role="button" href="~/Movement/Index">
+                <span class="glyphicon glyphicon-chevron-left"></span>
+            </a>
 
             <div class="container text-wrapper2">
-                <div class="list-group listyo2" id="challenge-listing">
-                    <a href="#" class="list-group-item">Hans</a>
-                    <a href="#" class="list-group-item">Peter</a>
-                    <a href="#" class="list-group-item">Harry</a>
-                    <a href="#" class="list-group-item">Kees</a>
-                    <a href="#" class="list-group-item">Frank</a>
-                    <a href="#" class="list-group-item">Peer</a>
-                    <a href="#" class="list-group-item">Peer2</a>
-                    <a href="#" class="list-group-item">Peer3</a>
-                    <a href="#" class="list-group-item">Peer4</a>
-                    <a href="#" class="list-group-item">Peer5</a>
-                    <a href="#" class="list-group-item">Peer6</a>
-                    <a href="#" class="list-group-item">Peer7</a>
-                </div>
+                <ul class="list-group checked-list-box">
+                    <li class="list-group-item">Hans</li>
+                    <li class="list-group-item">Peter</li>
+                    <li class="list-group-item">Harry</li>
+                    <li class="list-group-item">Kees</li>
+                    <li class="list-group-item">Rik</li>
+                    <li class="list-group-item">Richard</li>
+                    <li class="list-group-item">Mart</li>
+                    <li class="list-group-item">Tom</li>
+                    <li class="list-group-item">Bryan</li>
+                    <li class="list-group-item">Romal</li>
+                    <li class="list-group-item">Martijn</li>
+                    <li class="list-group-item">Guus</li>
+                    <li class="list-group-item">Gwen</li>
+                    <li class="list-group-item">Lilly</li>
+                    <li class="list-group-item">Bowie</li>
+                    <li class="list-group-item">Thijs</li>
+                </ul>
 
                 <div class="btn-group btnDaagUit">
-                    <button type="button" class="btn btn-info">Daag Uit</button>
+                    <a class="btn btn-info" role="button" href="~/Movement/Index">Daag Uit</a>
                 </div>
             </div>
         </div>
     </div>
 </div>
-
-<script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-2.2.0.min.js"></script>
-<script src="~/js/DaagUit.js"></script>
