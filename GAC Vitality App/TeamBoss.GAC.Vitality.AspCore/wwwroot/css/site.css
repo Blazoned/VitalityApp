@@ -117,6 +117,11 @@
     height: 124px; 
 }
 
+.listyo2 {
+    float: left;
+    width: 100%;
+}
+
 .optionprivacy{
     width: 20%; 
 }
@@ -134,6 +139,10 @@
 
 .container.text-wrapper{
     padding-top:20px;
+}
+
+.container .text-wrapper2{
+    padding-top:5px;
 }
 
 h1 {
@@ -162,3 +171,37 @@ h1 {
     margin-bottom: 20px; 
 }
 
+.btnDaagUit {
+    display:flex;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+    .btnDaagUit .btn {
+        flex:1;
+        background-color: #ff6100;
+        border-color: #ff6100;
+    }
+
+    .btnDaagUit .btn:active {
+        flex:1;
+        background-color: #ff6100;
+        border-color: #ff6100;
+    }
+
+.backBtnGroup {
+    background-color: #fcfcfc;
+    border-color: #fcfcfc;
+    margin-left:5px;
+    margin-top:5px;
+}
+
+    .backBtnGroup .btn {
+        background-color: #fcfcfc;
+        border-color: #fcfcfc;
+    }
+
+    .backBtnGroup .btn:active {
+        background-color: #fcfcfc;
+        border-color: #fcfcfc;
+    }
