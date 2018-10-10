@@ -6,8 +6,7 @@
 /* Wrapping element */
 /* Set some basic padding to keep content from hitting the edges */
 .body-content {
-    padding-left: 15px;
-    padding-right: 15px;
+    padding: 15px;
 }
 
 /* Carousel */
@@ -64,6 +63,24 @@
     height: 40px;
     /*background-color: lightgreen; */
     margin: 0 auto;
+}
+
+.block-wrapper {
+    width: auto;
+    height: auto;
+    background-color: #fcfcfc;
+    -webkit-box-shadow: 0px -1px 35px -11px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px -1px 35px -11px rgba(0,0,0,0.75);
+    box-shadow: 0px -1px 35px -11px rgba(0,0,0,0.75);
+    padding: 30px;
+}
+
+.section-wrapper {
+    padding-bottom: 10px;
+}
+
+.submit-section {
+    margin-top: 15px;
 }
 
 .buttonyoleft{
