@@ -1,4 +1,9 @@
-﻿/* Listing */
+﻿/* Goals */
+.challenge-goal-group-item {
+    padding: 2px;
+}
+
+/* Listing */
 #challenge-listing-icon {
     cursor: pointer;
 }

@@ -90,6 +90,18 @@
     padding-bottom: 10px;
 }
 
+span.input-group-empty {
+    width: 0;
+}
+
+li.list-group-item-lose {
+    margin: -1px 0 0 0;
+}
+
+.horizontal-overflow {
+    overflow-x: hidden;
+}
+
 .submit-section {
     margin-top: 15px;
 }
