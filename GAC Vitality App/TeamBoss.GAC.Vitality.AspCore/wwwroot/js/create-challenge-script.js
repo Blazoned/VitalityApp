@@ -61,6 +61,8 @@ function AddTag() {
 
         $(".challenge-remove-tag").click(AddTagRemovalOnClick);
     }
+
+    $("#challenge-tag-input").val(null);
 }
 
 // Remove Tags
