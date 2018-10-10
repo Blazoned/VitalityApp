@@ -1,6 +1,7 @@
 ﻿body {
     padding-top: 50px;
     padding-bottom: 20px;
+    background-color: #f6f7f9; 
 }
 
 /* Wrapping element */
@@ -35,8 +36,18 @@
 
 .buttonchallenge {
     margin-top: 15px;
-    display: block;
-    width: 100%;
+    width: 65%;
+    background-color: #00a1ff;
+    border: none; 
+    float: left; 
+}
+
+.buttoninvite {
+    margin-top: 15px;
+    width: 34%;
+    background-color: #00a1ff;
+    border: none; 
+    float: right; 
 }
 
 .challenge-wrapper {
@@ -123,6 +134,11 @@
     height: 124px; 
 }
 
+.listyo2 {
+    float: left;
+    width: 100%;
+}
+
 .optionprivacy{
     width: 20%; 
 }
@@ -142,6 +158,10 @@
     padding-top:20px;
 }
 
+.container .text-wrapper2{
+    padding-top:5px;
+}
+
 h1 {
     margin-top: 0px; 
 }
@@ -149,9 +169,56 @@ h1 {
 .btnspecial {
     display: flex; 
     margin-bottom: 20px; 
+
 }
 
-.btnspecial .btn{
-    flex: 1; 
+    .btnspecial .btn {
+        flex: 1;
+        background-color: #ff6100;
+        border-color: #ff6100;
+    }
+
+    .btnspecial .btn:active {
+        flex: 1;
+        background-color: #ff6100;
+        border-color: #ff6100;
+    }
+
+.progressinput {
+    margin-bottom: 20px; 
 }
 
+.btnDaagUit {
+    display:flex;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+    .btnDaagUit .btn {
+        flex:1;
+        background-color: #ff6100;
+        border-color: #ff6100;
+    }
+
+    .btnDaagUit .btn:active {
+        flex:1;
+        background-color: #ff6100;
+        border-color: #ff6100;
+    }
+
+.backBtnGroup {
+    color: #000000 !important;
+    background-color: #fcfcfc !important;
+    border-color: #fcfcfc !important;
+    margin-left:5px;
+    margin-top:5px;
+}
+
+.state-icon {
+    left: -5px;
+}
+
+.list-group-item-primary {
+    color: rgb(255, 255, 255);
+    background-color: rgb(66, 139, 202);
+}
