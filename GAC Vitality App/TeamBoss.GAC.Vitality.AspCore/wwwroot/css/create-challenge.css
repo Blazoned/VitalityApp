@@ -44,3 +44,21 @@
 #challenge-tag-list .challenge-remove-tag:hover {
     background: #bbb;
 }
+
+.backBtnGroup2 {
+    color: #000000 !important;
+    background-color: #fcfcfc !important;
+    border-color: #fcfcfc !important;
+    margin-left: -10%;
+    margin-top: -10%;
+}
+
+#challenge-header{
+    margin-top: -15%;
+}
+
+#challenge-submit-button {
+    background-color: #ff6100;
+    border-color: #ff6100;
+    width: 100%;
+}
