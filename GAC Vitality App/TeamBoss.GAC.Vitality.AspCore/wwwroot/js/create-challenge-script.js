@@ -1,7 +1,12 @@
-﻿$(document).ready(function () {
+﻿var challengeGoalCount = 0;
+
+$(document).ready(function () {
+    // Add Goals
+    $("#challenge-goals-button-add").click(AddGoal);
+
     // Date Time
-    var timeOffset = new Date().getTimezoneOffset() * 60000;
-    var localTime = new Date(Date.now() - timeOffset).toISOString().slice(0, -8);
+    let timeOffset = new Date().getTimezoneOffset() * 60000;
+    let localTime = new Date(Date.now() - timeOffset).toISOString().slice(0, -8);
     $("#challenge-date-time-input").val(localTime);
 
     // Toggle Listing
@@ -43,9 +48,52 @@
     });
 });
 
+// Add Goal
+function AddGoal() {
+    {
+        let lastGoalIsEmpty = IsGoalEmpty(challengeGoalCount);
+
+        if (lastGoalIsEmpty) {
+            challengeGoalCount++;
+
+            $("#challenge-goals-list").append(
+                '<li class="list-group-item list-group-item-text list-group-item-lose challenge-goal-group-item" id="challenge-goal-' + challengeGoalCount + '">' +
+                '<div class="input-group">' +
+                '<input class="form-control challenge-goal-type" type="text" maxlength="40" placeholder="Doelstelling Soort" required />' +
+                '<span class="input-group-btn input-group-empty"></span>' +
+                '<input class="form-control challenge-goal-amount" type="number" min="0" value="0" style="margin-left:-1px" required />' +
+                '<span class="input-group-btn input-group-empty"></span>' +
+                '<input class="form-control challenge-goal-measurement" type="text" maxlength="20" placeholder="Meet Eenheid (niet vereist)" style="margin-left:-2px" />' +
+                '<span class="input-group-btn">' +
+                '<button class="btn btn-group challenge-goal-button-remove">' +
+                '<span class="glyphicon glyphicon-remove"></span>' +
+                '</button>' +
+                '</span>' +
+                '</div>' +
+                '</li>'
+            );
+        }
+
+        $(".challenge-goal-button-remove").click(RemoveGoal);
+    }
+}
+
+// Remove Goal
+function RemoveGoal() {
+    SlideRemoveDOMObject($(this).closest("li"));
+    challengeGoalCount--;
+}
+
+// Check if a goal is left empty
+function IsGoalEmpty(index) {
+    // TODO: IMPLEMENT FUNCTION
+    return true;
+}
+
+
 // Add Tags
 function AddTag() {
-    var label = $("#challenge-tag-input").val();
+    let label = $("#challenge-tag-input").val();
 
     // TODO: Validate label
 
@@ -59,13 +107,13 @@ function AddTag() {
             '</li> '
         );
 
-        $(".challenge-remove-tag").click(AddTagRemovalOnClick);
+        $(".challenge-remove-tag").click(RemoveTag);
     }
 
     $("#challenge-tag-input").val(null);
 }
 
 // Remove Tags
-function AddTagRemovalOnClick() {
-    $(this).parent().fadeOut(250);
+function RemoveTag() {
+    FadeRemoveDOMObject($(this).parent());
 }

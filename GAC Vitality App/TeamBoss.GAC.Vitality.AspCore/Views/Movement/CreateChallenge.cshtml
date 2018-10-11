@@ -14,6 +14,10 @@
 
 <div class="container row">
     <div class="form-group block-wrapper col-xs-12 col-md-4">
+        <a class="btn btn-info backBtnGroup2" role="button" href="~/Movement/Index">
+            <span class="glyphicon glyphicon-chevron-left"></span>
+        </a>
+
         <!-- Header -->
         <div id="challenge-header" class="row panel-heading">
             <div class="col-xs-12 col-md-4">
@@ -29,15 +33,67 @@
             </div>
         </div>
 
-        <!-- Description -->
-        <!-- TODO: Upgrade description to list of actions -->
-        <!-- TODO: Change description to summary -->
-        <div id="challenge-description-field" class="row section-wrapper">
+        <!-- Summary -->
+        <div id="challenge-summary-field" class="row section-wrapper">
             <div class="input-group col-xs-12 col-md-4">
-                <textarea class="form-control" rows="3" maxlength="350" placeholder="Beschrijving" id="challenge-description-input" required></textarea>
+                <textarea class="form-control" rows="2" maxlength="100" placeholder="Beschrijving" id="challenge-summary-input" required></textarea>
             </div>
         </div>
 
+        <!-- Goals Label -->
+        <!-- TODO: Upgrade description to list of actions -->
+        <div id="challenge-goals-label" class="row section-wrapper">
+            <div class="input-group col-xs-6 col-md-2">
+                <span class="input-group-addon"><span class="glyphicon glyphicon-flag"></span></span>
+                <span class="form-control horizontal-overflow">
+                    Doelstellingen
+                </span>
+                <span class="input-group-btn">
+                    <button class="btn btn-default" id="challenge-goals-button-add">
+                        <span class="glyphicon glyphicon-plus"></span>
+                    </button>
+                </span>
+            </div>
+        </div>
+
+        <!-- TODO: Outlining of the input fields have to be alligned -->
+        <!-- TODO: Implement a descriptive header item in as a first item in the ul list (with the corresponding alignment -->
+        <!-- TODO: Always have at least one challenge goal item visible in the ul (besides the descriptive header) -->
+        <!-- Goals List -->
+        <div id="challenge-goals-field" class="row section-wrapper">
+            <div class="input-group col-xs-12 col-md-4">
+                <ul id="challenge-goals-list" class="list-unstyled list-group"><!--
+                    <li class="list-group-item list-group-item-text list-group-item-lose challenge-goal-group-item" id="challenge-goal-1">
+                        <div class="input-group">
+                            <input class="form-control challenge-goal-type" type="text" maxlength="40" placeholder="Doelstelling Soort" required />
+                            <span class="input-group-btn input-group-empty"></span>
+                            <input class="form-control challenge-goal-amount" type="number" min="0" value="0" style="margin-left:-1px" required />
+                            <span class="input-group-btn input-group-empty"></span>
+                            <input class="form-control challenge-goal-measurement" type="text" maxlength="20" placeholder="Meet Eenheid (niet vereist)" style="margin-left:-2px" />
+                            <span class="input-group-btn">
+                                <button class="btn btn-group challenge-goal-button-remove">
+                                    <span class="glyphicon glyphicon-remove"></span>
+                                </button>
+                            </span>
+                        </div>
+                    </li>
+                    <li class="list-group-item list-group-item-text list-group-item-lose challenge-goal-group-item" id="challenge-goal-2">
+                        <div class="input-group">
+                            <input class="form-control challenge-goal-type" type="text" maxlength="40" placeholder="Doelstelling Soort" required />
+                            <span class="input-group-btn input-group-empty"></span>
+                            <input class="form-control challenge-goal-amount" type="number" min="0" value="0" style="margin-left:-1px" required />
+                            <span class="input-group-btn input-group-empty"></span>
+                            <input class="form-control challenge-goal-measurement" type="text" maxlength="20" placeholder="Meet Eenheid (niet vereist)" style="margin-left:-2px" />
+                            <span class="input-group-btn">
+                                <button class="btn btn-group challenge-goal-button-remove">
+                                    <span class="glyphicon glyphicon-remove"></span>
+                                </button>
+                            </span>
+                        </div>
+                    </li>-->
+                </ul>
+            </div>
+        </div>
 
         <!-- Location -->
         <div id="challenge-location-field" class="row section-wrapper">
@@ -61,8 +117,8 @@
                 <span class="input-group-addon"><span class="glyphicon glyphicon-repeat"></span></span>
                 <select class="form-control" id="challenge-repeat-input">
                     <option selected>Niet Herhalen</option>
-                    <option>Dagelijks Herhalen</option>
-                    <option>Wekelijks Herhalen</option>
+                    <option>Meteen</option>
+                    <option>Zelfde Dag</option>
                 </select>
             </div>
         </div>
@@ -94,8 +150,7 @@
         <!-- Tag List -->
         <div id="challenge-tag-overview" class="row section-wrapper">
             <div id="challenge-tag-list" class="col-xs-12 col-md-4">
-                <ul id="tag-list" class="list-unstyled list-inline">
-                </ul>
+                <ul id="tag-list" class="list-unstyled list-inline"></ul>
             </div>
         </div>
 

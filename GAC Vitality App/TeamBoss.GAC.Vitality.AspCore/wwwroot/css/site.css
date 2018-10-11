@@ -90,6 +90,18 @@
     padding-bottom: 10px;
 }
 
+span.input-group-empty {
+    width: 0;
+}
+
+li.list-group-item-lose {
+    margin: -1px 0 0 0;
+}
+
+.horizontal-overflow {
+    overflow-x: hidden;
+}
+
 .submit-section {
     margin-top: 15px;
 }
@@ -168,6 +180,7 @@ h1 {
 
 .btnspecial {
     display: flex; 
+    margin-top: 5%;
     margin-bottom: 20px; 
 
 }
@@ -185,7 +198,8 @@ h1 {
     }
 
 .progressinput {
-    margin-bottom: 20px; 
+    margin-top: 3.5%;
+    margin-bottom: 1.5%;
 }
 
 .btnDaagUit {
@@ -221,4 +235,7 @@ h1 {
 .list-group-item-primary {
     color: rgb(255, 255, 255);
     background-color: rgb(66, 139, 202);
+}
+
+.text-wrapper3{
 }
