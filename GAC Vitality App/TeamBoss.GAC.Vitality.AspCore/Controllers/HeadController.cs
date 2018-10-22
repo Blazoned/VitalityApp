@@ -6,9 +6,19 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace TeamBoss.GAC.Vitality.AspCore.Controllers
 {
-    public class ChallengeController : Controller
+    public class HeadController : Controller
     {
         public IActionResult Index()
+        {
+            return View();
+        }
+
+        public IActionResult Achievements()
+        {
+            return View();
+        }
+
+        public IActionResult Settings()
         {
             return View();
         }

@@ -1,0 +1,33 @@
+﻿
+@{
+    ViewData["Title"] = "Instellingen";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section  Css{ 
+    <link rel="stylesheet" href="~/css/head-page.css" />
+}
+
+@section Scripts{
+    <script src="~/js/settings.js" asp-append-version="true"></script>
+}
+
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Button Group Containing The Different Settings-->
+            <div class="btn-group-settings">
+                <!-- Setting 1 -->
+                <button class="form-control-settings btn btn-success" type="button" data-public-listing=true>
+                    <span>Deel Behaalde Challenges</span>
+                </button>
+                <!-- Setting 2 -->
+                <button class="form-control-settings btn btn-success" type="button" data-public-listing=true>
+                    <span>Stel Persoonlijke Informatie Beschikbaar</span>
+                </button>
+                <!-- Setting 3 -->
+                <button class="form-control-settings btn btn-success" type="button" data-public-listing=true>
+                    <span>Sta Gebruiker Uitdagingen Toe</span>
+                </button>
+            </div>
+        </div>
+    </div>

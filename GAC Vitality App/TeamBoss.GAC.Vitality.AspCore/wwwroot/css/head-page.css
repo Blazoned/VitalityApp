@@ -1,0 +1,41 @@
+﻿body {
+}
+
+.btn-group-systems{
+    width:100%;
+}
+
+    .btn-group-systems .btn {
+        width: 100%;
+        /*margin-top: 5%;*/
+        margin-bottom: 5%;
+        /*font-size: 500%;*/
+        text-align: center;
+        background-color: #00a1ff;
+        border-radius:3px !important;
+    }
+
+    .btn-group-systems .glyphicon{
+        margin-bottom:10%;
+        font-size:500%;
+    }
+
+.list-group .list-group-item{
+    margin-bottom:5%;
+}
+
+.btn-group-settings{
+    width:100%;
+}
+
+    .btn-group-settings .btn {
+        width: 100%;
+    }
+
+.form-control-settings{
+    margin-bottom:5%;
+}
+
+.progress-bar {
+    background-color: #00a1ff;
+}

@@ -1,0 +1,36 @@
+﻿@{
+    ViewData["Title"] = "Home";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section Css{
+    <link rel="stylesheet" href="~/css/head-page.css" />
+}
+
+<div class="container-fluid">
+    <div class="row">
+        <!-- Button group containing the button for the different subsystems.-->
+        <div class="btn-group btn-group-systems">
+            <!-- Movement System Button -->
+            <a class="btn btn-info" role="button" href="~/Movement/Index">
+                <span class="glyphicon glyphicon-heart"></span>
+                <div class="alert-movement" role="alert">Begin nu met gebruiken!</div>
+            </a>
+            <!-- Food System Button -->
+            <a class="btn btn-info" role="button" href="~/Food/Index">
+                <span class="glyphicon glyphicon-grain"></span>
+                <div class="alert-food" role="alert">Begin nu met gebruiken!</div>
+            </a>
+            <!-- Rest System Button-->
+            <a class="btn btn-info" role="button" href="~/Rest/Index">
+                <span class="glyphicon glyphicon-hourglass"></span>
+                <div class="alert-rest" role="alert">Begin nu met gebruiken!</div>
+            </a>
+            <!-- Mental System Button-->
+            <a class="btn btn-info" role="button" href="~/Mental/Index">
+                <span class="glyphicon glyphicon-user"></span>
+                <div class="alert-mental" role="alert">Begin nu met gebruiken!</div>
+            </a>
+        </div>
+    </div>
+</div>
