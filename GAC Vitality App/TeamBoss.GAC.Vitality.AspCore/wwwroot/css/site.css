@@ -253,6 +253,7 @@ h1 {
 }
 
 .switch-width {
+    height: 40px;
     width: 50%;
 }
 
