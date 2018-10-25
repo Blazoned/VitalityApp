@@ -1,5 +1,5 @@
 ﻿@{
-    ViewData["Title"] = "Home";
+    ViewData["Title"] = "Vitaliteits App";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
@@ -7,32 +7,64 @@
     <link rel="stylesheet" href="~/css/head-page.css" />
 }
 
+@section  Scripts{
+    <script src="~/js/head-page.js" asp-append-version="true"></script>
+}
+
 <div class="container-fluid">
     <div class="row">
-        <!-- Button group containing the button for the different subsystems.-->
+        <!-- Button group containing the button for the different subsystems. -->
         <div class="btn-group btn-group-systems">
-            <!-- Movement System Button -->
-            <a class="btn btn-info" role="button" href="~/Movement/Index">
-                <span class="fa fa-running"></span>
+
+            <!-- Movement System Button (First Time Use) -->
+            <a class="btn btn-info btn-visible" role="button" href="~/Movement/Index">
+                <span class="fa fa-running icon-big"></span>
                 <div class="alert-movement" role="alert">Begin nu met gebruiken!</div>
             </a>
+            <!-- Movement System Button (Recurrent Use) -->
+            <a class="btn btn-info btn-hidden" role="button" href="~/Movement/Index">
+                <span class="fa fa-running icon-small"></span>
+                <div class="alert-movement-2" role="alert">10 KM Hardlopen</div>
+                <div class="progress">
+                    <div class="progress-bar" style="width:50%; background-color:#3fc661;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">4 km</div>
+                    <div class="progress-bar" style="width:50%; background-color:#e9ecef; color:#000000;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">6 km</div>
+                </div>
+            </a>
 
-            <!-- Food System Button -->
-            <a class="btn btn-info" role="button" href="~/Food/Index">
-                <span class="fa fa-utensils"></span>
+            <!-- Food System Button (First Time Use) -->
+            <a class="btn btn-info btn-visible" role="button" href="~/Food/Index">
+                <span class="fa fa-utensils icon-big"></span>
                 <div class="alert-food" role="alert">Begin nu met gebruiken!</div>
             </a>
-
-            <!-- Rest System Button-->
-            <a class="btn btn-info" role="button" href="~/Rest/Index">
-                <span class="fa fa-user-clock"></span>
-                <div class="alert-rest" role="alert">Begin nu met gebruiken!</div>
+            <!-- Food System Button (Recurrent Use) -->
+            <a class="btn btn-info btn-hidden" role="button" href="~/Food/Index">
+                <span class="fa fa-utensils icon-small"></span>
+                <div class="alert-food-2" role="alert">Totale Dag Inname</div>
+                <div class="alert-food-3" role="alert">500 kcal</div>
             </a>
 
-            <!-- Mental System Button-->
-            <a class="btn btn-info" role="button" href="~/Mental/Index">
-                <span class="fa fa-users"></span>
+            <!-- Rest System Button (First Time Use) -->
+            <a class="btn btn-info btn-visible" role="button" href="~/Rest/Index">
+                <span class="fa fa-user-clock icon-big"></span>
+                <div class="alert-rest" role="alert">Begin nu met gebruiken!</div>
+            </a>
+            <!-- Rest System Button (Recurrent Use) -->
+            <a class="btn btn-info btn-hidden" role="button" href="~/Rest/Index">
+                <span class="fa fa-user-clock icon-small"></span>
+                <div class="alert-rest-2" role="alert">Eerst Volgend Rust Moment</div>
+                <div class="alert-rest-3" role="alert">2:00 PM - 3:00 PM</div>
+            </a>
+
+            <!-- Mental System Button (First Time Use) -->
+            <a class="btn btn-info btn-visible" role="button" href="~/Mental/Index">
+                <span class="fa fa-users icon-big"></span>
                 <div class="alert-mental" role="alert">Begin nu met gebruiken!</div>
+            </a>
+            <!-- Mental System Button (Recurrent Use) -->
+            <a class="btn btn-info btn-hidden" role="button" href="~/Mental/Index">
+                <span class="fa fa-users icon-small"></span>
+                <div class="alert-mental-2" role="alert">Je Mentale Staat Voor De Dag</div>
+                <span class="fa fa-smile icon-medium"></span>
             </a>
         </div>
     </div>
