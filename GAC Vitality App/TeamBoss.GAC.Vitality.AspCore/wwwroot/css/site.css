@@ -141,7 +141,7 @@ li.list-group-item-lose {
 .listyo {
     float: left;
     width: 100%;
-    margin-top: 20px; 
+    margin-top: 20px;  
     overflow: scroll; 
     height: 124px; 
 }
@@ -238,4 +238,27 @@ h1 {
 }
 
 .text-wrapper3{
+}
+
+.heading-wrapper {
+    width: 100%;
+    height: auto;
+    background-color: #fcfcfc;
+    -webkit-box-shadow: 0px -1px 35px -11px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px -1px 35px -11px rgba(0,0,0,0.75);
+    box-shadow: 0px -1px 35px -11px rgba(0,0,0,0.75);
+    margin-top: 15px;
+    position: relative;
+}
+
+.buttonrecept {
+    margin-bottom: 20px;
+    background-color: #00a1ff; 
+}
+
+.listyo3 {
+    float: left;
+    width: 100%;
+    overflow: scroll;
+    height: 200px;
 }

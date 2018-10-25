@@ -1,0 +1,62 @@
+﻿
+@{
+    ViewData["Title"] = "SearchRecepts";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section Css{
+    <link rel="stylesheet" href="~/css/voedingssysteem.css" />
+}
+
+@section Scripts{
+    <script src="~/js/voedingssysteem.js" asp-append-version="true"></script>
+}
+
+<div class="container-fluid jojo">
+    <div class="row">
+        <div class="challenge-wrapper">
+            <div class="container text-wrapper filterbox">
+                <div class="form-group">
+                    <input type="text" class="form-control searchrecept" placeholder="Recept naam" />
+
+                    <select class="form-control selectfilter">
+                        <option value="" disabled selected>Allergenen</option>
+                        <option class="optionprivacy">Melk</option>
+                        <option class="optionprivacy">Ei</option>
+                        <option class="optionprivacy">Vis</option>
+                        <option class="optionprivacy">Pinda</option>
+                        <option class="optionprivacy">Noten</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="challenge-wrapper">
+            <div class="container text-wrapper">
+                <div class="list-group listfood" id="">
+
+                    <a href="#" class="list-group-item">Spaghetti Carbonara</a>
+                    <a href="#" class="list-group-item">Lamsbout</a>
+                    <a href="#" class="list-group-item">Pizza</a>
+                    <a href="#" class="list-group-item">Patatas bravas</a>
+                    <a href="#" class="list-group-item">Franse kip</a>
+                    <a href="#" class="list-group-item">Truffelburger</a>
+
+                    <a href="#" class="list-group-item">Spaghetti Carbonara</a>
+                    <a href="#" class="list-group-item">Lamsbout</a>
+                    <a href="#" class="list-group-item">Pizza</a>
+                    <a href="#" class="list-group-item">Patatas bravas</a>
+                    <a href="#" class="list-group-item">Franse kip</a>
+                    <a href="#" class="list-group-item">Truffelburger</a>
+
+                    <a href="#" class="list-group-item">Spaghetti Carbonara</a>
+                    <a href="#" class="list-group-item">Lamsbout</a>
+                    <a href="#" class="list-group-item">Pizza</a>
+                    <a href="#" class="list-group-item">Patatas bravas</a>
+                    <a href="#" class="list-group-item">Franse kip</a>
+                    <a href="#" class="list-group-item">Truffelburger</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
