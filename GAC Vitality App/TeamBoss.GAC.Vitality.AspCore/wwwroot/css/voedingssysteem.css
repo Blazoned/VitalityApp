@@ -1,0 +1,65 @@
+﻿.remove {
+    background-color: #d43f3a; 
+}
+
+.edit, .remove {
+    width: 50px !important;
+    height: 30px !important;
+}
+
+#recept-submit-button {
+    background-color: #ff6100;
+    border-color: #ff6100;
+    width: 100%;
+}
+
+.searchrecept {
+    width: 48%;
+    float: left;
+    height: 34px;
+}
+
+.selectfilter {
+    width: 48%;
+    float: right;
+}
+
+.imagebox {
+    height: 150px; 
+    width: 100%; 
+    background-color: red; 
+    margin-bottom: 10px;  
+}
+
+p1 {
+    font-weight: bold;
+    margin-bottom: 10px; 
+}
+
+.btnadd {
+    margin-top: 10px; 
+    margin-bottom: 10px; 
+}
+
+.btnreactions {
+    width: 70% !important;
+    margin-bottom: 10px; 
+}
+
+.btnwrapper {
+    text-align: center; 
+}
+
+.listfood {
+    float: left;
+    width: 100%;
+    margin-top: 20px;
+    overflow: scroll; 
+    height: auto;   
+}
+
+.filterbox{
+    padding-bottom: 20px; 
+}
+
+

@@ -1,0 +1,72 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section Css{
+    <link rel="stylesheet" href="~/css/voedingssysteem.css" />
+}
+
+@section Scripts{
+    <script src="~/js/voedingssysteem.js" asp-append-version="true"></script>
+}
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="heading-wrapper">
+            <div class="container text-wrapper">
+                <h1>Mijn recepten</h1>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                </p>
+            </div>
+            <div class="col-md-4 text-center">
+                <a class="btn btn-info buttonrecept">Maak een recept</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="heading-wrapper">
+            <div class="container text-wrapper">
+                <div class="list-group listyo3" id="challenge-listing">
+                    <a href="#" class="list-group-item clearfix">
+                        Pizza
+                        <span class="pull-right">
+                            <button class="btn btn-danger remove"><span class="glyphicon glyphicon-trash"></span></button>
+                            <button class="btn btn-info edit"><span class="glyphicon glyphicon-pencil"></span></button>
+                        </span>
+                    </a>
+
+                    <a href="#" class="list-group-item clearfix">
+                        Pasta
+                        <span class="pull-right">
+                            <button class="btn btn-danger remove"><span class="glyphicon glyphicon-trash"></span></button>
+                            <button class="btn btn-info edit"><span class="glyphicon glyphicon-pencil"></span></button>
+                        </span>
+                    </a>
+
+                    <a href="#" class="list-group-item clearfix">
+                        Biefstuk
+                        <span class="pull-right">
+                            <button class="btn btn-danger remove"><span class="glyphicon glyphicon-trash"></span></button>
+                            <button class="btn btn-info edit"><span class="glyphicon glyphicon-pencil"></span></button>
+                        </span>
+                    </a>
+
+                    <a href="#" class="list-group-item clearfix">
+                        Ovenschotel
+                        <span class="pull-right">
+                            <button class="btn btn-danger remove"><span class="glyphicon glyphicon-trash"></span></button>
+                            <button class="btn btn-info edit"><span class="glyphicon glyphicon-pencil"></span></button>
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

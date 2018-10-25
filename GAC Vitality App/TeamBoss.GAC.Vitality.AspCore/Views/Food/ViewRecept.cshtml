@@ -1,0 +1,53 @@
+﻿
+@{
+    ViewData["Title"] = "ViewRecept";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section Css{
+    <link rel="stylesheet" href="~/css/voedingssysteem.css" />
+}
+
+@section Scripts{
+    <script src="~/js/voedingssysteem.js" asp-append-version="true"></script>
+}
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="challenge-wrapper">
+            <div class="container text-wrapper">
+                <h1>Pizza</h1>
+                <p>
+                    Donec tempus id leo et finibus. Sed sit amet commodo lorem. In rutrum euismod pretium.
+                    Ut eros velit, sodales ac dolor non, maximus tus, iaculis quis arcu in, fermentum bibendum risus.
+                    Duis ac cursus enim. Donec tempus id leo et finibus. Sed sit amet commodo lorem. In rutrum euismod pretium.
+                </p>
+
+                <img src="https://img.grouponcdn.com/deal/8DDtq5XRzVnLXEUnPHPd/p2-2048x1229/v1/c700x420.jpg" class="img-rounded imagebox" />
+
+                <p1>Ingredienten + allergenen:</p1>
+                <p>
+                    - Ingredient <br />
+                    - Ingredient <br />
+                    - Ingredient <br />
+                    - Ingredient <br />
+                </p>
+                <p1>Bereiding:</p1>
+                <p>
+                    1. Stap <br />
+                    2. Stap <br />
+                    3. Stap <br />
+                    4. Stap <br />
+                </p>
+                <p2>Calorien: 45Kcal</p2>
+
+                <button class="btn btn-primary btnadd" type="button" id="recept-submit-button">Voeg toe aan de calorienteller</button>
+
+                <div class="btnwrapper">
+                    <button class="btn btn-primary btnreactions" type="button" id="recept-submit-button">Reacties</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
