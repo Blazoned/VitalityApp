@@ -239,3 +239,60 @@ h1 {
 
 .text-wrapper3{
 }
+
+.full-width {
+    display: block;
+    padding: 10px;
+    font-size: 50%;
+}
+
+/* Switch button */
+.btn-default.btn-on.active {
+    background-color: #ff6100;
+    color: white;
+}
+
+.switch-width {
+    width: 50%;
+}
+
+.btn-default.btn-off.active {
+    background-color: #ff6100;
+    color: white;
+}
+
+.switch {
+    padding-bottom: 20px;
+    width: 100%;
+}
+
+.add-button {
+    margin-top: 20px;
+}
+
+.overviewRest{
+    display: inline-block;
+    text-align: right;
+    width: auto;
+}
+
+span.fa.fa-pause {
+    vertical-align: middle;
+    font-size:25px;
+}
+
+span.fa.fa-bed {
+    font-size: 25px;
+}
+
+span.fa.fa-calendar{
+font-size: 25px;
+}
+
+.thCenter{
+    text-align: center;
+}
+
+.container.text-wrapper2{
+    padding:0px;
+}
