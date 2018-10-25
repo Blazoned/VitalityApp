@@ -12,12 +12,48 @@
         </a>
         <br />
         <br />
+        
+            <a class="btn btn-primary btn-block" role="button" href="~/Rest/AddRest"><span class="fa fa-plus"></span></a>
+        <br/>
+
         <div class="container text-wrapper2">
             <ul class="list-group checked-list-box">
                 <li class="list-group-item">
-                    <span class="fa fa-bed"></span>
-                </li>
-                <li class="list-group-item"><span class="fa fa-pause"></span> @DateTime.Now.ToShortDateString()</li>
+                    <table class="table">
+                        <thead>
+                        <tr>
+                            <th scope="col" class="thCenter">
+                                <span class="fa fa-bed"></span>
+                            </th>
+                            <th scope="col" class="thCenter">                                    
+                                <span class="fa fa-calendar"></span>
+                            </th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td class="thCenter">22:00 - 07:00</td>
+                            <td class="thCenter">@DateTime.Now.ToShortDateString()</td>
+                        </tr>                        
+                    </table>
+                    <table class="table">
+                        <thead>
+                        <tr>
+                            <th scope="col" class="thCenter">
+                                <span class="fa fa-pause"></span>
+                            </th>
+                            <th scope="col" class="thCenter">                                    
+                                <span class="fa fa-calendar"></span>
+                            </th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td class="thCenter">12:30 - 13:00</td>
+                            <td class="thCenter">24-10-2018</td>
+                        </tr>                        
+                    </table>
+                </li>             
             </ul>
         </div>
     </div>

@@ -282,19 +282,17 @@ span.fa.fa-pause {
 }
 
 span.fa.fa-bed {
-    vertical-align: middle;
     font-size: 25px;
 }
-.list-group-item {
-    background-color: #33b5e5;
-    color: white;
+
+span.fa.fa-calendar{
+font-size: 25px;
 }
 
-.infoBox{
-    display: inline-block;
+.thCenter{
+    text-align: center;
 }
 
-.viewBed{
-    vertical-align:middle!important;
-    font-size: 60px!important;
+.container.text-wrapper2{
+    padding:0px;
 }
