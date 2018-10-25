@@ -106,6 +106,15 @@ li.list-group-item-lose {
     margin-top: 15px;
 }
 
+.border-flash {
+    border-width: 2px;
+    border-color: orange;
+    -webkit-transition: all 0.25s ease;
+    -moz-transition: all 0.25s ease;
+    -o-transition: all 0.25s ease;
+    transition: all 0.25s ease;
+}
+
 .buttonyoleft{
     margin-top: 3px; 
     position: relative; 

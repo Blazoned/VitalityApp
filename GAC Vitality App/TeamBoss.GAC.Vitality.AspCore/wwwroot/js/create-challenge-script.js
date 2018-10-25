@@ -85,6 +85,17 @@ function AddGoal() {
 
             $(".challenge-goal-button-remove").click(RemoveGoal);
         }
+
+        // TODO: Implement challenge flash
+        let flashTime = 1000;
+
+        let flashInterval = setInterval(function () {
+            $("#challenge-goal-" + challengeGoalId).children().first().toggleClass("border-flash");
+        }, flashTime / 4);
+
+        setTimeout(function () {
+            clearInterval(flashInterval);
+        }, flashTime);
     }
 }
 
