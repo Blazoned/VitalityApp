@@ -239,3 +239,62 @@ h1 {
 
 .text-wrapper3{
 }
+
+.full-width {
+    display: block;
+    padding: 10px;
+    font-size: 50%;
+}
+
+/* Switch button */
+.btn-default.btn-on.active {
+    background-color: #ff6100;
+    color: white;
+}
+
+.switch-width {
+    width: 50%;
+}
+
+.btn-default.btn-off.active {
+    background-color: #ff6100;
+    color: white;
+}
+
+.switch {
+    padding-bottom: 20px;
+    width: 100%;
+}
+
+.add-button {
+    margin-top: 20px;
+}
+
+.overviewRest{
+    display: inline-block;
+    text-align: right;
+    width: auto;
+}
+
+span.fa.fa-pause {
+    vertical-align: middle;
+    font-size:25px;
+}
+
+span.fa.fa-bed {
+    vertical-align: middle;
+    font-size: 25px;
+}
+.list-group-item {
+    background-color: #33b5e5;
+    color: white;
+}
+
+.infoBox{
+    display: inline-block;
+}
+
+.viewBed{
+    vertical-align:middle!important;
+    font-size: 60px!important;
+}
