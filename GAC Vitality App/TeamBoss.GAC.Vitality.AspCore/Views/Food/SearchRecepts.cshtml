@@ -1,6 +1,6 @@
 ﻿
 @{
-    ViewData["Title"] = "SearchRecepts";
+    ViewData["Title"] = "Zoek Recepten";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
@@ -14,7 +14,7 @@
 
 <div class="container-fluid jojo">
     <div class="row">
-        <div class="challenge-wrapper">
+        <div class="challenge-wrapper navbar-food">
             <div class="container text-wrapper filterbox">
                 <div class="form-group">
                     <input type="text" class="form-control searchrecept" placeholder="Recept naam" />
@@ -30,7 +30,8 @@
                 </div>
             </div>
         </div>
-        <div class="challenge-wrapper">
+
+        <div class="challenge-wrapper move-below">
             <div class="container text-wrapper">
                 <div class="list-group listfood" id="">
 
@@ -59,4 +60,3 @@
         </div>
     </div>
 </div>
-
