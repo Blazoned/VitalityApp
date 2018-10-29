@@ -59,7 +59,72 @@ p1 {
 }
 
 .filterbox{
-    padding-bottom: 20px; 
+    padding-bottom: 20px;
 }
 
+.navbar-food{
+    z-index:1000;
+    position:fixed;
+    text-align:center;
+    top:50px;
+    width:100%;
+}
 
+.move-below{
+    margin-top:90px;
+}
+
+.carousel {
+    width: 100%;
+    height: 240px;
+    margin-bottom:20px;
+    position:relative;
+}
+
+.carousel-inner{
+    height:100%;
+}
+
+.item{
+    width:100%;
+    height:100%;
+
+    -webkit-mask-size: 100% 240px;
+    -webkit-mask-image: -webkit-gradient(linear, center top, center bottom, color-stop(0.00, rgba(0,0,0,0)), color-stop(0.70, rgba(0,0,0,1)));
+}
+
+.img-center{
+    position:center !important;
+    min-height:240px;
+    min-width:100%;
+}
+
+.recept-header, .recept-user{
+    position:absolute;
+    z-index:1000;
+    color:white;
+    padding-left: 5%;
+}
+
+.recept-header{
+    margin-top:10px;
+}
+
+.recept-user {
+    margin-top:50px;
+    opacity:0.75;
+}
+
+.header-container {
+    position: absolute;
+    z-index: 1000;
+    width:100%;
+    padding-left: 5%;
+    margin-top: 25px;
+}
+
+.text-wrapper-shadow:after {
+    -webkit-box-shadow: inset 0px 122px 252px -38px rgba(0,0,0,0.74);
+    -moz-box-shadow: inset 0px 122px 252px -38px rgba(0,0,0,0.74);
+    box-shadow: inset 0px 122px 252px -38px rgba(0,0,0,0.74);
+}
