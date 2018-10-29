@@ -33,11 +33,33 @@
             </div>
         </div>
 
+        <div id="recept-preparation-field" class="row section-wrapper">
+            <div class="input-group col-xs-12 col-md-4">
+                <textarea class="form-control" rows="10" maxlength="100" placeholder="Bereiding" id="recept-preparation-input" required></textarea>
+            </div>
+        </div>
+
+        <div id="recept-preparation-time-field" class="row section-wrapper">
+            <div class="input-group col-xs-12 col-md-4">
+                <span class="input-group-addon"><span class="fa fa-clock"></span></span>
+                <input class="form-control" type="number" maxlength="40" placeholder="Bereidings Tijd (Minuten)" id="recept-preparation-time-input" required />
+            </div>
+        </div>
+
         <div id="recept-calories-field" class="row section-wrapper">
             <div class="input-group col-xs-12 col-md-4">
                 <span class="input-group-addon"><span class="glyphicon glyphicon-cutlery"></span></span>
-                <input class="form-control" type="text" maxlength="40" placeholder="Calorien" id="recept-calories-input" required />
+                <input class="form-control" type="number" maxlength="40" placeholder="Caloriëen" id="recept-calories-input" required />
             </div>
+        </div>
+
+        <div class="input-group section-wrapper row">
+            <label class="input-group-btn">
+                <span class="btn btn-primary btn-browse">
+                    Browse <input type="file" style="display: none;" accept="image/*" multiple>
+                </span>
+            </label>
+            <input type="text" class="form-control" readonly>
         </div>
 
         <div id="recept-submit" class="row submit-section">
