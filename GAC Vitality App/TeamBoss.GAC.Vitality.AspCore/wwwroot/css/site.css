@@ -250,15 +250,18 @@ h1 {
 .btn-default.btn-on.active {
     background-color: #ff6100;
     color: white;
+    border:none;
 }
 
 .switch-width {
     width: 50%;
+    height:40px;
 }
 
 .btn-default.btn-off.active {
     background-color: #ff6100;
     color: white;
+    border:none;
 }
 
 .switch {
