@@ -85,12 +85,12 @@ p1 {
     height:100%;
 }
 
-.item{
-    width:100%;
-    height:100%;
+.item {
+    width: 100%;
+    height: 100%;
 
     -webkit-mask-size: 100% 240px;
-    -webkit-mask-image: -webkit-gradient(linear, center top, center bottom, color-stop(0.00, rgba(0,0,0,0)), color-stop(0.70, rgba(0,0,0,1)));
+    -webkit-mask-image: -webkit-linear-gradient(bottom, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 1) 50%, rgba(255, 255, 255, 0.2) 100%);
 }
 
 .img-center{
@@ -115,16 +115,28 @@ p1 {
     opacity:0.75;
 }
 
-.header-container {
-    position: absolute;
-    z-index: 1000;
-    width:100%;
-    padding-left: 5%;
-    margin-top: 25px;
+.calory-icon, .clock-icon, .favourite-btn{
+    color:white;
+    position:absolute;
+    z-index:1000;
+    font-size:160%;
+    margin-top:200px;
 }
 
-.text-wrapper-shadow:after {
-    -webkit-box-shadow: inset 0px 122px 252px -38px rgba(0,0,0,0.74);
-    -moz-box-shadow: inset 0px 122px 252px -38px rgba(0,0,0,0.74);
-    box-shadow: inset 0px 122px 252px -38px rgba(0,0,0,0.74);
+.calory-icon {
+    margin-left: 5%;
+}
+
+.clock-icon{
+    margin-left:35%;
+}
+
+.favourite-btn{
+    margin-top:190px;
+    margin-left:80%;
+}
+
+.calory-text, .clock-text{
+    font-family:Arial, Helvetica, sans-serif;
+    font-size:14px;
 }
