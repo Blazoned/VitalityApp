@@ -1,5 +1,5 @@
 ﻿.remove {
-    background-color: #d43f3a; 
+    background-color: #d43f3a;
 }
 
 .edit, .remove {
@@ -25,72 +25,71 @@
 }
 
 .imagebox {
-    height: 150px; 
-    width: 100%; 
-    background-color: red; 
-    margin-bottom: 10px;  
+    height: 150px;
+    width: 100%;
+    background-color: red;
+    margin-bottom: 10px;
 }
 
 p1 {
     font-weight: bold;
-    margin-bottom: 10px; 
+    margin-bottom: 10px;
 }
 
 .btnadd {
-    margin-top: 10px; 
-    margin-bottom: 10px; 
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 .btnreactions {
     width: 70% !important;
-    margin-bottom: 10px; 
+    margin-bottom: 10px;
 }
 
 .btnwrapper {
-    text-align: center; 
+    text-align: center;
 }
 
 .listfood {
     float: left;
     width: 100%;
     margin-top: 20px;
-    overflow: scroll; 
-    height: auto;   
+    overflow: scroll;
+    height: auto;
 }
 
-.filterbox{
+.filterbox {
     padding-bottom: 20px;
 }
 
-.navbar-food{
-    z-index:1000;
-    position:fixed;
-    text-align:center;
-    top:50px;
-    width:100%;
+.navbar-food {
+    z-index: 1000;
+    position: fixed;
+    text-align: center;
+    top: 50px;
+    width: 100%;
 }
 
-.move-below{
-    margin-top:90px;
+.move-below {
+    margin-top: 90px;
 }
 
 .carousel {
     width: 100%;
     height: 240px;
-    margin-bottom:20px;
-    position:relative;
+    margin-bottom: 5px;
+    position: relative;
 }
 
-.carousel-inner{
-    height:100%;
+.carousel-inner {
+    height: 100%;
 }
 
 .item {
     width: 100%;
     height: 100%;
-
     -webkit-mask-size: 100% 240px;
-    -webkit-mask-image: -webkit-linear-gradient(bottom, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 1) 50%, rgba(255, 255, 255, 0.2) 100%);
+    -webkit-mask-image: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 1.0) 50%, rgba(255, 255, 255, 0.2) 100%);
 }
 
 .img-center {
@@ -100,76 +99,82 @@ p1 {
     max-width: 100%;
 }
 
-.recept-header, .recept-user{
-    position:absolute;
-    z-index:1000;
-    color:white;
+.recept-header, .recept-user {
+    position: absolute;
+    z-index: 1000;
+    color: white;
     padding-left: 5%;
 }
 
-.recept-header{
-    margin-top:10px;
+.recept-header {
+    margin-top: 10px;
 }
 
 .recept-user {
-    margin-top:50px;
-    opacity:0.75;
+    margin-top: 50px;
+    opacity: 0.75;
 }
 
-.calory-icon, .clock-icon, .favourite-btn{
-    color:white;
-    position:absolute;
-    z-index:1000;
-    font-size:160%;
-    margin-top:200px;
+.icon-wrapper {
+    margin-bottom: 10px;
 }
 
-.calory-icon {
-    margin-left: 5%;
+    .icon-wrapper .calory-icon, .clock-icon, .favourite-btn {
+        font-size: 160%;
+    }
+
+    .icon-wrapper .calory-icon {
+        margin-left: 3%;
+    }
+
+    .icon-wrapper .clock-icon {
+        margin-left: 5%;
+    }
+
+    .icon-wrapper .favourite-btn {
+        margin-left: 22%;
+    }
+
+.visible {
+    display: normal;
 }
 
-.clock-icon{
-    margin-left:35%;
+.hidden {
+    display: none;
 }
 
-.favourite-btn{
-    margin-top:190px;
-    margin-left:80%;
-}
-
-.calory-text, .clock-text{
-    font-family:Arial, Helvetica, sans-serif;
-    font-size:14px;
+.calory-text, .clock-text {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
 }
 
 .btn-browse {
     background-color: #00a1ff !important;
-    border:none;
+    border: none;
 }
 
-.btn-send{
-    width:90%;
-    margin-bottom:15px;
-    margin-left:5%;
-    margin-right:5%;
-    background-color:#ff6100 !important;
-    border:none;
+.btn-send {
+    width: 90%;
+    margin-bottom: 15px;
+    margin-left: 5%;
+    margin-right: 5%;
+    background-color: #ff6100 !important;
+    border: none;
 }
 
 .btn-remove-recipe {
     margin-left: 33%;
     border: none;
 }
+
+.input-field {
+    margin-bottom: 15px;
 }
 
-.input-field{
-    margin-bottom: 15px; 
-}
-
-.image-container{
-    background-color: red; 
-    height: 200px; 
-    width: 100%; 
+.image-container {
+    background-color: red;
+    height: 200px;
+    width: 100%;
 }
 
 .image-feed {
@@ -177,4 +182,3 @@ p1 {
     height: 100%;
     -webkit-mask-size: 100% 240px;
 }
-
