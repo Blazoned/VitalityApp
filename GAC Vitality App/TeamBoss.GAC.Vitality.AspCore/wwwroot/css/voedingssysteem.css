@@ -166,10 +166,11 @@ p1 {
     margin-bottom: 15px; 
 }
 
-.image-container{
-    background-color: red; 
-    height: 200px; 
-    width: 100%; 
+.image-container {
+    height: 200px;
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 .image-feed {
@@ -177,4 +178,46 @@ p1 {
     height: 100%;
     -webkit-mask-size: 100% 240px;
 }
+
+.recept-name-list p1{
+    font-weight: bold; 
+}
+
+.feed-info {
+    overflow: hidden; 
+    height: 20px; 
+    float: left; 
+    width: 30%; 
+}
+
+.feed-info p {
+    float: left; 
+    margin-bottom: 0; 
+}
+
+.feed-icon{
+    float: left;
+    margin-right: 5%; 
+}
+
+.feed-info-container{
+    height: auto; 
+    width: 100%; 
+    overflow: hidden; 
+    margin-top: 10px;  
+}
+
+.feed-info-container p1 {
+    float: left; 
+}
+
+.preptime-feed {
+    width: 23% !important; 
+}
+
+.feed-option {
+    float: right; 
+}
+
+
 

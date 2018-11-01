@@ -1,15 +1,15 @@
 ﻿
 @{
-    ViewData["Title"] = "Zoek Recepten";
-    Layout = "~/Views/Shared/_Layout.cshtml";
+ViewData["Title"] = "Zoek Recepten";
+Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
 @section Css{
-    <link rel="stylesheet" href="~/css/voedingssysteem.css" />
+<link rel="stylesheet" href="~/css/voedingssysteem.css" />
 }
 
 @section Scripts{
-    <script src="~/js/voedingssysteem.js" asp-append-version="true"></script>
+<script src="~/js/voedingssysteem.js" asp-append-version="true"></script>
 }
 
 <div class="container-fluid jojo">
@@ -35,33 +35,84 @@
             <div class="container text-wrapper">
                 <div class="list-group listfood" id="">
 
-                    <a href="#" class="list-group-item">
-                        Spaghetti Carbonara
+                    <a href="#" class="list-group-item recept-name-list">
+                        <p1>Pizza Hawaii</p1>                        
+
+                        <div class="feed-info-container">
+                            <div class="calories-feed feed-info">
+                                <span class="fa fa-fire feed-icon"></span>
+                                <p>450 Kcal</p>
+                            </div>
+                            <div class="preptime-feed feed-info">
+                                <span class="fa fa-clock feed-icon"></span>
+                                <p>60 min</p>
+                            </div>
+                        </div>
+
                         <div class="image-container">
                             <div class="image-feed">
                                 <img class="img-center" src="https://img.grouponcdn.com/deal/8DDtq5XRzVnLXEUnPHPd/p2-2048x1229/v1/c700x420.jpg" />
                             </div>
                         </div>
                     </a>
-                    <a href="#" class="list-group-item">Lamsbout</a>
-                    <a href="#" class="list-group-item">Pizza</a>
-                    <a href="#" class="list-group-item">Patatas bravas</a>
-                    <a href="#" class="list-group-item">Franse kip</a>
-                    <a href="#" class="list-group-item">Truffelburger</a>
 
-                    <a href="#" class="list-group-item">Spaghetti Carbonara</a>
-                    <a href="#" class="list-group-item">Lamsbout</a>
-                    <a href="#" class="list-group-item">Pizza</a>
-                    <a href="#" class="list-group-item">Patatas bravas</a>
-                    <a href="#" class="list-group-item">Franse kip</a>
-                    <a href="#" class="list-group-item">Truffelburger</a>
+                    <a href="#" class="list-group-item recept-name-list">
+                        <p1>Kip Marengo</p1>
+                        <div class="feed-info-container">
+                            <div class="calories-feed feed-info">
+                                <span class="fa fa-fire feed-icon"></span>
+                                <p>200 Kcal</p>
+                            </div>
+                            <div class="preptime-feed feed-info">
+                                <span class="fa fa-clock feed-icon"></span>
+                                <p>30 min</p>
+                            </div>
+                        </div>
+                        <div class="image-container">
+                            <div class="image-feed">
+                                <img class="img-center" src="https://www.koopeenkip.be/frontend/files/tips/image/320x230/kip-marengo.jpg" />
+                            </div>
+                        </div>
+                    </a>
 
-                    <a href="#" class="list-group-item">Spaghetti Carbonara</a>
-                    <a href="#" class="list-group-item">Lamsbout</a>
-                    <a href="#" class="list-group-item">Pizza</a>
-                    <a href="#" class="list-group-item">Patatas bravas</a>
-                    <a href="#" class="list-group-item">Franse kip</a>
-                    <a href="#" class="list-group-item">Truffelburger</a>
+                    <a href="#" class="list-group-item recept-name-list">
+                        <p1>Mosselen</p1>
+                        <div class="feed-info-container">
+                            <div class="calories-feed feed-info">
+                                <span class="fa fa-fire feed-icon"></span>
+                                <p>150 Kcal</p>
+                            </div>
+                            <div class="preptime-feed feed-info">
+                                <span class="fa fa-clock feed-icon"></span>
+                                <p>25 min</p>
+                            </div>
+                        </div>
+                        <div class="image-container">
+                            <div class="image-feed">
+                                <img class="img-center" src="https://www.emte.nl/upload_mm/7/9/9/cid6535_1059388_Receptbeeld_1000x1000-1_619x310.png" />
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="#" class="list-group-item recept-name-list">
+                        <p1>Pad Thai</p1>
+                        <div class="feed-info-container">
+                            <div class="calories-feed feed-info">
+                                <span class="fa fa-fire feed-icon"></span>
+                                <p>550 Kcal</p>
+                            </div>
+                            <div class="preptime-feed feed-info">
+                                <span class="fa fa-clock feed-icon"></span>
+                                <p>40 min</p>
+                            </div>
+                        </div>
+                        <div class="image-container">
+                            <div class="image-feed">
+                                <img class="img-center" src="https://sarahscucinabella.com/wp-content/uploads/2018/01/Pad-Thai-for-Two-with-Shrimp4-500x400.jpg" />
+                            </div>
+                        </div>
+                    </a>
+
                 </div>
             </div>
         </div>
