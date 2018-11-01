@@ -306,3 +306,7 @@ font-size: 25px;
 .container.text-wrapper2{
     padding:0px;
 }
+
+.hidden-description{
+    display: none;
+}
