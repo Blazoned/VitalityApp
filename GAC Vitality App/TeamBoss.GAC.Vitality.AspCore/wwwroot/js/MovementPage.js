@@ -22,7 +22,7 @@
 $(function () {
     $.each(objects,
         function(index, value) {
-            $("#challenge-listing").append("<a href='#' class='list-group-item' data-id='" + value.id + "' data-title = '" + value.title + "' + data-description='" + value.description + "' + data-location='" + value.location + "'>" + value.title + "</a>");
+            $("#challenge-listing").append("<a href='#' class='list-group-item' data-id='" + value.id + "'>" + value.title + "</a>");
         });
 });
 
@@ -34,8 +34,19 @@ $(function () {
         $that.parent().find('a').removeClass('active');
         $that.addClass('active');
 
+        // the code you're looking for
+        var singleObject = $(this).data("id");
+
+        // iterate over each element in the array
+        for (var i = 0; i < objects.length; i++) {
+            // look for the entry with a matching `code` value
+            if (objects[i].id === singleObject) {
+                $("#Challenge-Description").text(objects[i].description);
+                $("#Challenge-Location").text(objects[i].location); 
+            }
+        }
+
         $("#Challenge-Title").text($('.list-group a.active').text());
-        $("#Challenge-Description").text($(this).data("description"));
-        $("#Challenge-Location").text($(this).data("location"));
+       
     });
 });
