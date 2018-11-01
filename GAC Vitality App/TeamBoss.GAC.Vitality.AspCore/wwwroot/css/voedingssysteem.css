@@ -89,7 +89,7 @@ p1 {
     width: 100%;
     height: 100%;
     -webkit-mask-size: 100% 240px;
-    -webkit-mask-image: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 1.0) 50%, rgba(255, 255, 255, 0.2) 100%);
+    -webkit-mask-image: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 1.0) 40%, rgba(255, 255, 255, 0.2) 100%);
 }
 
 .img-center {
@@ -181,4 +181,15 @@ p1 {
     width: 100%;
     height: 100%;
     -webkit-mask-size: 100% 240px;
+}
+
+.back-icon-btn{
+    font-size:20px;
+    color:black !important;
+    border:none !important;
+}
+
+.username-text{
+    font-size:17px;
+    font-weight:bold;
 }
