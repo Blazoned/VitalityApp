@@ -12,5 +12,10 @@ namespace TeamBoss.GAC.Vitality.AspCore.Controllers
         {
             return View();
         }
+
+        public IActionResult AddRest()
+        {
+            return View();
+        }
     }
 }

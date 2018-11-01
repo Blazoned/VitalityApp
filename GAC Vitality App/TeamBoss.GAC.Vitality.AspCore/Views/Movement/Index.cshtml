@@ -4,6 +4,11 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
+@section Scripts
+{
+    <script src="js/MovementPage.js"></script>
+}
+
 <div class="container-fluid">
     <div class="row">
         <a class="btn btn-primary buttonchallenge" role="button" asp-action="CreateChallenge" asp-controller="Movement">Challenge Aanmaken</a>
@@ -13,18 +18,16 @@
     <div class="row">
         <div class="challenge-wrapper">
             <div class="container text-wrapper">
-                <h1>10 KM Hardlopen</h1>
-                <p>
-                    Donec tempus id leo et finibus. Sed sit amet commodo lorem. In rutrum euismod pretium.
-                    Ut eros velit, sodales ac dolor non, maximus tus, iaculis quis arcu in, fermentum bibendum risus.
-                    Duis ac cursus enim. Donec tempus id leo et finibus. Sed sit amet commodo lorem. In rutrum euismod pretium.
+                <h1 id="Challenge-Title">Geen challenge geselecteerd</h1>
+                <p id="Challenge-Description">
+                   Geen beschrijving beschikbaar.
                 </p>
             </div>
 
             <div class="container text-wrapper3">
-                <h4>Locatie</h4>
-                <p>
-                    De Scheper 307, 5688 HP Oirschot.
+                <h4><b>Locatie</b></h4>
+                <p id="Challenge-Location">
+                   
                 </p>
             </div>
 
@@ -67,12 +70,6 @@
                 </div>
 
                 <div class="list-group listyo" id="challenge-listing">
-                    <a href="#" class="list-group-item">45x opdrukken</a>
-                    <a href="#" class="list-group-item">30 minuten zwemmen</a>
-                    <a href="#" class="list-group-item">3x 10 min lopen</a>
-                    <a href="#" class="list-group-item">Touwtje springen</a>
-                    <a href="#" class="list-group-item">15km marathon</a>
-                    <a href="#" class="list-group-item">20x opdrukken</a>
                 </div>
             </div>
         </div>

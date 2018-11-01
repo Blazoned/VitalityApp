@@ -54,9 +54,9 @@
     width: 100%; 
     height: auto;
     background-color: #fcfcfc;
-    -webkit-box-shadow: 0px -1px 35px -11px rgba(0,0,0,0.75);
-    -moz-box-shadow: 0px -1px 35px -11px rgba(0,0,0,0.75);
-    box-shadow: 0px -1px 35px -11px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 0 -1px 35px -11px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0 -1px 35px -11px rgba(0,0,0,0.75);
+    box-shadow: 0 -1px 35px -11px rgba(0,0,0,0.75);
     margin-top: 15px; 
     position: relative; 
 }
@@ -80,9 +80,9 @@
     width: auto;
     height: auto;
     background-color: #fcfcfc;
-    -webkit-box-shadow: 0px -1px 35px -11px rgba(0,0,0,0.75);
-    -moz-box-shadow: 0px -1px 35px -11px rgba(0,0,0,0.75);
-    box-shadow: 0px -1px 35px -11px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 0 -1px 35px -11px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0 -1px 35px -11px rgba(0,0,0,0.75);
+    box-shadow: 0 -1px 35px -11px rgba(0,0,0,0.75);
     padding: 30px;
 }
 
@@ -104,6 +104,15 @@ li.list-group-item-lose {
 
 .submit-section {
     margin-top: 15px;
+}
+
+.border-flash {
+    border-width: 2px;
+    border-color: orange;
+    -webkit-transition: all 0.25s ease;
+    -moz-transition: all 0.25s ease;
+    -o-transition: all 0.25s ease;
+    transition: all 0.25s ease;
 }
 
 .buttonyoleft{
@@ -159,9 +168,9 @@ li.list-group-item-lose {
     width: 100%;
     height: auto; 
     background-color: #fcfcfc;
-    -webkit-box-shadow: 0px -1px 35px -11px rgba(0,0,0,0.75);
-    -moz-box-shadow: 0px -1px 35px -11px rgba(0,0,0,0.75);
-    box-shadow: 0px -1px 35px -11px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 0 -1px 35px -11px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0 -1px 35px -11px rgba(0,0,0,0.75);
+    box-shadow: 0 -1px 35px -11px rgba(0,0,0,0.75);
     margin-top: 15px;
 }
 
@@ -175,7 +184,7 @@ li.list-group-item-lose {
 }
 
 h1 {
-    margin-top: 0px; 
+    margin-top: 0; 
 }
 
 .btnspecial {
@@ -238,6 +247,68 @@ h1 {
 }
 
 .text-wrapper3{
+}
+
+.full-width {
+    display: block;
+    padding: 10px;
+    font-size: 50%;
+}
+
+/* Switch button */
+.btn-default.btn-on.active {
+    background-color: #ff6100;
+    color: white;
+}
+
+.switch-width {
+    height: 40px;
+    width: 50%;
+}
+
+.btn-default.btn-off.active {
+    background-color: #ff6100;
+    color: white;
+}
+
+.switch {
+    padding-bottom: 20px;
+    width: 100%;
+}
+
+.add-button {
+    margin-top: 20px;
+}
+
+.overviewRest{
+    display: inline-block;
+    text-align: right;
+    width: auto;
+}
+
+span.fa.fa-pause {
+    vertical-align: middle;
+    font-size:25px;
+}
+
+span.fa.fa-bed {
+    font-size: 25px;
+}
+
+span.fa.fa-calendar{
+font-size: 25px;
+}
+
+.thCenter{
+    text-align: center;
+}
+
+.container.text-wrapper2{
+    padding:0px;
+}
+
+.hidden-description{
+    display: none;
 }
 
 .heading-wrapper {
