@@ -1,6 +1,60 @@
-﻿$(document).ready(function () {
+﻿var eggCounter = 0;
+var audioElement;
+
+$(document).ready(function () {
     changeWidth();
-    window.onresize = function () { changeWidth() };
+    window.onresize = function () { changeWidth(); };
+
+    $("#food-search-text").keypress(function (e) { console.log(e.which) });
+
+    // Eggs
+    $("#food-search-allergies").click(function () {
+        if (eggCounter < 3)
+            eggCounter++;
+
+        if (eggCounter === 3) {
+            $("#food-search-text").keypress(function (e) {
+                if (eggCounter === 3 && e.which === 109 || e.which === 77)
+                    eggCounter++;
+
+                if (eggCounter === 4 && e.which === 111 || e.which === 79)
+                    eggCounter++;
+
+                if (eggCounter === 5 && e.which === 110 || e.which === 78)
+                    eggCounter++;
+
+                if (eggCounter === 6 && e.which === 115 || e.which === 83)
+                    eggCounter++;
+
+                if (eggCounter === 7 && e.which === 116 || e.which === 84)
+                    eggCounter++;
+
+                if (eggCounter === 8 && e.which === 101 || e.which === 69)
+                    eggCounter++;
+
+                if (eggCounter === 9 && e.which === 114 || e.which === 82)
+                    eggCounter++;
+
+
+                if (eggCounter === 4) {
+                    audioElement = document.createElement('audio');
+                    audioElement.setAttribute('src', '/audio/eggSound.mp3');
+                }
+
+                if (eggCounter === 9) {
+                    $("#food-search-allergies").click(function () {
+                        if (eggCounter < 12)
+                            eggCounter++;
+
+                        if (eggCounter === 12) {
+                            audioElement.play();
+                            $("#food-search-allergies").off("click");
+                        }
+                    });
+                }
+            });
+        }
+    });
 });
 
 function changeWidth() {

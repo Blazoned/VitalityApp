@@ -17,9 +17,9 @@ Layout = "~/Views/Shared/_Layout.cshtml";
         <div class="challenge-wrapper navbar-food">
             <div class="container text-wrapper filterbox">
                 <div class="form-group">
-                    <input type="text" class="form-control searchrecept" placeholder="Recept naam" />
+                    <input type="text" class="form-control searchrecept" placeholder="Recept naam" id="food-search-text" />
 
-                    <select class="form-control selectfilter" multiple>
+                    <select class="form-control selectfilter" multiple id="food-search-allergies">
                         <option value="" disabled selected>Allergenen</option>
                         <option class="optionprivacy">Melk</option>
                         <option class="optionprivacy">Ei</option>
@@ -27,6 +27,9 @@ Layout = "~/Views/Shared/_Layout.cshtml";
                         <option class="optionprivacy">Pinda</option>
                         <option class="optionprivacy">Noten</option>
                     </select>
+                </div>
+                <div class="container-fluid allergies">
+
                 </div>
             </div>
         </div>
