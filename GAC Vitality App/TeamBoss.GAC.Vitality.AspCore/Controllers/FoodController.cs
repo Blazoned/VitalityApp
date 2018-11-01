@@ -33,6 +33,11 @@ namespace TeamBoss.GAC.Vitality.AspCore.Controllers
             return View();
         }
 
+        public IActionResult SavedRecipes()
+        {
+            return View();
+        }
+
         public IActionResult CalorieCounter()
         {
             return View();
