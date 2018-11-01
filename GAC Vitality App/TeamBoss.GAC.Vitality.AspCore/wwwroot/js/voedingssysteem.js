@@ -66,12 +66,12 @@ function changeWidth() {
 
 $(".favourite-btn").click(function () {
     var btnVisible = $(".visible");
-    var btnHidden = $(".invisible");
+    var btnHidden = $(".hidden");
 
     btnVisible.removeClass("visible");
-    btnVisible.addClass("invisible");
+    btnVisible.addClass("hidden");
 
-    btnHidden.removeClass("invisible");
+    btnHidden.removeClass("hidden");
     btnHidden.addClass("visible");
 });
 

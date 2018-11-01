@@ -40,7 +40,13 @@
                             Voeding <span class="caret"></span>
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a asp-area="" asp-controller="food" asp-action="index">Overzicht</a></li>
+                            <li><a asp-area="" asp-controller="Food" asp-action="Index">Overzicht</a></li>
+                            <li><a asp-area="" asp-controller="Food" asp-action="CalorieCounter">Calorie Teller</a></li>
+                            <li><a asp-area="" asp-controller="Food" asp-action="CreateRecept">Creeer Recept</a></li>
+                            <li><a asp-area="" asp-controller="Food" asp-action="SavedRecipes">Opgeslagen Recepten</a></li>
+                            <li><a asp-area="" asp-controller="Food" asp-action="SearchRecepts">Zoek Recept</a></li>
+                            <li><a asp-area="" asp-controller="Food" asp-action="RecipeReactions">Recept Reacties (DEMO)</a></li>
+                            <li><a asp-area="" asp-controller="Food" asp-action="ViewRecept">Zie Recept (DEMO)</a></li>
                         </ul>
                     </li>
                     <li class="dropdown">
