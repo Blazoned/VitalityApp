@@ -235,4 +235,6 @@ p1 {
 
 .feed-option {
     float: right; 
+    font-size:20px;
+    color:red;
 }
