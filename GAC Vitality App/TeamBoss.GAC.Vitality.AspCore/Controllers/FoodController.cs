@@ -27,5 +27,15 @@ namespace TeamBoss.GAC.Vitality.AspCore.Controllers
         {
             return View();
         }
+
+        public IActionResult RecipeReactions()
+        {
+            return View();
+        }
+
+        public IActionResult SavedRecipes()
+        {
+            return View();
+        }
     }
 }

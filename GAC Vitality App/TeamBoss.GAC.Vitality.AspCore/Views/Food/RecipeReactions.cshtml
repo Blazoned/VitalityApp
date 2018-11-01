@@ -1,0 +1,58 @@
+﻿
+@{
+    ViewData["Title"] = "Recept Reacties";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section Css{
+    <link rel="stylesheet" href="~/css/voedingssysteem.css" />
+}
+
+    <div class="container row">
+        <div class="challenge-wrapper">
+            <div class="container text-wrapper">
+                <div class="input-group col-xs-12 col-md-4">
+                    <textarea class="form-control" rows="4" maxlength="140" placeholder="Type Reactie Hier..." required></textarea>
+                </div>
+
+                <div class="row submit-section">
+                    <button class="btn btn-primary btn-send" type="button">Verzend</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="challenge-wrapper">
+            <div class="container text-wrapper">
+                <p>User 1</p>
+                <p>Dit recept is best wel kek.</p>
+            </div>
+        </div>
+
+        <div class="challenge-wrapper">
+            <div class="container text-wrapper">
+                <p>User 2</p>
+                <p>Dit recept werkt niet!</p>
+            </div>
+        </div>
+
+        <div class="challenge-wrapper">
+            <div class="container text-wrapper">
+                <p>User 3</p>
+                <p>Test bericht</p>
+            </div>
+        </div>
+
+        <div class="challenge-wrapper">
+            <div class="container text-wrapper">
+                <p>User 4</p>
+                <p>Lorem ipsum.</p>
+            </div>
+        </div>
+
+        <div class="challenge-wrapper">
+            <div class="container text-wrapper">
+                <p>User 5</p>
+                <p>the quick brown fox jumps over the lazy dog. THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG.</p>
+            </div>
+        </div>
+    </div>

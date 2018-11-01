@@ -6,7 +6,8 @@
     <title>VitaliteitsApp - @ViewData["Title"]</title>
 
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
-    <link rel="stylesheet" href="~/lib/font-awesome/css/font-awesome.css" />
+    <!--<link rel="stylesheet" href="~/lib/font-awesome/css/font-awesome.css" />-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
     <link rel="stylesheet" href="~/css/site.css" />
     @RenderSection("Css", required: false)
 </head>
@@ -24,10 +25,10 @@
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li><a asp-area="" asp-controller="movement" asp-action="index">Beweging</a></li>
-                    <li><a asp-area="" asp-controller="food" asp-action="index">Voeding</a></li>
-                    <li><a asp-area="" asp-controller="Home" asp-action="Contact">Rust</a></li>
-                    <li><a asp-area="" asp-controller="Home" asp-action="Contact">Mentaal</a></li>
+                    <li><a asp-area="" asp-controller="Home" asp-action="Index">Home</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="navbar-link dropdown-toggle"
+                    </li>
                 </ul>
             </div>
         </div>

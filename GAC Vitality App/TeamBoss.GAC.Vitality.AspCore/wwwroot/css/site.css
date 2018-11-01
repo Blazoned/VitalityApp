@@ -58,7 +58,7 @@
     -moz-box-shadow: 0 -1px 35px -11px rgba(0,0,0,0.75);
     box-shadow: 0 -1px 35px -11px rgba(0,0,0,0.75);
     margin-top: 15px; 
-    position: relative; 
+    position: relative;
 }
 
 .challenge-options {
@@ -249,6 +249,28 @@ h1 {
 .text-wrapper3{
 }
 
+.heading-wrapper {
+    width: 100%;
+    height: auto;
+    background-color: #fcfcfc;
+    -webkit-box-shadow: 0px -1px 35px -11px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px -1px 35px -11px rgba(0,0,0,0.75);
+    box-shadow: 0px -1px 35px -11px rgba(0,0,0,0.75);
+    margin-top: 15px;
+    position: relative;
+}
+
+.buttonrecept {
+    margin-bottom: 20px;
+    background-color: #00a1ff; 
+}
+
+.listyo3 {
+    float: left;
+    width: 100%;
+    overflow: scroll;
+    height: 200px;
+}
 .full-width {
     display: block;
     padding: 10px;

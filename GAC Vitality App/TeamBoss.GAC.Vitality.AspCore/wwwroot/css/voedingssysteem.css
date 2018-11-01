@@ -59,7 +59,104 @@ p1 {
 }
 
 .filterbox{
-    padding-bottom: 20px; 
+    padding-bottom: 20px;
 }
 
+.navbar-food{
+    z-index:1000;
+    position:fixed;
+    text-align:center;
+    top:50px;
+    width:100%;
+}
 
+.move-below{
+    margin-top:90px;
+}
+
+.carousel {
+    width: 100%;
+    height: 240px;
+    margin-bottom:20px;
+    position:relative;
+}
+
+.carousel-inner{
+    height:100%;
+}
+
+.item {
+    width: 100%;
+    height: 100%;
+
+    -webkit-mask-size: 100% 240px;
+    -webkit-mask-image: -webkit-linear-gradient(bottom, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 1) 50%, rgba(255, 255, 255, 0.2) 100%);
+}
+
+.img-center {
+    min-height: 100%;
+    min-width: 100%;
+    max-height: 100%;
+    max-width: 100%;
+}
+
+.recept-header, .recept-user{
+    position:absolute;
+    z-index:1000;
+    color:white;
+    padding-left: 5%;
+}
+
+.recept-header{
+    margin-top:10px;
+}
+
+.recept-user {
+    margin-top:50px;
+    opacity:0.75;
+}
+
+.calory-icon, .clock-icon, .favourite-btn{
+    color:white;
+    position:absolute;
+    z-index:1000;
+    font-size:160%;
+    margin-top:200px;
+}
+
+.calory-icon {
+    margin-left: 5%;
+}
+
+.clock-icon{
+    margin-left:35%;
+}
+
+.favourite-btn{
+    margin-top:190px;
+    margin-left:80%;
+}
+
+.calory-text, .clock-text{
+    font-family:Arial, Helvetica, sans-serif;
+    font-size:14px;
+}
+
+.btn-browse {
+    background-color: #00a1ff !important;
+    border:none;
+}
+
+.btn-send{
+    width:90%;
+    margin-bottom:15px;
+    margin-left:5%;
+    margin-right:5%;
+    background-color:#ff6100 !important;
+    border:none;
+}
+
+.btn-remove-recipe {
+    margin-left: 33%;
+    border: none;
+}
