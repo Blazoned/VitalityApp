@@ -25,9 +25,45 @@
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li><a asp-area="" asp-controller="Home" asp-action="Index">Home</a></li>
-                    <li class="nav-item dropdown">
-                        <a class="navbar-link dropdown-toggle"></a>
+                    <li><a asp-area="" asp-controller="home" asp-action="index">Home</a></li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                            Beweging <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a asp-area="" asp-controller="movement" asp-action="index">Overzicht</a></li>
+                            <li><a asp-area="" asp-controller="movement" asp-action="createchallenge">Uitdaging Aanmaken</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                            Voeding <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a asp-area="" asp-controller="Food" asp-action="Index">Overzicht</a></li>
+                            <li><a asp-area="" asp-controller="Food" asp-action="CalorieCounter">Calorie Teller</a></li>
+                            <li><a asp-area="" asp-controller="Food" asp-action="CreateRecept">Creeer Recept</a></li>
+                            <li><a asp-area="" asp-controller="Food" asp-action="SavedRecipes">Opgeslagen Recepten</a></li>
+                            <li><a asp-area="" asp-controller="Food" asp-action="SearchRecepts">Zoek Recept</a></li>
+                            <li><a asp-area="" asp-controller="Food" asp-action="RecipeReactions">Recept Reacties (DEMO)</a></li>
+                            <li><a asp-area="" asp-controller="Food" asp-action="ViewRecept">Zie Recept (DEMO)</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                            Rust <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a asp-area="" asp-controller="rest" asp-action="index">Overzicht</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                             Gevoel <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a asp-area="" asp-controller="rest" asp-action="index">Overzicht</a></li>
+                        </ul>
                     </li>
                 </ul>
             </div>
