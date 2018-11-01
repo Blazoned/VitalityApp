@@ -249,17 +249,6 @@ h1 {
 .text-wrapper3{
 }
 
-.heading-wrapper {
-    width: 100%;
-    height: auto;
-    background-color: #fcfcfc;
-    -webkit-box-shadow: 0px -1px 35px -11px rgba(0,0,0,0.75);
-    -moz-box-shadow: 0px -1px 35px -11px rgba(0,0,0,0.75);
-    box-shadow: 0px -1px 35px -11px rgba(0,0,0,0.75);
-    margin-top: 15px;
-    position: relative;
-}
-
 .buttonrecept {
     margin-bottom: 20px;
     background-color: #00a1ff; 
@@ -326,7 +315,7 @@ font-size: 25px;
 }
 
 .container.text-wrapper2{
-    padding:0px;
+    padding:0;
 }
 
 .hidden-description{
@@ -337,9 +326,9 @@ font-size: 25px;
     width: 100%;
     height: auto;
     background-color: #fcfcfc;
-    -webkit-box-shadow: 0px -1px 35px -11px rgba(0,0,0,0.75);
-    -moz-box-shadow: 0px -1px 35px -11px rgba(0,0,0,0.75);
-    box-shadow: 0px -1px 35px -11px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 0 -1px 35px -11px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0 -1px 35px -11px rgba(0,0,0,0.75);
+    box-shadow: 0 -1px 35px -11px rgba(0,0,0,0.75);
     margin-top: 15px;
     position: relative;
 }
