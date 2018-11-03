@@ -259,16 +259,19 @@ h1 {
 .btn-default.btn-on.active {
     background-color: #ff6100;
     color: white;
+    border:none;
 }
 
 .switch-width {
     height: 40px;
     width: 50%;
+    height:40px;
 }
 
 .btn-default.btn-off.active {
     background-color: #ff6100;
     color: white;
+    border:none;
 }
 
 .switch {
