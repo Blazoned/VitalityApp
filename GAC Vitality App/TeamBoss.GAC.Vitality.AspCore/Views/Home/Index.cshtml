@@ -1,106 +1,71 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Vitaliteits App";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="6000">
-    <ol class="carousel-indicators">
-        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-        <li data-target="#myCarousel" data-slide-to="1"></li>
-        <li data-target="#myCarousel" data-slide-to="2"></li>
-        <li data-target="#myCarousel" data-slide-to="3"></li>
-    </ol>
-    <div class="carousel-inner" role="listbox">
-        <div class="item active">
-            <img src="~/images/banner1.svg" alt="ASP.NET" class="img-responsive" />
-            <div class="carousel-caption" role="option">
-                <p>
-                    Learn how to build ASP.NET apps that can run anywhere.
-                    <a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkID=525028&clcid=0x409">
-                        Learn More
-                    </a>
-                </p>
-            </div>
-        </div>
-        <div class="item">
-            <img src="~/images/banner2.svg" alt="Visual Studio" class="img-responsive" />
-            <div class="carousel-caption" role="option">
-                <p>
-                    There are powerful new features in Visual Studio for building modern web apps.
-                    <a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkID=525030&clcid=0x409">
-                        Learn More
-                    </a>
-                </p>
-            </div>
-        </div>
-        <div class="item">
-            <img src="~/images/banner3.svg" alt="Package Management" class="img-responsive" />
-            <div class="carousel-caption" role="option">
-                <p>
-                    Bring in libraries from NuGet and npm, and automate tasks using Grunt or Gulp.
-                    <a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkID=525029&clcid=0x409">
-                        Learn More
-                    </a>
-                </p>
-            </div>
-        </div>
-        <div class="item">
-            <img src="~/images/banner4.svg" alt="Microsoft Azure" class="img-responsive" />
-            <div class="carousel-caption" role="option">
-                <p>
-                    Learn how Microsoft's Azure cloud platform allows you to build, deploy, and scale web apps.
-                    <a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkID=525027&clcid=0x409">
-                        Learn More
-                    </a>
-                </p>
-            </div>
-        </div>
-    </div>
-    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
-    </a>
-    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
-    </a>
-</div>
+@section Css{
+    <link rel="stylesheet" href="~/css/head-page.css" />
+}
 
-<div class="row">
-    <div class="col-md-3">
-        <h2>Application uses</h2>
-        <ul>
-            <li>Sample pages using ASP.NET Core MVC</li>
-            <li>Theming using <a href="https://go.microsoft.com/fwlink/?LinkID=398939">Bootstrap</a></li>
-        </ul>
-    </div>
-    <div class="col-md-3">
-        <h2>How to</h2>
-        <ul>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkID=398600">Add a Controller and View</a></li>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkId=699315">Manage User Secrets using Secret Manager.</a></li>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkId=699316">Use logging to log a message.</a></li>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkId=699317">Add packages using NuGet.</a></li>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkId=699319">Target development, staging or production environment.</a></li>
-        </ul>
-    </div>
-    <div class="col-md-3">
-        <h2>Overview</h2>
-        <ul>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkId=518008">Conceptual overview of what is ASP.NET Core</a></li>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkId=699320">Fundamentals of ASP.NET Core such as Startup and middleware.</a></li>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkId=398602">Working with Data</a></li>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkId=398603">Security</a></li>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkID=699321">Client side development</a></li>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkID=699322">Develop on different platforms</a></li>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkID=699323">Read more on the documentation site</a></li>
-        </ul>
-    </div>
-    <div class="col-md-3">
-        <h2>Run &amp; Deploy</h2>
-        <ul>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkID=517851">Run your app</a></li>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkID=517853">Run tools such as EF migrations and more</a></li>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkID=398609">Publish to Microsoft Azure Web Apps</a></li>
-        </ul>
+@section  Scripts{
+    <script src="~/js/head-page.js" asp-append-version="true"></script>
+}
+
+<div class="container-fluid">
+    <div class="row">
+        <!-- Button group containing the button for the different subsystems. -->
+        <div class="btn-group btn-group-systems">
+
+            <!-- Movement System Button (First Time Use) -->
+            <a class="btn btn-info btn-visible" role="button" href="~/Movement/Index">
+                <span class="fa fa-running icon-big"></span>
+                <div class="alert-movement" role="alert">Begin nu met gebruiken!</div>
+            </a>
+            <!-- Movement System Button (Recurrent Use) -->
+            <a class="btn btn-info btn-hidden" role="button" href="~/Movement/Index">
+                <span class="fa fa-running icon-small"></span>
+                <div class="alert-movement-2" role="alert">10 KM Hardlopen</div>
+                <div class="progress">
+                    <div class="progress-bar" style="width:50%; background-color:#3fc661;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">4 km</div>
+                    <div class="progress-bar" style="width:50%; background-color:#e9ecef; color:#000000;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">6 km</div>
+                </div>
+            </a>
+
+            <!-- Food System Button (First Time Use) -->
+            <a class="btn btn-info btn-visible" role="button" href="~/Food/Index">
+                <span class="fa fa-utensils icon-big"></span>
+                <div class="alert-food" role="alert">Begin nu met gebruiken!</div>
+            </a>
+            <!-- Food System Button (Recurrent Use) -->
+            <a class="btn btn-info btn-hidden" role="button" href="~/Food/Index">
+                <span class="fa fa-utensils icon-small"></span>
+                <div class="alert-food-2" role="alert">Totale Dag Inname</div>
+                <div class="alert-food-3" role="alert">500 kcal</div>
+            </a>
+
+            <!-- Rest System Button (First Time Use) -->
+            <a class="btn btn-info btn-visible" role="button" href="~/Rest/Index">
+                <span class="fa fa-user-clock icon-big"></span>
+                <div class="alert-rest" role="alert">Begin nu met gebruiken!</div>
+            </a>
+            <!-- Rest System Button (Recurrent Use) -->
+            <a class="btn btn-info btn-hidden" role="button" href="~/Rest/Index">
+                <span class="fa fa-user-clock icon-small"></span>
+                <div class="alert-rest-2" role="alert">Eerst Volgend Rust Moment</div>
+                <div class="alert-rest-3" role="alert">2:00 PM - 3:00 PM</div>
+            </a>
+
+            <!-- Mental System Button (First Time Use) -->
+            <a class="btn btn-info btn-visible" role="button" href="~/Mental/Index">
+                <span class="fa fa-users icon-big"></span>
+                <div class="alert-mental" role="alert">Begin nu met gebruiken!</div>
+            </a>
+            <!-- Mental System Button (Recurrent Use) -->
+            <a class="btn btn-info btn-hidden" role="button" href="~/Mental/Index">
+                <span class="fa fa-users icon-small"></span>
+                <div class="alert-mental-2" role="alert">Je Mentale Staat Voor De Dag</div>
+                <span class="fa fa-smile icon-medium"></span>
+            </a>
+        </div>
     </div>
 </div>
