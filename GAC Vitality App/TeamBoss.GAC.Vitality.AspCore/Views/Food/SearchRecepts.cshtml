@@ -16,20 +16,30 @@
     <div class="row">
         <div class="challenge-wrapper navbar-food">
             <div class="container text-wrapper filterbox">
-                <div class="form-group">
-                    <input type="text" class="form-control searchrecept" placeholder="Recept naam" id="food-search-text" />
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Recept Zoeken..." id="food-search-text" />
+                    <div class="input-group-btn">
+                        <button type="button" class="btn btn-primary" id="food-search-filters-btn">
+                            Filters <span class="caret"></span>
+                        </button>
+                    </div>
+                    <!--
+        <input type="text" class="form-control col-sm-4 searchrecept" placeholder="Recept naam" id="food-search-text" />
+            <select class="form-control selectfilter" multiple id="food-search-allergies">
+                <option value="" disabled selected>Allergieën</option>
+                <option class="optionprivacy">Melk</option>
+                <option class="optionprivacy">Ei</option>
+                <option class="optionprivacy">Vis</option>
+                <option class="optionprivacy">Pinda</option>
+                <option class="optionprivacy">Noten</option>
+            </select>
+        </div>
+        <div class="container-fluid allergies">
 
-                    <select class="form-control selectfilter" multiple id="food-search-allergies">
-                        <option value="" disabled selected>Allergenen</option>
-                        <option class="optionprivacy">Melk</option>
-                        <option class="optionprivacy">Ei</option>
-                        <option class="optionprivacy">Vis</option>
-                        <option class="optionprivacy">Pinda</option>
-                        <option class="optionprivacy">Noten</option>
-                    </select>
+        </div> -->
                 </div>
-                <div class="container-fluid allergies">
-
+                <div class="container-fluid" id="food-search-filters-div" hidden>
+                    I see fire.
                 </div>
             </div>
         </div>

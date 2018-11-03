@@ -14,7 +14,6 @@
 }
 
 .searchrecept {
-    width: 48%;
     float: left;
     height: 34px;
 }
@@ -183,13 +182,18 @@ p1 {
     -webkit-mask-size: 100% 240px;
 }
 
-.back-icon-btn{
+.back-icon-btn {
     font-size:20px;
     color:black !important;
     border:none !important;
 }
 
-.username-text{
+.username-text {
     font-size:17px;
     font-weight:bold;
+}
+
+.food-dropdown {
+    position: relative;
+    right: 0;
 }

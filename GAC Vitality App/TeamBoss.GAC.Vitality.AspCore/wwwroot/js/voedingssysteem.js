@@ -5,10 +5,13 @@ $(document).ready(function () {
     changeWidth();
     window.onresize = function () { changeWidth(); };
 
-    $("#food-search-text").keypress(function (e) { console.log(e.which) });
+    // Filters
+    $("#food-search-filters-btn").click(function () {
+        $("#food-search-filters-div").slideToggle(500);
+    });
 
     // Eggs
-    $("#food-search-allergies").click(function () {
+    $("#food-search-filters-div").click(function () {
         if (eggCounter < 3)
             eggCounter++;
 
@@ -42,13 +45,12 @@ $(document).ready(function () {
                 }
 
                 if (eggCounter === 9) {
-                    $("#food-search-allergies").click(function () {
+                    $("#food-search-filters-div").click(function () {
                         if (eggCounter < 12)
                             eggCounter++;
 
                         if (eggCounter === 12) {
                             audioElement.play();
-                            $("#food-search-allergies").off("click");
                         }
                     });
                 }
