@@ -1,0 +1,89 @@
+﻿
+@{
+    ViewData["Title"] = "ViewRecept";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section Css{
+    <link rel="stylesheet" href="~/css/voedingssysteem.css" />
+}
+
+@section Scripts{
+    <script src="~/js/voedingssysteem.js" asp-append-version="true"></script>
+}
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="challenge-wrapper">
+            <div class="container text-wrapper">
+
+                <div id="carouselControl" style="background-color:#000000;" class="carousel slide text-wrapper-shadow" data-ride="carousel" data-wrap="true">
+                    <h1 class="recept-header">Pizza</h1>
+                    <p class="recept-user">
+                        Test Gebruikers Naam
+                    </p>
+
+                    <div class="carousel-inner">
+                        <div class="item active">
+                            <img class="img-center" src="https://img.grouponcdn.com/deal/8DDtq5XRzVnLXEUnPHPd/p2-2048x1229/v1/c700x420.jpg" />
+                        </div>
+
+                        <div class="item">
+                            <img class="img-center" src="https://food-images.files.bbci.co.uk/food/recipes/alpine_pizza_32132_16x9.jpg" />
+                        </div>
+
+                        <div class="item">
+                            <img class="img-center" src="https://pbs.twimg.com/profile_images/875417069650497536/wPCwhgrt_400x400.jpg" />
+                        </div>
+                    </div>
+                </div>
+
+                <div class="icon-wrapper">
+                    <span class="fa fa-fire calory-icon">
+                        <b class="calory-text">450 kcal</b>
+                    </span>
+
+                    <span class="fa fa-clock clock-icon">
+                        <b class="clock-text">15 min</b>
+                    </span>
+
+                    <div class="btn favourite-btn visible">
+                        <span class="far fa-star"></span>
+                    </div>
+                    <div class="btn favourite-btn hidden">
+                        <span class="fa fa-star"></span>
+                    </div>
+                </div>
+
+                <p1>Beschrijving:</p1>
+                <p>
+                    the quick brown fox jumps over the lazy dog.
+                    THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG.
+                </p>
+
+                <p1>Ingredienten + allergenen:</p1>
+                <p>
+                    - Ingredient <br />
+                    - Ingredient <br />
+                    - Ingredient <br />
+                    - Ingredient <br />
+                </p>
+
+                <p1>Bereiding:</p1>
+                <p>
+                    1. Stap <br />
+                    2. Stap <br />
+                    3. Stap <br />
+                    4. Stap <br />
+                </p>
+
+                <button class="btn btn-primary btnadd" type="button" id="recept-submit-button">Voeg toe aan de calorienteller</button>
+
+                <div class="btnwrapper">
+                    <a class="btn btn-primary btnreactions" role="button" id="recept-submit-button" asp-controller="Food" asp-action="RecipeReactions">Reacties</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

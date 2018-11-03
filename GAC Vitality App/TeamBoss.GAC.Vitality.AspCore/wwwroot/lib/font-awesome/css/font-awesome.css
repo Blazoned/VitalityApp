@@ -1,5 +1,5 @@
-﻿/*!
- * Font Awesome Free 5.4.1 by @fontawesome - https://fontawesome.com
+/*!
+ * Font Awesome Free 5.4.2 by @fontawesome - https://fontawesome.com
  * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
  */
 .fa, .fab, .fal, .far, .fas {
@@ -1364,6 +1364,10 @@
 
 .fa-d-and-d:before {
     content: "\f38d"
+}
+
+.fa-d-and-d-beyond:before {
+    content: "\f6ca"
 }
 
 .fa-dashcube:before {
@@ -3710,10 +3714,6 @@
     content: "\f25d"
 }
 
-.fa-rendact:before {
-    content: "\f3e4"
-}
-
 .fa-renren:before {
     content: "\f18b"
 }
@@ -4502,6 +4502,10 @@
     content: "\f2c8"
 }
 
+.fa-think-peaks:before {
+    content: "\f731"
+}
+
 .fa-thumbs-down:before {
     content: "\f165"
 }
@@ -4950,6 +4954,10 @@
     content: "\f028"
 }
 
+.fa-vr-cardboard:before {
+    content: "\f729"
+}
+
 .fa-vuejs:before {
     content: "\f41f"
 }
@@ -5080,6 +5088,10 @@
 
 .fa-wpforms:before {
     content: "\f298"
+}
+
+.fa-wpressr:before {
+    content: "\f3e4"
 }
 
 .fa-wrench:before {

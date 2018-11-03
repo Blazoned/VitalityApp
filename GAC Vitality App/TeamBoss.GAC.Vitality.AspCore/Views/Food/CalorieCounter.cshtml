@@ -1,0 +1,75 @@
+﻿
+@{
+    ViewData["Title"] = "CalorieCounter";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+@section Css{
+    <link rel="stylesheet" href="~/css/voedingssysteem.css" />
+}
+
+@section Scripts{
+    <script src="~/js/voedingssysteem.js" asp-append-version="true"></script>
+}
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="heading-wrapper">
+            <div class="container text-wrapper">
+                <h1>4000 Kcal</h1>
+
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ultricies suscipit feugiat. Sed vehicula mauris sit amet semper accumsan.</p>
+
+                <div class="input-group col-xs-12 col-md-4 input-field">
+                    <span class="input-group-addon"><span class="glyphicon glyphicon-header"></span></span>
+                    <input class="form-control" type="text" maxlength="40" placeholder="Titel" id="recept-name-input" required />
+                </div>
+                <div class="input-group col-xs-12 col-md-4 input-field">
+                    <span class="input-group-addon"><span class="fa fa-fire"></span></span>
+                    <input class="form-control" type="number" maxlength="40" placeholder="Calorien" id="recept-name-input" min="0" required />
+                </div>
+            </div>
+            <div class="col-md-4 text-center">
+                <a class="btn btn-info buttonrecept">Add Recept</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="heading-wrapper">
+            <div class="container text-wrapper">
+                <div class="list-group listyo3" id="challenge-listing">
+                    <a href="#" class="list-group-item clearfix">
+                        Pizza
+                        <span class="pull-right">
+                            <button class="btn btn-danger remove"><span class="fa fa-trash-alt"></span></button>
+                        </span>
+                    </a>
+
+                    <a href="#" class="list-group-item clearfix">
+                        Pasta
+                        <span class="pull-right">
+                            <button class="btn btn-danger remove"><span class="fa fa-trash-alt"></span></button>
+                        </span>
+                    </a>
+
+                    <a href="#" class="list-group-item clearfix">
+                        Biefstuk
+                        <span class="pull-right">
+                            <button class="btn btn-danger remove"><span class="fa fa-trash-alt"></span></button>
+                        </span>
+                    </a>
+
+                    <a href="#" class="list-group-item clearfix">
+                        Ovenschotel
+                        <span class="pull-right">
+                            <button class="btn btn-danger remove"><span class="fa fa-trash-alt"></span></button>
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

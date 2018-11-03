@@ -6,7 +6,8 @@
     <title>VitaliteitsApp - @ViewData["Title"]</title>
 
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+    <!--<link rel="stylesheet" href="~/lib/font-awesome/css/font-awesome.css" />-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
     <link rel="stylesheet" href="~/css/site.css" />
     @RenderSection("Css", required: false)
 </head>
@@ -24,10 +25,46 @@
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li><a asp-area="" asp-controller="Head" asp-action="Index">Home</a></li>
-                    <li><a asp-area="" asp-controller="Head" asp-action="Achievements">Achievements</a></li>
-                    <li><a asp-area="" asp-controller="Head" asp-action="Settings">Instellingen</a></li>
-                    <li><a asp-area="" asp-controller="Head" asp-action="LogOut">Log Uit</a></li>
+                    <li><a asp-area="" asp-controller="home" asp-action="index">Home</a></li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                            Beweging <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a asp-area="" asp-controller="movement" asp-action="index">Overzicht</a></li>
+                            <li><a asp-area="" asp-controller="movement" asp-action="createchallenge">Uitdaging Aanmaken</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                            Voeding <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a asp-area="" asp-controller="Food" asp-action="Index">Overzicht</a></li>
+                            <li><a asp-area="" asp-controller="Food" asp-action="CalorieCounter">Calorie Teller</a></li>
+                            <li><a asp-area="" asp-controller="Food" asp-action="CreateRecept">Creeer Recept</a></li>
+                            <li><a asp-area="" asp-controller="Food" asp-action="SavedRecipes">Opgeslagen Recepten</a></li>
+                            <li><a asp-area="" asp-controller="Food" asp-action="SearchRecepts">Zoek Recept</a></li>
+                            <li><a asp-area="" asp-controller="Food" asp-action="RecipeReactions">Recept Reacties (DEMO)</a></li>
+                            <li><a asp-area="" asp-controller="Food" asp-action="ViewRecept">Zie Recept (DEMO)</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                            Rust <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a asp-area="" asp-controller="rest" asp-action="index">Overzicht</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                             Gevoel <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a asp-area="" asp-controller="rest" asp-action="index">Overzicht</a></li>
+                        </ul>
+                    </li>
                 </ul>
             </div>
         </div>

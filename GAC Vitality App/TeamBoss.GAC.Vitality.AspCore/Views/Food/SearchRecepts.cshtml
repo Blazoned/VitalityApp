@@ -1,0 +1,175 @@
+﻿
+@{
+ViewData["Title"] = "Zoek Recepten";
+Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section Css{
+<link rel="stylesheet" href="~/css/voedingssysteem.css" />
+}
+
+@section Scripts{
+<script src="~/js/voedingssysteem.js" asp-append-version="true"></script>
+}
+
+<div class="container-fluid jojo">
+    <div class="row">
+        <div class="challenge-wrapper navbar-food">
+            <div class="container text-wrapper filterbox">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Recept Zoeken..." id="food-search-text" />
+                    <div class="input-group-btn">
+                        <button type="button" class="btn btn-primary" id="food-search-filters-btn">
+                            Filters <span class="caret"></span>
+                        </button>
+                    </div>
+                    <!--
+        <input type="text" class="form-control col-sm-4 searchrecept" placeholder="Recept naam" id="food-search-text" />
+            <select class="form-control selectfilter" multiple id="food-search-allergies">
+                <option value="" disabled selected>Allergieën</option>
+                <option class="optionprivacy">Melk</option>
+                <option class="optionprivacy">Ei</option>
+                <option class="optionprivacy">Vis</option>
+                <option class="optionprivacy">Pinda</option>
+                <option class="optionprivacy">Noten</option>
+            </select>
+        </div>
+        <div class="container-fluid allergies">
+
+        </div> -->
+                </div>
+                <div class="container-fluid" id="food-search-filters-div" hidden>
+                    I see fire.
+                </div>
+            </div>
+        </div>
+
+        <div class="challenge-wrapper move-below">
+            <div class="container text-wrapper">
+                <div class="list-group listfood" id="">
+
+                    <a href="#" class="list-group-item recept-name-list">
+                        <p1>Pizza Hawaii</p1>
+                        
+                        <button id="myBtn">
+                            <span class="fa fa-times-circle feed-option"></span>
+                        </button>
+                        
+                        <div id="myModal" class="modal">
+
+                            <!-- Modal content -->
+                            <div class="modal-content">
+                                <span class="close">&times;</span>
+                                <p>Some text in the Modal..</p>
+                            </div>
+
+                        </div>
+
+                        <div class="feed-info-container">
+                            <div class="calories-feed feed-info">
+                                <span class="fa fa-fire feed-icon"></span>
+                                <p>450 Kcal</p>
+                            </div>
+                            <div class="preptime-feed feed-info">
+                                <span class="fa fa-clock feed-icon"></span>
+                                <p>60 min</p>
+                            </div>
+                        </div>
+
+                        <div class="image-container">
+                            <div class="image-feed">
+                                <img class="img-center" src="https://img.grouponcdn.com/deal/8DDtq5XRzVnLXEUnPHPd/p2-2048x1229/v1/c700x420.jpg" />
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="#" class="list-group-item recept-name-list">
+                        <p1>Kip Marengo</p1>
+                        <div class="feed-info-container">
+                            <div class="calories-feed feed-info">
+                                <span class="fa fa-fire feed-icon"></span>
+                                <p>200 Kcal</p>
+                            </div>
+                            <div class="preptime-feed feed-info">
+                                <span class="fa fa-clock feed-icon"></span>
+                                <p>30 min</p>
+                            </div>
+                        </div>
+                        <div class="image-container">
+                            <div class="image-feed">
+                                <img class="img-center" src="https://www.koopeenkip.be/frontend/files/tips/image/320x230/kip-marengo.jpg" />
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="#" class="list-group-item recept-name-list">
+                        <p1>Mosselen</p1>
+                        <div class="feed-info-container">
+                            <div class="calories-feed feed-info">
+                                <span class="fa fa-fire feed-icon"></span>
+                                <p>150 Kcal</p>
+                            </div>
+                            <div class="preptime-feed feed-info">
+                                <span class="fa fa-clock feed-icon"></span>
+                                <p>25 min</p>
+                            </div>
+                        </div>
+                        <div class="image-container">
+                            <div class="image-feed">
+                                <img class="img-center" src="https://www.emte.nl/upload_mm/7/9/9/cid6535_1059388_Receptbeeld_1000x1000-1_619x310.png" />
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="#" class="list-group-item recept-name-list">
+                        <p1>Pad Thai</p1>
+                        <div class="feed-info-container">
+                            <div class="calories-feed feed-info">
+                                <span class="fa fa-fire feed-icon"></span>
+                                <p>550 Kcal</p>
+                            </div>
+                            <div class="preptime-feed feed-info">
+                                <span class="fa fa-clock feed-icon"></span>
+                                <p>40 min</p>
+                            </div>
+                        </div>
+                        <div class="image-container">
+                            <div class="image-feed">
+                                <img class="img-center" src="https://sarahscucinabella.com/wp-content/uploads/2018/01/Pad-Thai-for-Two-with-Shrimp4-500x400.jpg" />
+                            </div>
+                        </div>
+                    </a>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    // Get the modal
+    var modal = document.getElementById('myModal');
+
+// Get the button that opens the modal
+    var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal 
+    btn.onclick = function() {
+        modal.style.display = "block";
+    }
+
+// When the user clicks on <span> (x), close the modal
+    span.onclick = function() {
+        modal.style.display = "none";
+    }
+
+// When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+</script>
