@@ -1,44 +1,60 @@
 ﻿
 @{
-    ViewData["Title"] = "Rust Invoeren";
-    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewData["Title"] = "Overzicht";
 }
 
-<script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-2.2.0.min.js"></script>
-<link rel="stylesheet" type="text/css" href="~/css/clockpicker.css">
-
-<script src="js/jquery-clockpicker.js"></script>
-<script src="js/jquery-clockpicker.min.js"></script>
 
 
 <div class="container row">
-    <div class="form-group block-wrapper col-xs-12 col-md-4">
+    <div class="form-group block-wrapper col-md-12 col-md-4">
         <a class="btn btn-primary backBtnGroup2" role="button" href="~/Movement/Index">
             <span class="glyphicon glyphicon-chevron-left"></span>
         </a>
+        <br />
+        <br />
+        
+            <a class="btn btn-primary btn-block" role="button" href="~/Rest/AddRest"><span class="fa fa-plus"></span></a>
         <br/>
-        <br/>
-        <h1><span class="label label-default">Rust Invoeren</span></h1>
-        <br/>
-        <div class="input-group clockpicker">
-            <input type="text" class="form-control" placeholder="Begintijd">
-            <span class="input-group-addon">
-                <span class="glyphicon glyphicon-time"></span>
-            </span>
-        </div>
-        <br/>
-        <div class="input-group clockpicker">
-            <input type="text" class="form-control" placeholder="Eindtijd">
-            <span class="input-group-addon">
-                <span class="glyphicon glyphicon-time"></span>
-            </span>
+
+        <div class="container text-wrapper2">
+            <ul class="list-group checked-list-box">
+                <li class="list-group-item">
+                    <table class="table">
+                        <thead>
+                        <tr>
+                            <th scope="col" class="thCenter">
+                                <span class="fa fa-bed"></span>
+                            </th>
+                            <th scope="col" class="thCenter">                                    
+                                <span class="fa fa-calendar"></span>
+                            </th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td class="thCenter">22:00 - 07:00</td>
+                            <td class="thCenter">@DateTime.Now.ToShortDateString()</td>
+                        </tr>                        
+                    </table>
+                    <table class="table">
+                        <thead>
+                        <tr>
+                            <th scope="col" class="thCenter">
+                                <span class="fa fa-pause"></span>
+                            </th>
+                            <th scope="col" class="thCenter">                                    
+                                <span class="fa fa-calendar"></span>
+                            </th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td class="thCenter">12:30 - 13:00</td>
+                            <td class="thCenter">24-10-2018</td>
+                        </tr>                        
+                    </table>
+                </li>             
+            </ul>
         </div>
     </div>
 </div>
-
-
-
-
-<script type="text/javascript">
-    $('.clockpicker').clockpicker();
-</script>

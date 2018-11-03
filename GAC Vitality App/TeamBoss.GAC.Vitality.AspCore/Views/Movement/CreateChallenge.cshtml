@@ -10,6 +10,8 @@
 
 @section Scripts{
     <script src="~/js/create-challenge-script.js" asp-append-version="true"></script>
+    <script src="http://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyBgzprJmBuSxyte0NNLezTnUjOJUtbf1Ao"></script>
+    <script src="~/lib/geocomplete/jquery.geocomplete.min.js"></script>
 }
 
 <div class="container row">
@@ -62,8 +64,22 @@
         <!-- Goals List -->
         <div id="challenge-goals-field" class="row section-wrapper">
             <div class="input-group col-xs-12 col-md-4">
-                <ul id="challenge-goals-list" class="list-unstyled list-group"><!--
-                    <li class="list-group-item list-group-item-text list-group-item-lose challenge-goal-group-item" id="challenge-goal-1">
+                <ul id="challenge-goals-list" class="list-unstyled list-group">
+                    <li class="list-group-item list-group-item-text list-group-item-lose challenge-goal-group-item row" id="challenge-goal-header">
+                        <div class="input-group">
+                            <span class="form-control challenge-goal-header-type" type="text" maxlength="40" placeholder="Doelstelling Soort" required></span>
+                            <span class="input-group-btn input-group-empty"></span>
+                            <span class="form-control challenge-goal-header--amount" type="number" min="0" value="0" style="margin-left:-1px" required />
+                            <span class="input-group-btn input-group-empty"></span>
+                            <span class="form-control challenge-goal-header-measurement" style="margin-left:-2px" />
+                            <span class="input-group-btn">
+                                <button class="btn btn-group challenge-goal-button-remove">
+                                    <span class="glyphicon glyphicon-remove"></span>
+                                </button>
+                            </span>
+                        </div>
+                    </li>
+                    <li class="list-group-item list-group-item-text list-group-item-lose challenge-goal-group-item row" id="challenge-goal-0">
                         <div class="input-group">
                             <input class="form-control challenge-goal-type" type="text" maxlength="40" placeholder="Doelstelling Soort" required />
                             <span class="input-group-btn input-group-empty"></span>
@@ -77,24 +93,11 @@
                             </span>
                         </div>
                     </li>
-                    <li class="list-group-item list-group-item-text list-group-item-lose challenge-goal-group-item" id="challenge-goal-2">
-                        <div class="input-group">
-                            <input class="form-control challenge-goal-type" type="text" maxlength="40" placeholder="Doelstelling Soort" required />
-                            <span class="input-group-btn input-group-empty"></span>
-                            <input class="form-control challenge-goal-amount" type="number" min="0" value="0" style="margin-left:-1px" required />
-                            <span class="input-group-btn input-group-empty"></span>
-                            <input class="form-control challenge-goal-measurement" type="text" maxlength="20" placeholder="Meet Eenheid (niet vereist)" style="margin-left:-2px" />
-                            <span class="input-group-btn">
-                                <button class="btn btn-group challenge-goal-button-remove">
-                                    <span class="glyphicon glyphicon-remove"></span>
-                                </button>
-                            </span>
-                        </div>
-                    </li>-->
                 </ul>
             </div>
         </div>
 
+        <!-- https://community.microstrategy.com/s/question/0D54400004zXySwCAK/google-maps-free-for-testing-on-localhost-as-of-february-2016-44-mstr-102 -->
         <!-- Location -->
         <div id="challenge-location-field" class="row section-wrapper">
             <div class="input-group col-xs-12 col-md-4">
@@ -117,8 +120,8 @@
                 <span class="input-group-addon"><span class="glyphicon glyphicon-repeat"></span></span>
                 <select class="form-control" id="challenge-repeat-input">
                     <option selected>Niet Herhalen</option>
-                    <option>Meteen</option>
-                    <option>Zelfde Dag</option>
+                    <option>Dagelijks</option>
+                    <option>Weekend</option>
                 </select>
             </div>
         </div>

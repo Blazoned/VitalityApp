@@ -7,6 +7,10 @@
       "destination": "wwwroot/lib/jquery/dist/"
     },
     {
+      "library": "geocomplete@1.7.0",
+      "destination": "wwwroot/lib/geocomplete"
+    },
+    {
       "library": "font-awesome@4.7.0",
       "destination": "wwwroot/lib/font-awesome"
     }
