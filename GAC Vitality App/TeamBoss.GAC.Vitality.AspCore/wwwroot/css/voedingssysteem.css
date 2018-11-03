@@ -171,7 +171,6 @@ p1 {
 }
 
 .image-container {
-    background-color: red;
     height: 200px;
     width: 100%;
 }
@@ -196,4 +195,50 @@ p1 {
 .food-dropdown {
     position: relative;
     right: 0;
+}
+
+.calories-feed {
+    float: left; 
+    margin-left: 0; 
+    margin-right: 3%; 
+}
+
+.calories-feed {
+    float: left; 
+}
+
+.feed-icon {
+    float: left;
+    margin-right: 7%;
+}
+
+
+
+.feed-info{
+    width: 30%; 
+    overflow: hidden; 
+}
+
+.feed-info-container {
+    height: 20px; 
+    margin-bottom: 10px; 
+    margin-top: 5px; 
+}
+
+.feed-icon{
+    margin-top: 3px; 
+}
+
+.preptime-feed {
+    margin-right: 0; 
+}
+
+.feed-info p {
+    margin-bottom: 0; 
+}
+
+.feed-option {
+    float: right; 
+    font-size:20px;
+    color:red;
 }
