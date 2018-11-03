@@ -4,11 +4,16 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-2.2.0.min.js"></script>
-<link rel="stylesheet" type="text/css" href="~/css/clockpicker.css">
+@section Css{
+    <link rel="stylesheet" type="text/css" href="~/css/clockpicker.css">
+}
 
-<script src="js/jquery-clockpicker.js"></script>
-<script src="js/jquery-clockpicker.min.js"></script>
+@section Scripts{
+    <script src="~/js/jquery-clockpicker.js"></script>
+    <script type="text/javascript">
+        $('.clockpicker').clockpicker();
+    </script>
+}
 
 
 <div class="container row">
@@ -17,7 +22,7 @@
             <span class="glyphicon glyphicon-chevron-left"></span>
         </a>
         <br />
-        <br/>
+        <br />
 
         <div class="btn-group switch" id="status" data-toggle="buttons">
             <label class="btn btn-default switch-width btn-on btn-md active">
@@ -26,19 +31,19 @@
             </label>
             <label class="btn btn-default switch-width btn-off btn-md">
                 <input type="radio" value="0" name="multifeatured_module[module_id][status]">
-                <span class="fa fa-pause"></span> 
+                <span class="fa fa-pause"></span>
             </label>
         </div>
 
         <div class="input-group clockpicker">
-            <input type="text" class="form-control" placeholder="Begintijd">
+            <input type="text" class="form-control" placeholder="Begintijd" readonly>
             <span class="input-group-addon">
                 <span class="glyphicon glyphicon-time"></span>
             </span>
         </div>
-        <br/>
+        <br />
         <div class="input-group clockpicker">
-            <input type="text" class="form-control" placeholder="Eindtijd">
+            <input type="text" class="form-control" placeholder="Eindtijd" readonly>
             <span class="input-group-addon">
                 <span class="glyphicon glyphicon-time"></span>
             </span>
@@ -46,10 +51,3 @@
         <button type="button" class="btn btn-primary btn-block add-button"><span class="glyphicon glyphicon-plus"></span></button>
     </div>
 </div>
-
-
-
-
-<script type="text/javascript">
-    $('.clockpicker').clockpicker();
-</script>
