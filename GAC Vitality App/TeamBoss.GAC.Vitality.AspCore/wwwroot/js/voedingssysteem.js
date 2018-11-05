@@ -1,4 +1,6 @@
-﻿var eggCounter = 0;
+﻿var allergies = [];
+
+var eggCounter = 0;
 var audioElement;
 
 $(document).ready(function () {
@@ -6,12 +8,11 @@ $(document).ready(function () {
     window.onresize = function () { changeWidth(); };
 
     // Filters
-    $("#food-search-filters-btn").click(function () {
-        $("#food-search-filters-div").slideToggle(500);
-    });
+    $("#food-search-filters-toggle").click(ToggleFilterMenu);
+    $("#food-search-filters-apply").click(ToggleFilterMenu);
 
     // Eggs
-    $("#food-search-filters-div").click(function () {
+    $("#food-search-filters-allergies").click(function () {
         if (eggCounter < 3)
             eggCounter++;
 
@@ -45,7 +46,7 @@ $(document).ready(function () {
                 }
 
                 if (eggCounter === 9) {
-                    $("#food-search-filters-div").click(function () {
+                    $("#food-search-filters-allergies").click(function () {
                         if (eggCounter < 12)
                             eggCounter++;
 
@@ -56,6 +57,27 @@ $(document).ready(function () {
                 }
             });
         }
+    });
+
+    // Dropdown Menu Allergies
+    $('.dropdown-menu-checkbox a').on('click', function (e) {
+
+        e.stopPropagation();
+
+        var target = $(e.currentTarget),
+            value = target.attr('data-value'),
+            input = target.find('input'),
+            index;
+
+        if ((index = allergies.indexOf(value)) > -1) {
+            allergies.splice(index, 1);
+            setTimeout(function () { input.prop('checked', false); }, 0);
+        } else {
+            allergies.push(value);
+            setTimeout(function () { input.prop('checked', true); }, 0);
+        }
+
+        $(e.target).blur();
     });
 });
 
@@ -101,3 +123,8 @@ $(function () {
     });
 
 });
+
+function ToggleFilterMenu() {
+    $("#food-search-filters-div").slideToggle(200);
+    $("#food-search-filters-caret").toggleClass("dropup");
+}
