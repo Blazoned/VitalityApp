@@ -397,3 +397,17 @@ button#myBtn {
     border: none;
     background: none;
 }
+
+/* Remove outlines on buttons and links */
+
+.ignore-focus:focus {
+    outline: none;
+}
+
+.ignore-focus:active {
+    outline: none;
+}
+
+.ignore-focus:hover {
+    outline: none;
+}

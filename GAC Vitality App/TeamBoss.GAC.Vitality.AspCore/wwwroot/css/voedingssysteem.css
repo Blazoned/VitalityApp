@@ -242,3 +242,34 @@ p1 {
     font-size:20px;
     color:red;
 }
+
+#food-search-filters-div {
+    text-align: left;
+}
+
+li.checkbox-menu {
+    height: 30px;
+}
+
+li.checkbox-menu:not(:first-child) {
+    padding-top: 1px;
+}
+
+li.checkbox-menu:not(:last-child) {
+    padding-bottom: 19px;
+    border-bottom: 0.5px groove #FFFFFF;
+}
+
+.checkbox-menu a:focus {
+    outline: none;
+}
+
+.checkbox-menu a span {
+    display: inline-block;
+    float: left;
+}
+
+.checkbox-menu a input {
+    display: inline-block;
+    float: right;
+}
