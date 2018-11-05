@@ -60,21 +60,21 @@ $(document).ready(function () {
     });
 
     // Dropdown Menu Allergies
-    $('.dropdown-menu-checkbox a').on('click', function (e) {
+    $(".dropdown-menu-checkbox .checkbox-menu").on("click", function (e) {
 
         e.stopPropagation();
 
-        var target = $(e.currentTarget),
-            value = target.attr('data-value'),
-            input = target.find('input'),
+        let target = $(this).find("a"),
+            value = target.attr("data-value"),
+            input = target.find("input"),
             index;
 
         if ((index = allergies.indexOf(value)) > -1) {
             allergies.splice(index, 1);
-            setTimeout(function () { input.prop('checked', false); }, 0);
+            setTimeout(function () { input.prop("checked", false); }, 0);
         } else {
             allergies.push(value);
-            setTimeout(function () { input.prop('checked', true); }, 0);
+            setTimeout(function () { input.prop("checked", true); }, 0);
         }
 
         $(e.target).blur();
