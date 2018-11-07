@@ -122,16 +122,12 @@ p1 {
         font-size: 160%;
     }
 
-    .icon-wrapper .calory-icon {
-        margin-left: 3%;
-    }
-
     .icon-wrapper .clock-icon {
         margin-left: 5%;
     }
 
     .icon-wrapper .users-icon{
-        margin-top:5%;
+        margin-left:5%;
     }
 
     .icon-wrapper .favourite-btn {
@@ -149,8 +145,9 @@ p1 {
 }
 
 .calory-text, .clock-text, .users-text {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 14px;
+    font-weight: normal;
 }
 
 .btn-browse {
@@ -237,7 +234,6 @@ p1 {
 
 .preptime-feed {
     margin-right: 0; 
-    float: left; 
 }
 
 .feed-info p {
@@ -247,7 +243,6 @@ p1 {
 .feed-option {
     float: right;
     font-size: 20px;
-    color: red;
     padding: 0 !important;
 }
 
@@ -292,10 +287,18 @@ li.checkbox-menu:not(:last-child) {
 }
 
 .icon-group{
-    width:60%;
+    width:90%;
+    margin-top: 15px; 
 }
 
 .star{
     float: right; 
-    margin-top: 0px; 
+    margin-top: 0px;
+    z-index: 2; 
+    position: relative; 
 }
+
+
+
+
+
