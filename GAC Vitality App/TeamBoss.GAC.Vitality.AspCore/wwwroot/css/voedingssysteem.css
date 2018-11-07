@@ -298,7 +298,14 @@ li.checkbox-menu:not(:last-child) {
     position: relative; 
 }
 
+.trash-icon {
+    color: #d8411c; 
+    position: relative; 
+}
 
+.mini-recept{
+    margin-bottom: 5spx !important;
+}
 
 
 
