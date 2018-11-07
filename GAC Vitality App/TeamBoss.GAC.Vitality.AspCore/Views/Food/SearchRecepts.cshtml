@@ -12,7 +12,7 @@
     <script src="~/js/voedingssysteem.js" asp-append-version="true"></script>
 }
 
-<div id="myModal" class="modal">
+<div class="modal pop-up-modal">
 
     <!-- Modal content -->
     <div class="modal-content">
@@ -29,8 +29,8 @@
                 <div class="input-group">
                     <input type="text" class="form-control" placeholder="Recept Zoeken..." id="food-search-text" />
                     <div class="input-group-btn">
-                        <button type="button" class="btn btn-primary" id="food-search-filters-btn">
-                            Filters <span class="caret"></span>
+                        <button type="button" class="btn btn-primary ignore-focus" id="food-search-filters-toggle">
+                            Filters <span class="animated-transition" id="food-search-filters-caret"><span class="caret"></span></span>
                         </button>
                     </div>
                     <!--
@@ -49,7 +49,27 @@
                     </div> -->
                 </div>
                 <div class="container-fluid" id="food-search-filters-div" hidden>
-                    I see fire.
+                    <hr />
+                    <div class="input-group">
+                        <div class="input-group-btn">
+                            <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="food-search-filters-allergies">
+                                <span class="fa fa-allergies"></span> &ensp;Allergieën <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu dropdown-menu-checkbox">
+                                <li class="checkbox-menu"><a href="#" data-value="dairy" tabindex="-1"><span>Zuivel</span><input type="checkbox" /></a></li>
+                                <li class="checkbox-menu"><a href="#" data-value="egg" tabindex="-1"><span>Ei</span><input type="checkbox" /></a></li>
+                                <li class="checkbox-menu"><a href="#" data-value="nuts" tabindex="-1"><span>Noten</span><input type="checkbox" /></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <hr />
+                    <div class="input-group">
+                        <div class="input-group-btn">
+                            <button class="btn btn-info" type="button" id="food-search-filters-apply">
+                                Filters Toepassen
+                            </button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

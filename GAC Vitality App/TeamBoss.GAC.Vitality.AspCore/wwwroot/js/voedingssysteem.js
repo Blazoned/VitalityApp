@@ -1,17 +1,19 @@
-﻿var eggCounter = 0;
+﻿var allergies = [];
+
+var eggCounter = 0;
 var audioElement;
 
+/* Memes */
 $(document).ready(function () {
     changeWidth();
     window.onresize = function () { changeWidth(); };
 
     // Filters
-    $("#food-search-filters-btn").click(function () {
-        $("#food-search-filters-div").slideToggle(500);
-    });
+    $("#food-search-filters-toggle").click(ToggleFilterMenu);
+    $("#food-search-filters-apply").click(ToggleFilterMenu);
 
     // Eggs
-    $("#food-search-filters-div").click(function () {
+    $("#food-search-filters-allergies").click(function () {
         if (eggCounter < 3)
             eggCounter++;
 
@@ -45,7 +47,7 @@ $(document).ready(function () {
                 }
 
                 if (eggCounter === 9) {
-                    $("#food-search-filters-div").click(function () {
+                    $("#food-search-filters-allergies").click(function () {
                         if (eggCounter < 12)
                             eggCounter++;
 
@@ -57,8 +59,31 @@ $(document).ready(function () {
             });
         }
     });
+
+    // Dropdown Menu Allergies
+    $(".dropdown-menu-checkbox .checkbox-menu").on("click", function (e) {
+
+        e.stopPropagation();
+
+        let target = $(this).find("a"),
+            value = target.attr("data-value"),
+            input = target.find("input"),
+            index;
+
+        if ((index = allergies.indexOf(value)) > -1) {
+            allergies.splice(index, 1);
+            setTimeout(function () { input.prop("checked", false); }, 0);
+        } else {
+            allergies.push(value);
+            setTimeout(function () { input.prop("checked", true); }, 0);
+        }
+
+        $(e.target).blur();
+    });
 });
 
+/* Changes the width of the '.navbar-food' object based on the width of the row */
+/* NOT IDEAL! NEEDS CHANGING! */
 function changeWidth() {
     var challengeWrapper = $(".navbar-food");
     var rowWidth = $(".row").width();
@@ -66,6 +91,7 @@ function changeWidth() {
     challengeWrapper.css("width", rowWidth);
 }
 
+/* Handles the switch between an object becoming 'visible' and/or 'hidden' */
 $(".favourite-btn").click(function () {
     var parent = $(this).parent();
     /*var btnVisible = $(".visible");
@@ -80,7 +106,7 @@ $(".favourite-btn").click(function () {
     btnHidden.addClass("visible");
 });
 
-// For selecting image files
+/* For selecting image files */
 $(function () {
     // We can attach the `fileselect` event to all file inputs on the page
     $(document).on('change', ':file', function () {
@@ -104,3 +130,26 @@ $(function () {
     });
 
 });
+
+/* MODAL RELATED FUNCTIONS */
+// When the user clicks anywhere in the html document it checks if it hit the modal and if not it closes the modal
+$(document).click(function (event) {
+    if (event.target.classList.contains("pop-up-modal")) {
+        $(".pop-up-modal").css("display", "none");
+    }
+});
+
+// When the user clicks the button, open the modal 
+$(".modal-button").click(function () {
+    $(".pop-up-modal").css("display", "block");
+});
+
+// When the user clicks on <span> (x), close the modal
+$(".close").click(function () {
+    $(".pop-up-modal").css("display", "none");
+});
+
+function ToggleFilterMenu() {
+    $("#food-search-filters-div").slideToggle(200);
+    $("#food-search-filters-caret").toggleClass("dropup");
+}
