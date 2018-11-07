@@ -3,6 +3,7 @@
 var eggCounter = 0;
 var audioElement;
 
+/* Memes */
 $(document).ready(function () {
     changeWidth();
     window.onresize = function () { changeWidth(); };
@@ -81,6 +82,8 @@ $(document).ready(function () {
     });
 });
 
+/* Changes the width of the '.navbar-food' object based on the width of the row */
+/* NOT IDEAL! NEEDS CHANGING! */
 function changeWidth() {
     var challengeWrapper = $(".navbar-food");
     var rowWidth = $(".row").width();
@@ -88,9 +91,13 @@ function changeWidth() {
     challengeWrapper.css("width", rowWidth);
 }
 
+/* Handles the switch between an object becoming 'visible' and/or 'hidden' */
 $(".favourite-btn").click(function () {
-    var btnVisible = $(".visible");
-    var btnHidden = $(".hidden");
+    var parent = $(this).parent();
+    /*var btnVisible = $(".visible");
+    var btnHidden = $(".hidden"); */
+    var btnVisible = parent.children(".visible");
+    var btnHidden = parent.children(".hidden");
 
     btnVisible.removeClass("visible");
     btnVisible.addClass("hidden");
@@ -99,7 +106,7 @@ $(".favourite-btn").click(function () {
     btnHidden.addClass("visible");
 });
 
-// For selecting image files
+/* For selecting image files */
 $(function () {
     // We can attach the `fileselect` event to all file inputs on the page
     $(document).on('change', ':file', function () {
@@ -122,6 +129,24 @@ $(function () {
         });
     });
 
+});
+
+/* MODAL RELATED FUNCTIONS */
+// When the user clicks anywhere in the html document it checks if it hit the modal and if not it closes the modal
+$(document).click(function (event) {
+    if (event.target.classList.contains("pop-up-modal")) {
+        $(".pop-up-modal").css("display", "none");
+    }
+});
+
+// When the user clicks the button, open the modal 
+$(".modal-button").click(function () {
+    $(".pop-up-modal").css("display", "block");
+});
+
+// When the user clicks on <span> (x), close the modal
+$(".close").click(function () {
+    $(".pop-up-modal").css("display", "none");
 });
 
 function ToggleFilterMenu() {

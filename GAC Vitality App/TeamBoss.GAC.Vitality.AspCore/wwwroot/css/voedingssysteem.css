@@ -52,7 +52,6 @@ p1 {
 .listfood {
     float: left;
     width: 100%;
-    margin-top: 20px;
     overflow: scroll;
     height: auto;
 }
@@ -116,22 +115,25 @@ p1 {
 
 .icon-wrapper {
     margin-bottom: 10px;
+    margin-top: 5px;
 }
 
-    .icon-wrapper .calory-icon, .clock-icon, .favourite-btn {
+    .icon-wrapper .calory-icon, .clock-icon, .users-icon, .favourite-btn {
         font-size: 160%;
-    }
-
-    .icon-wrapper .calory-icon {
-        margin-left: 3%;
     }
 
     .icon-wrapper .clock-icon {
         margin-left: 5%;
     }
 
+    .icon-wrapper .users-icon{
+        margin-left:5%;
+    }
+
     .icon-wrapper .favourite-btn {
-        margin-left: 22%;
+        margin-top:-5.5px;
+        padding:0;
+        border:none;
     }
 
 .visible {
@@ -142,9 +144,10 @@ p1 {
     display: none;
 }
 
-.calory-text, .clock-text {
-    font-family: Arial, Helvetica, sans-serif;
+.calory-text, .clock-text, .users-text {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 14px;
+    font-weight: normal;
 }
 
 .btn-browse {
@@ -221,8 +224,8 @@ p1 {
 
 .feed-info-container {
     height: 20px; 
-    margin-bottom: 10px; 
     margin-top: 5px; 
+    margin-bottom:25px;
 }
 
 .feed-icon{
@@ -238,9 +241,9 @@ p1 {
 }
 
 .feed-option {
-    float: right; 
-    font-size:20px;
-    color:red;
+    float: right;
+    font-size: 20px;
+    padding: 0 !important;
 }
 
 #food-search-filters-div {
@@ -273,3 +276,29 @@ li.checkbox-menu:not(:last-child) {
     display: inline-block;
     float: right;
 }
+
+.list-item-link{
+    position:absolute;
+    width:90%;
+    padding-left:10%;
+    height:90%;
+    padding-bottom:10%;
+    position:center;
+}
+
+.icon-group{
+    width:90%;
+    margin-top: 15px; 
+}
+
+.star{
+    float: right; 
+    margin-top: 0px;
+    z-index: 2; 
+    position: relative; 
+}
+
+
+
+
+
