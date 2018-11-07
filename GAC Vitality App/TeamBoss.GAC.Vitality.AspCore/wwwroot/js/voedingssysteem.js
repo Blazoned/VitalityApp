@@ -67,8 +67,11 @@ function changeWidth() {
 }
 
 $(".favourite-btn").click(function () {
-    var btnVisible = $(".visible");
-    var btnHidden = $(".hidden");
+    var parent = $(this).parent();
+    /*var btnVisible = $(".visible");
+    var btnHidden = $(".hidden"); */
+    var btnVisible = parent.children(".visible");
+    var btnHidden = parent.children(".hidden");
 
     btnVisible.removeClass("visible");
     btnVisible.addClass("hidden");

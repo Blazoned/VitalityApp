@@ -52,7 +52,6 @@ p1 {
 .listfood {
     float: left;
     width: 100%;
-    margin-top: 20px;
     overflow: scroll;
     height: auto;
 }
@@ -231,6 +230,7 @@ p1 {
 
 .preptime-feed {
     margin-right: 0; 
+    float: left; 
 }
 
 .feed-info p {
@@ -239,6 +239,11 @@ p1 {
 
 .feed-option {
     float: right; 
-    font-size:20px;
-    color:red;
+    font-size:20px; 
+    padding: 0 !important; 
+}
+
+.star{
+    float: right; 
+    margin-top: 0px; 
 }
