@@ -3,53 +3,141 @@
     ViewData["Title"] = "Overzicht";
 }
 
+@section Css{
+    <link rel="stylesheet" type="text/css" href="~/css/clockpicker.css">
+}
 
+@section Scripts{
+    <script src="~/js/jquery-clockpicker.js"></script>
+    <script src="~/js/Filter.js"></script>
+    <script type="text/javascript">
+        $('.clockpicker').clockpicker();
+    </script>
+}
 
 <div class="container row">
     <div class="form-group block-wrapper col-md-12 col-md-4">
-        <a class="btn btn-primary btn-block" role="button" href="~/Rest/AddRest">
+        <a class="btn btn-primary btn-block" role="button" href="~/Rest/AddRest" data-toggle="modal" data-target="#myModal">
             <span class="fa fa-plus"></span>
         </a>
-        <br/>
+
+
+        <div id="myModal" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+
+                <!-- Modal content-->
+                <div class="container row">
+                    <div class="form-group block-wrapper col-md-12 col-md-4">
+                        <a class="btn btn-primary backBtnGroup2" role="button" href="~/Rest/Index">
+                            <span class="glyphicon glyphicon-chevron-left"></span>
+                        </a>
+                        <br />
+                        <br />
+
+                        <div class="btn-group switch" id="status" data-toggle="buttons">
+                            <label class="btn btn-default switch-width btn-on btn-md active">
+                                <input type="radio" value="1" name="multifeatured_module[module_id][status]" checked="checked">
+                                <span class="fa fa-bed"></span>
+                            </label>
+                            <label class="btn btn-default switch-width btn-off btn-md">
+                                <input type="radio" value="0" name="multifeatured_module[module_id][status]">
+                                <span class="fa fa-pause"></span>
+                            </label>
+                        </div>
+
+                        <div class="input-group clockpicker">
+                            <input type="text" class="form-control" placeholder="Begintijd" readonly>
+                            <span class="input-group-addon">
+                                <span class="glyphicon glyphicon-time"></span>
+                            </span>
+                        </div>
+                        <br />
+                        <div class="input-group clockpicker">
+                            <input type="text" class="form-control" placeholder="Eindtijd" readonly>
+                            <span class="input-group-addon">
+                                <span class="glyphicon glyphicon-time"></span>
+                            </span>
+                        </div>
+                        <br />
+                        <div class="input-group">
+                            <input type="date" class="form-control" placeholder="Datum">
+                            <span class="input-group-addon">
+                                <span class="glyphicon glyphicon-calendar"></span>
+                            </span>
+                        </div>
+                        <br/>
+                        <div class="input-group repeat-checkbox">
+                            <label>Herhalen?</label>
+
+                            <div class="checkbox">
+                                <label style="padding-right: 20px;"><input type="checkbox" value="">Dagelijks</label>
+                                <label><input type="checkbox" value="">Wekelijks</label>
+                            </div>
+                        </div>
+                        <button type="button" class="btn btn-primary btn-block add-button"><span class="glyphicon glyphicon-plus"></span></button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <br />
 
         <div class="container text-wrapper2">
+            <input id="myInput" type="text" placeholder="Search.." class="form-control">
+            <br/>
             <ul class="list-group checked-list-box">
                 <li class="list-group-item">
-                    <table class="table">
-                        <thead>
+                    <label>Rust Momenten</label>
+                    <table>
+                        <tbody id="myTable">
                         <tr>
-                            <th scope="col" class="thCenter">
-                                <span class="fa fa-bed"></span>
-                            </th>
-                            <th scope="col" class="thCenter">                                    
-                                <span class="fa fa-calendar"></span>
-                            </th>
+                            <td>
+                                <div class="col-md-2 custom-md">
+                                    <span class="fa fa-bed bedpad"></span>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="col-md-2 custom-md">
+                                    22:00 - 07:00
+                                </div>
+                            </td>
+                            <td>
+                                <div class="col-md-1 custom-md">
+                                    <span class="fa fa-calendar-alt"></span>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="col-md-2 custom-md">
+                                    08-11
+                                </div>
+                            </td>
                         </tr>
-                        </thead>
-                        <tbody>
                         <tr>
-                            <td class="thCenter">22:00 - 07:00</td>
-                            <td class="thCenter">@DateTime.Now.ToShortDateString()</td>
-                        </tr>                        
-                    </table>
-                    <table class="table">
-                        <thead>
-                        <tr>
-                            <th scope="col" class="thCenter">
-                                <span class="fa fa-pause"></span>
-                            </th>
-                            <th scope="col" class="thCenter">                                    
-                                <span class="fa fa-calendar"></span>
-                            </th>
+                            <td>
+                                <div class="col-md-2 custom-md">
+                                    <span class="fa fa-pause"></span>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="col-md-2 custom-md">
+                                    12:30 - 13:00
+                                </div>
+                            </td>
+                            <td>
+                                <div class="col-md-1 custom-md">
+                                    <span class="fa fa-calendar-alt"></span>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="col-md-2 custom-md">
+                                    08-12
+                                </div>
+                            </td>
                         </tr>
-                        </thead>
-                        <tbody>
-                        <tr>
-                            <td class="thCenter">12:30 - 13:00</td>
-                            <td class="thCenter">24-10-2018</td>
-                        </tr>                        
+                        </tbody>
                     </table>
-                </li>             
+                </li>
             </ul>
         </div>
     </div>

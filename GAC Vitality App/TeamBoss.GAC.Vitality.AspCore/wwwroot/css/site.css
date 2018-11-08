@@ -309,7 +309,7 @@ span.fa.fa-bed {
     font-size: 25px;
 }
 
-span.fa.fa-calendar{
+span.fa.fa-calendar-alt{
 font-size: 25px;
 }
 
@@ -410,4 +410,30 @@ button#myBtn {
 
 .ignore-focus:hover {
     outline: none;
+}
+
+a.btn.btn-info.btn-visible {
+    padding: 20px;
+}
+
+.clockpicker-popover {
+    z-index: 9999!important;
+}
+
+.custom-md{
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+
+.repeat-checkbox{
+    width: 100%;
+}
+
+.col-md-2.custom-md{
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.bedpad{
+    padding-right: 20px;
 }
