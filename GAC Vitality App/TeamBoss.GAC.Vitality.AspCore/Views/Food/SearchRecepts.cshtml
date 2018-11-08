@@ -1,16 +1,28 @@
 ﻿
 @{
-ViewData["Title"] = "Zoek Recepten";
-Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewData["Title"] = "Zoek Recepten";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
 @section Css{
-<link rel="stylesheet" href="~/css/voedingssysteem.css" />
+    <link rel="stylesheet" href="~/css/voedingssysteem.css" />
 }
 
 @section Scripts{
-<script src="~/js/voedingssysteem.js" asp-append-version="true"></script>
+    <script src="~/js/voedingssysteem.js" asp-append-version="true"></script>
 }
+
+
+
+<div class="modal pop-up-modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <p>Some text in the Modal..</p>
+    </div>
+
+</div>
 
 <div class="container-fluid jojo">
     <div class="row">
@@ -24,22 +36,23 @@ Layout = "~/Views/Shared/_Layout.cshtml";
                         </button>
                     </div>
                     <!--
-        <input type="text" class="form-control col-sm-4 searchrecept" placeholder="Recept naam" id="food-search-text" />
-            <select class="form-control selectfilter" multiple id="food-search-allergies">
-                <option value="" disabled selected>Allergieën</option>
-                <option class="optionprivacy">Melk</option>
-                <option class="optionprivacy">Ei</option>
-                <option class="optionprivacy">Vis</option>
-                <option class="optionprivacy">Pinda</option>
-                <option class="optionprivacy">Noten</option>
-            </select>
-        </div>
-        <div class="container-fluid allergies">
+                    <input type="text" class="form-control col-sm-4 searchrecept" placeholder="Recept naam" id="food-search-text" />
+                        <select class="form-control selectfilter" multiple id="food-search-allergies">
+                            <option value="" disabled selected>Allergieën</option>
+                            <option class="optionprivacy">Melk</option>
+                            <option class="optionprivacy">Ei</option>
+                            <option class="optionprivacy">Vis</option>
+                            <option class="optionprivacy">Pinda</option>
+                            <option class="optionprivacy">Noten</option>
+                        </select>
+                    </div>
+                    <div class="container-fluid allergies">
 
-        </div> -->
+                    </div> -->
                 </div>
                 <div class="container-fluid" id="food-search-filters-div" hidden>
                     <hr />
+                    <h3>Filters</h3>
                     <div class="input-group">
                         <div class="input-group-btn">
                             <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="food-search-filters-allergies">
@@ -66,25 +79,27 @@ Layout = "~/Views/Shared/_Layout.cshtml";
 
         <div class="challenge-wrapper move-below">
             <div class="container text-wrapper">
-                <div class="list-group listfood" id="">
+                <ul class="list-group" id="challenge-listing">
 
-                    <a href="#food-list-item-1" class="list-group-item recept-name-list" name="food-list-item-1">
-                        <p1>Pizza Hawaii</p1>
-                        
-                        <button id="myBtn">
-                            <span class="fa fa-times-circle feed-option"></span>
-                        </button>
-                        
-                        <div id="myModal" class="modal">
+                    <!-- Item Pizza Hawaii -->
+                    <li class="list-group-item feedyo clearfix">
 
-                            <!-- Modal content -->
-                            <div class="modal-content">
-                                <span class="close">&times;</span>
-                                <p>Some text in the Modal..</p>
+                        <!-- Link covering the entire list-group-item -->
+                        <a class="list-item-link" href="~/Food/ViewRecept"></a>
+
+                        <!-- fav -->
+                        <div class="star">
+                            <div class="favourite-btn visible feed-option">
+                                <span class="far fa-star feed-icon"></span>
                             </div>
-
+                            <div class="favourite-btn hidden feed-option">
+                                <span class="fa fa-star feed-icon"></span>
+                            </div>
                         </div>
 
+                        <p1>Pizza Hawaii</p1>
+
+                        <!-- Container containing the recipe data icons -->
                         <div class="feed-info-container">
                             <div class="calories-feed feed-info">
                                 <span class="fa fa-fire feed-icon"></span>
@@ -94,73 +109,146 @@ Layout = "~/Views/Shared/_Layout.cshtml";
                                 <span class="fa fa-clock feed-icon"></span>
                                 <p>60 min</p>
                             </div>
+                            <div class="favourites-feed feed-info">
+                                <span class="fa fa-users feed-icon"></span>
+                                <p>25</p>
+                            </div>
                         </div>
 
+                        <!-- Container containing the image -->
                         <div class="image-container">
                             <div class="image-feed">
                                 <img class="img-center" src="https://img.grouponcdn.com/deal/8DDtq5XRzVnLXEUnPHPd/p2-2048x1229/v1/c700x420.jpg" />
                             </div>
                         </div>
-                    </a>
+                    </li>
 
-                    <a href="#food-list-item-2" class="list-group-item recept-name-list" name="food-list-item-2">
-                        <p1>Kip Marengo</p1>
+                    <!-- Item Pasta -->
+                    <li class="list-group-item clearfix">
+
+                        <!-- Link covering the entire list-group-item -->
+                        <a class="list-item-link" href="~/Food/ViewRecept"></a>
+
+                        <!-- fav -->
+                        <div class="star">
+                            <div class="favourite-btn visible feed-option">
+                                <span class="far fa-star feed-icon"></span>
+                            </div>
+                            <div class="favourite-btn hidden feed-option">
+                                <span class="fa fa-star feed-icon"></span>
+                            </div>
+                        </div>
+
+                        <p1>Pasta</p1>
+
+                        <!-- Container containing the recipe data icons -->
                         <div class="feed-info-container">
                             <div class="calories-feed feed-info">
                                 <span class="fa fa-fire feed-icon"></span>
-                                <p>200 Kcal</p>
+                                <p>100 Kcal</p>
                             </div>
                             <div class="preptime-feed feed-info">
                                 <span class="fa fa-clock feed-icon"></span>
-                                <p>30 min</p>
+                                <p>15 min</p>
+                            </div>
+                            <div class="favourites-feed feed-info">
+                                <span class="fa fa-users feed-icon"></span>
+                                <p>5</p>
                             </div>
                         </div>
+
+                        <!-- Container containing the image -->
                         <div class="image-container">
                             <div class="image-feed">
-                                <img class="img-center" src="https://www.koopeenkip.be/frontend/files/tips/image/320x230/kip-marengo.jpg" />
+                                <img class="img-center" src="https://www.budgetbytes.com/wp-content/uploads/2016/07/Pasta-with-Butter-Tomato-Sauce-and-Toasted-Bread-Crumbs-utensils.jpg" />
                             </div>
                         </div>
-                    </a>
+                    </li>
 
-                    <a href="#food-list-item-3" class="list-group-item recept-name-list" name="food-list-item-3">
-                        <p1>Mosselen</p1>
+                    <!-- Item Biefstuk -->
+                    <li class="list-group-item clearfix">
+
+                        <!-- Link covering the entire list-group-item -->
+                        <a class="list-item-link" href="~/Food/ViewRecept"></a>
+
+                        <!-- fav -->
+                        <div class="star">
+                            <div class="favourite-btn visible feed-option">
+                                <span class="far fa-star feed-icon"></span>
+                            </div>
+                            <div class="favourite-btn hidden feed-option">
+                                <span class="fa fa-star feed-icon"></span>
+                            </div>
+                        </div>
+
+                        <p1>Biefstuk</p1>
+
+                        <!-- Container containing the recipe data icons -->
                         <div class="feed-info-container">
                             <div class="calories-feed feed-info">
                                 <span class="fa fa-fire feed-icon"></span>
-                                <p>150 Kcal</p>
+                                <p>500 Kcal</p>
                             </div>
                             <div class="preptime-feed feed-info">
                                 <span class="fa fa-clock feed-icon"></span>
-                                <p>25 min</p>
+                                <p>90 min</p>
+                            </div>
+                            <div class="favourites-feed feed-info">
+                                <span class="fa fa-users feed-icon"></span>
+                                <p>500</p>
                             </div>
                         </div>
+
+                        <!-- Container containing the image -->
                         <div class="image-container">
                             <div class="image-feed">
-                                <img class="img-center" src="https://www.emte.nl/upload_mm/7/9/9/cid6535_1059388_Receptbeeld_1000x1000-1_619x310.png" />
+                                <img class="img-center" src="https://eenvandaag.avrotros.nl/fileadmin/_processed_/5/a/csm_Biefstuk_23dfa76775.jpg" />
                             </div>
                         </div>
-                    </a>
+                    </li>
 
-                    <a href="#food-list-item-4" class="list-group-item recept-name-list" name="food-list-item-4">
-                        <p1>Pad Thai</p1>
+                    <!-- Item Ovenschotel -->
+                    <li class="list-group-item clearfix">
+
+                        <!-- Link covering the entire list-group-item -->
+                        <a class="list-item-link" href="~/Food/ViewRecept"></a>
+
+                        <!-- fav -->
+                        <div class="star">
+                            <div class="favourite-btn visible feed-option">
+                                <span class="far fa-star feed-icon"></span>
+                            </div>
+                            <div class="favourite-btn hidden feed-option">
+                                <span class="fa fa-star feed-icon"></span>
+                            </div>
+                        </div>
+
+                        <p1>Ovenschotel</p1>
+
+                        <!-- Container containing the recipe data icons -->
                         <div class="feed-info-container">
                             <div class="calories-feed feed-info">
                                 <span class="fa fa-fire feed-icon"></span>
-                                <p>550 Kcal</p>
+                                <p>1250 Kcal</p>
                             </div>
                             <div class="preptime-feed feed-info">
                                 <span class="fa fa-clock feed-icon"></span>
-                                <p>40 min</p>
+                                <p>45 min</p>
+                            </div>
+                            <div class="favourites-feed feed-info">
+                                <span class="fa fa-users feed-icon"></span>
+                                <p>1227</p>
                             </div>
                         </div>
+
+                        <!-- Container containing the image -->
                         <div class="image-container">
                             <div class="image-feed">
-                                <img class="img-center" src="https://sarahscucinabella.com/wp-content/uploads/2018/01/Pad-Thai-for-Two-with-Shrimp4-500x400.jpg" />
+                                <img class="img-center" src="https://www.keukenliefde.nl/wp-content/uploads/2017/10/Ovenschotel-met-sperziebonen-en-gehakt-3934.jpg" />
                             </div>
                         </div>
-                    </a>
-
-                </div>
+                    </li>
+                </ul>
             </div>
         </div>
     </div>
@@ -170,24 +258,24 @@ Layout = "~/Views/Shared/_Layout.cshtml";
     // Get the modal
     var modal = document.getElementById('myModal');
 
-// Get the button that opens the modal
+    // Get the button that opens the modal
     var btn = document.getElementById("myBtn");
 
-// Get the <span> element that closes the modal
+    // Get the <span> element that closes the modal
     var span = document.getElementsByClassName("close")[0];
 
-// When the user clicks the button, open the modal 
-    btn.onclick = function() {
+    // When the user clicks the button, open the modal
+    btn.onclick = function () {
         modal.style.display = "block";
     }
 
-// When the user clicks on <span> (x), close the modal
-    span.onclick = function() {
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function () {
         modal.style.display = "none";
     }
 
-// When the user clicks anywhere outside of the modal, close it
-    window.onclick = function(event) {
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function (event) {
         if (event.target == modal) {
             modal.style.display = "none";
         }
