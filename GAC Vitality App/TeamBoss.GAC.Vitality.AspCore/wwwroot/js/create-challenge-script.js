@@ -101,7 +101,7 @@ function AddGoal() {
 
 // Remove Goal
 function RemoveGoal() {
-    if ($("#challenge-goals-list").children().length <= 2)
+    if ($("#challenge-goals-list").children().length <= 1)
         return;
 
     let htmlObj = $(this).closest("li");
