@@ -16,136 +16,212 @@
     <div class="row">
         <div class="challenge-wrapper navbar-food">
             <div class="container text-wrapper filterbox">
-                <div class="form-group">
-                    <input type="text" class="form-control searchrecept" placeholder="Recept naam" />
-
-                    <select class="form-control selectfilter" multiple>
-                        <option value="" disabled selected>Allergenen</option>
-                        <option class="optionprivacy">Melk</option>
-                        <option class="optionprivacy">Ei</option>
-                        <option class="optionprivacy">Vis</option>
-                        <option class="optionprivacy">Pinda</option>
-                        <option class="optionprivacy">Noten</option>
-                    </select>
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Recept Zoeken..." id="food-search-text" />
+                    <div class="input-group-btn">
+                        <button type="button" class="btn btn-primary ignore-focus" id="food-search-filters-toggle">
+                            Filters <span class="animated-transition" id="food-search-filters-caret"><span class="caret"></span></span>
+                        </button>
+                    </div>
+                </div>
+                <div class="container-fluid" id="food-search-filters-div" hidden>
+                    <hr />
+                    <div class="input-group">
+                        <div class="input-group-btn">
+                            <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="food-search-filters-allergies">
+                                <span class="fa fa-allergies"></span> &ensp;Allergieën <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu dropdown-menu-checkbox">
+                                <li class="checkbox-menu"><a href="#" data-value="dairy" tabindex="-1"><span>Zuivel</span><input type="checkbox" /></a></li>
+                                <li class="checkbox-menu"><a href="#" data-value="egg" tabindex="-1"><span>Ei</span><input type="checkbox" /></a></li>
+                                <li class="checkbox-menu"><a href="#" data-value="nuts" tabindex="-1"><span>Noten</span><input type="checkbox" /></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <hr />
+                    <div class="input-group">
+                        <div class="input-group-btn">
+                            <button class="btn btn-info" type="button" id="food-search-filters-apply">
+                                Filters Toepassen
+                            </button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
 
         <div class="challenge-wrapper move-below">
             <div class="container text-wrapper">
-                <div class="list-group listfood" id="">
+                <ul class="list-group" id="challenge-listing">
 
-                    <a href="#food-list-item-1" class="list-group-item clearfix" name="food-list-item-1">
-                        Spaghetti Carbonara
-                        <span class="pull-right">
-                            <btn class="btn btn-danger fa fa-trash-alt remove" role="button"></btn>
-                        </span>
-                    </a>
-                    <a href="#food-list-item-2" class="list-group-item clearfix" name="food-list-item-2">
-                        Lamsbout
-                        <span class="pull-right">
-                            <btn class="btn btn-danger fa fa-trash-alt remove" role="button"></btn>
-                        </span>
-                    </a>
-                    <a href="#food-list-item-3" class="list-group-item clearfix" name="food-list-item-3">
-                        Pizza
-                        <span class="pull-right">
-                            <btn class="btn btn-danger fa fa-trash-alt remove" role="button"></btn>
-                        </span>
-                    </a>
-                    <a href="#food-list-item-4" class="list-group-item clearfix" name="food-list-item-4">
-                        Patatas Bravas
-                        <span class="pull-right">
-                            <btn class="btn btn-danger fa fa-trash-alt remove" role="button"></btn>
-                        </span>
-                    </a>
-                    <a href="#food-list-item-5" class="list-group-item clearfix" name="food-list-item-5">
-                        Franse Kip
-                        <span class="pull-right">
-                            <btn class="btn btn-danger fa fa-trash-alt remove" role="button"></btn>
-                        </span>
-                    </a>
-                    <a href="#food-list-item-6" class="list-group-item clearfix" name="food-list-item-6">
-                        Truffelburger
-                        <span class="pull-right">
-                            <btn class="btn btn-danger fa fa-trash-alt remove" role="button"></btn>
-                        </span>
-                    </a>
+                    <!-- Item Pizza Hawaii -->
+                    <li class="list-group-item feedyo clearfix">
 
-                    <a href="#food-list-item-7" class="list-group-item clearfix" name="food-list-item-7">
-                        Spaghetti Carbonara
-                        <span class="pull-right">
-                            <btn class="btn btn-danger fa fa-trash-alt remove" role="button"></btn>
-                        </span>
-                    </a>
-                    <a href="#food-list-item-8" class="list-group-item clearfix" name="food-list-item-8">
-                        Lamsbout
-                        <span class="pull-right">
-                            <btn class="btn btn-danger fa fa-trash-alt remove" role="button"></btn>
-                        </span>
-                    </a>
-                    <a href="#food-list-item-9" class="list-group-item clearfix" name="food-list-item-9">
-                        Pizza
-                        <span class="pull-right">
-                            <btn class="btn btn-danger fa fa-trash-alt remove" role="button"></btn>
-                        </span>
-                    </a>
-                    <a href="#food-list-item-10" class="list-group-item clearfix" name="food-list-item-10">
-                        Patatas Bravas
-                        <span class="pull-right">
-                            <btn class="btn btn-danger fa fa-trash-alt remove" role="button"></btn>
-                        </span>
-                    </a>
-                    <a href="#food-list-item-11" class="list-group-item clearfix" name="food-list-item-11">
-                        Franse Kip
-                        <span class="pull-right">
-                            <btn class="btn btn-danger fa fa-trash-alt remove" role="button"></btn>
-                        </span>
-                    </a>
-                    <a href="#food-list-item-12" class="list-group-item clearfix" name="food-list-item-12">
-                        Truffelburger
-                        <span class="pull-right">
-                            <btn class="btn btn-danger fa fa-trash-alt remove" role="button"></btn>
-                        </span>
-                    </a>
+                        <!-- Link covering the entire list-group-item -->
+                        <a class="list-item-link" href="~/Food/ViewRecept"></a>
 
-                    <a href="#food-list-item-13" class="list-group-item clearfix" name="food-list-item-13">
-                        Spaghetti Carbonara
-                        <span class="pull-right">
-                            <btn class="btn btn-danger fa fa-trash-alt remove" role="button"></btn>
-                        </span>
-                    </a>
-                    <a href="#food-list-item-14" class="list-group-item clearfix" name="food-list-item-14">
-                        Lamsbout
-                        <span class="pull-right">
-                            <btn class="btn btn-danger fa fa-trash-alt remove" role="button"></btn>
-                        </span>
-                    </a>
-                    <a href="#food-list-item-15" class="list-group-item clearfix" name="food-list-item-15">
-                        Pizza
-                        <span class="pull-right">
-                            <btn class="btn btn-danger fa fa-trash-alt remove" role="button"></btn>
-                        </span>
-                    </a>
-                    <a href="#food-list-item-16" class="list-group-item clearfix" name="food-list-item-16">
-                        Patatas Bravas
-                        <span class="pull-right">
-                            <btn class="btn btn-danger fa fa-trash-alt remove" role="button"></btn>
-                        </span>
-                    </a>
-                    <a href="#food-list-item-17" class="list-group-item clearfix" name="food-list-item-17">
-                        Franse Kip
-                        <span class="pull-right">
-                            <btn class="btn btn-danger fa fa-trash-alt remove" role="button"></btn>
-                        </span>
-                    </a>
-                    <a href="#food-list-item-18" class="list-group-item clearfix" name="food-list-item-18">
-                        Truffelburger
-                        <span class="pull-right">
-                            <btn class="btn btn-danger fa fa-trash-alt remove" role="button"></btn>
-                        </span>
-                    </a>
-                </div>
+                        <!-- fav -->
+                        <div class="star">
+                            <div class="favourite-btn hidden feed-option">
+                                <span class="far fa-star feed-icon"></span>
+                            </div>
+                            <div class="favourite-btn visible feed-option">
+                                <span class="fa fa-star feed-icon"></span>
+                            </div>
+                        </div>
+
+                        <p1>Pizza Hawaii</p1>
+
+                        <!-- Container containing the recipe data icons -->
+                        <div class="feed-info-container">
+                            <div class="calories-feed feed-info">
+                                <span class="fa fa-fire feed-icon"></span>
+                                <p>450 Kcal</p>
+                            </div>
+                            <div class="preptime-feed feed-info">
+                                <span class="fa fa-clock feed-icon"></span>
+                                <p>60 min</p>
+                            </div>
+                            <div class="favourites-feed feed-info">
+                                <span class="fa fa-users feed-icon"></span>
+                                <p>25</p>
+                            </div>
+                        </div>
+
+                        <!-- Container containing the image -->
+                        <div class="image-container">
+                            <div class="image-feed">
+                                <img class="img-center" src="https://img.grouponcdn.com/deal/8DDtq5XRzVnLXEUnPHPd/p2-2048x1229/v1/c700x420.jpg" />
+                            </div>
+                        </div>
+                    </li>
+
+                    <!-- Item Pasta -->
+                    <li class="list-group-item clearfix">
+
+                        <!-- Link covering the entire list-group-item -->
+                        <a class="list-item-link" href="~/Food/ViewRecept"></a>
+
+                        <!-- fav -->
+                        <div class="star">
+                            <div class="favourite-btn hidden feed-option">
+                                <span class="far fa-star feed-icon"></span>
+                            </div>
+                            <div class="favourite-btn visible feed-option">
+                                <span class="fa fa-star feed-icon"></span>
+                            </div>
+                        </div>
+
+                        <p1>Pasta</p1>
+
+                        <!-- Container containing the recipe data icons -->
+                        <div class="feed-info-container">
+                            <div class="calories-feed feed-info">
+                                <span class="fa fa-fire feed-icon"></span>
+                                <p>100 Kcal</p>
+                            </div>
+                            <div class="preptime-feed feed-info">
+                                <span class="fa fa-clock feed-icon"></span>
+                                <p>15 min</p>
+                            </div>
+                            <div class="favourites-feed feed-info">
+                                <span class="fa fa-users feed-icon"></span>
+                                <p>5</p>
+                            </div>
+                        </div>
+
+                        <!-- Container containing the image -->
+                        <div class="image-container">
+                            <div class="image-feed">
+                                <img class="img-center" src="https://www.budgetbytes.com/wp-content/uploads/2016/07/Pasta-with-Butter-Tomato-Sauce-and-Toasted-Bread-Crumbs-utensils.jpg" />
+                            </div>
+                        </div>
+                    </li>
+
+                    <!-- Item Biefstuk -->
+                    <li class="list-group-item clearfix">
+
+                        <!-- Link covering the entire list-group-item -->
+                        <a class="list-item-link" href="~/Food/ViewRecept"></a>
+
+                        <!-- fav -->
+                        <div class="star">
+                            <div class="favourite-btn hidden feed-option">
+                                <span class="far fa-star feed-icon"></span>
+                            </div>
+                            <div class="favourite-btn visible feed-option">
+                                <span class="fa fa-star feed-icon"></span>
+                            </div>
+                        </div>
+
+                        <p1>Biefstuk</p1>
+
+                        <!-- Container containing the recipe data icons -->
+                        <div class="feed-info-container">
+                            <div class="calories-feed feed-info">
+                                <span class="fa fa-fire feed-icon"></span>
+                                <p>500 Kcal</p>
+                            </div>
+                            <div class="preptime-feed feed-info">
+                                <span class="fa fa-clock feed-icon"></span>
+                                <p>90 min</p>
+                            </div>
+                            <div class="favourites-feed feed-info">
+                                <span class="fa fa-users feed-icon"></span>
+                                <p>500</p>
+                            </div>
+                        </div>
+
+                        <!-- Container containing the image -->
+                        <div class="image-container">
+                            <div class="image-feed">
+                                <img class="img-center" src="https://eenvandaag.avrotros.nl/fileadmin/_processed_/5/a/csm_Biefstuk_23dfa76775.jpg" />
+                            </div>
+                        </div>
+                    </li>
+
+                    <!-- Item Ovenschotel -->
+                    <li class="list-group-item clearfix">
+
+                        <!-- Link covering the entire list-group-item -->
+                        <a class="list-item-link" href="~/Food/ViewRecept"></a>
+
+                        <!-- fav -->
+                        <div class="star">
+                            <div class="favourite-btn hidden feed-option">
+                                <span class="far fa-star feed-icon"></span>
+                            </div>
+                            <div class="favourite-btn visible feed-option">
+                                <span class="fa fa-star feed-icon"></span>
+                            </div>
+                        </div>
+
+                        <p1>Ovenschotel</p1>
+
+                        <!-- Container containing the recipe data icons -->
+                        <div class="feed-info-container">
+                            <div class="calories-feed feed-info">
+                                <span class="fa fa-fire feed-icon"></span>
+                                <p>1250 Kcal</p>
+                            </div>
+                            <div class="preptime-feed feed-info">
+                                <span class="fa fa-clock feed-icon"></span>
+                                <p>45 min</p>
+                            </div>
+                            <div class="favourites-feed feed-info">
+                                <span class="fa fa-users feed-icon"></span>
+                                <p>1227</p>
+                            </div>
+                        </div>
+
+                        <!-- Container containing the image -->
+                        <div class="image-container">
+                            <div class="image-feed">
+                                <img class="img-center" src="https://www.keukenliefde.nl/wp-content/uploads/2017/10/Ovenschotel-met-sperziebonen-en-gehakt-3934.jpg" />
+                            </div>
+                        </div>
+                    </li>
+                </ul>
             </div>
         </div>
     </div>

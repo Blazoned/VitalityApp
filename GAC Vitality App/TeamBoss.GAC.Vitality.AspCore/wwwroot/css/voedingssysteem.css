@@ -126,15 +126,16 @@ p1 {
         margin-left: 5%;
     }
 
-    .icon-wrapper .users-icon{
-        margin-left:5%;
+    .icon-wrapper .users-icon {
+        margin-left: 5%;
     }
 
-    .icon-wrapper .favourite-btn {
-        margin-top:-5.5px;
-        padding:0;
-        border:none;
-    }
+.favourite-btn {
+    margin-top: -5.5px;
+    padding: 0;
+    border: none;
+    color: gold;
+}
 
 .visible {
     display: normal;
@@ -185,14 +186,14 @@ p1 {
 }
 
 .back-icon-btn {
-    font-size:20px;
-    color:black !important;
-    border:none !important;
+    font-size: 20px;
+    color: black !important;
+    border: none !important;
 }
 
 .username-text {
-    font-size:17px;
-    font-weight:bold;
+    font-size: 17px;
+    font-weight: bold;
 }
 
 .food-dropdown {
@@ -201,13 +202,13 @@ p1 {
 }
 
 .calories-feed {
-    float: left; 
-    margin-left: 0; 
-    margin-right: 3%; 
+    float: left;
+    margin-left: 0;
+    margin-right: 3%;
 }
 
 .calories-feed {
-    float: left; 
+    float: left;
 }
 
 .feed-icon {
@@ -217,27 +218,27 @@ p1 {
 
 
 
-.feed-info{
-    width: 30%; 
-    overflow: hidden; 
+.feed-info {
+    width: 30%;
+    overflow: hidden;
 }
 
 .feed-info-container {
-    height: 20px; 
-    margin-top: 5px; 
-    margin-bottom:25px;
+    height: 20px;
+    margin-top: 5px;
+    margin-bottom: 25px;
 }
 
-.feed-icon{
-    margin-top: 3px; 
+.feed-icon {
+    margin-top: 3px;
 }
 
 .preptime-feed {
-    margin-right: 0; 
+    margin-right: 0;
 }
 
 .feed-info p {
-    margin-bottom: 0; 
+    margin-bottom: 0;
 }
 
 .feed-option {
@@ -254,14 +255,14 @@ li.checkbox-menu {
     height: 30px;
 }
 
-li.checkbox-menu:not(:first-child) {
-    padding-top: 1px;
-}
+    li.checkbox-menu:not(:first-child) {
+        padding-top: 1px;
+    }
 
-li.checkbox-menu:not(:last-child) {
-    padding-bottom: 19px;
-    border-bottom: 0.5px groove #FFFFFF;
-}
+    li.checkbox-menu:not(:last-child) {
+        padding-bottom: 19px;
+        border-bottom: 0.5px groove #FFFFFF;
+    }
 
 .checkbox-menu a:focus {
     outline: none;
@@ -277,28 +278,32 @@ li.checkbox-menu:not(:last-child) {
     float: right;
 }
 
-.list-item-link{
-    position:absolute;
-    width:90%;
-    padding-left:10%;
-    height:90%;
-    padding-bottom:10%;
-    position:center;
+.list-item-link {
+    position: absolute;
+    width: 90%;
+    padding-left: 10%;
+    height: 90%;
+    padding-bottom: 10%;
+    position: center;
 }
 
-.icon-group{
-    width:90%;
-    margin-top: 15px; 
+.icon-group {
+    width: 90%;
+    margin-top: 15px;
 }
 
-.star{
-    float: right; 
+.star {
+    float: right;
     margin-top: 0px;
-    z-index: 2; 
-    position: relative; 
+    z-index: 2;
+    position: relative;
 }
 
+.trash-icon {
+    color: #d8411c;
+    position: relative;
+}
 
-
-
-
+.mini-recept {
+    margin-bottom: 5spx !important;
+}
