@@ -5,7 +5,7 @@
         var $widget = $(this),
             $checkbox = $('<input type="checkbox" class="hidden" />'),
             color = ($widget.data('color') ? $widget.data('color') : "primary"),
-            style = ($widget.data('style') == "button" ? "btn-" : "list-group-item-"),
+            style = ($widget.data('style') === "button" ? "btn-" : "list-group-item-"),
             settings = {
                 on: {
                     icon: 'glyphicon glyphicon-check'
@@ -15,7 +15,7 @@
                 }
             };
 
-        $widget.css('cursor', 'pointer')
+        $widget.css('cursor', 'pointer');
         $widget.append($checkbox);
 
         // Event Handlers
@@ -34,7 +34,7 @@
             var isChecked = $checkbox.is(':checked');
 
             // Set the button's state
-            $widget.data('state', (isChecked) ? "on" : "off");
+            $widget.data('state', isChecked ? "on" : "off");
 
             // Set the button's icon
             $widget.find('.state-icon')
@@ -52,14 +52,14 @@
         // Initialization
         function init() {
 
-            if ($widget.data('checked') == true) {
+            if ($widget.data('checked') === true) {
                 $checkbox.prop('checked', !$checkbox.is(':checked'));
             }
 
             updateDisplay();
 
             // Inject the icon if applicable
-            if ($widget.find('.state-icon').length == 0) {
+            if ($widget.find('.state-icon').length === 0) {
                 $widget.prepend('<span class="state-icon ' + settings[$widget.data('state')].icon + '"></span>');
             }
         }

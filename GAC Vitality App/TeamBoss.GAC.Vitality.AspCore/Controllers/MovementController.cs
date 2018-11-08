@@ -17,5 +17,10 @@ namespace TeamBoss.GAC.Vitality.AspCore.Controllers
         {
             return View();
         }
+
+        public IActionResult Invite()
+        {
+            return View();
+        }
     }
 }
