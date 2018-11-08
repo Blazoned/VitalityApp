@@ -1,0 +1,74 @@
+﻿
+@{
+	ViewData["Title"] = "Mental";
+	Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section Scripts
+	{
+	<script src="~/js/MentalPage.js"></script>
+}
+
+<div class="container-fluid">
+	<div class="row">
+		<div class="Mental-wrapper">
+			<div class="container text-wrapper">
+				<h3 id="Mental-Title">
+					Goedendag!
+				</h3>
+				<hr id="Mental-Description">
+				<i>
+					Het leven wordt niet rijker door vrij te zijn van emoties,
+					wel door vrij met emoties om te kunnen gaan.
+				</i>
+			</div>	
+			</div>
+		</div>
+	</div>
+
+<div class="container-fluid">
+	<div class="row">
+		<div class="heading-wrapper">
+			<div class="container text-wrapper">
+				<h3 id="Mental-mindstate">
+					Gemoedstoestand van vandaag!
+				</h3>
+				<div class="container text-wrapper">
+					<div class="container text-wrapper">
+						<h4 id="Mental-You">
+							Ik voel me
+						</h4>
+						<div class="image-container">
+							<div class="image-feed">
+								<img class="img-center" src="https://tompai.pro/wp-content/uploads/2012/01/smiley-emoticon.png" />
+							</div>
+						</div>
+						<h4 id="Mental-You">
+							vandaag!
+						</h4>
+						<h4 id="Mental-Buddy">
+							Mental Buddy voelt zich
+						</h4>
+						<div class="image-container">
+							<div class="image-feed">
+								<img class="img-center" src="http://www.clker.com/cliparts/9/3/r/W/g/e/black-crossed-out-circle-md.png" />
+							</div>
+						</div>
+						<h4 id="Mental-Buddy">
+							vandaag!
+						</h4>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+	<div class="container-fluid">
+		<div class="row">
+			<a class="btn btn-primary buttonCalendar" role="button" asp-action="NikoNikoCalendar" asp-controller="Mental">Niko Niko Kalender</a>
+			<a class="btn btn-primary buttonMentalBuddy" role="button" asp-action="MentalBuddy" asp-controller="Mental">Mental Buddy</a>
+		</div>
+	</div>
+</div>
+
+

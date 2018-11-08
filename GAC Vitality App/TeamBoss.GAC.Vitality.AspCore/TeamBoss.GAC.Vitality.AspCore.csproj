@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp2.0</TargetFramework>
-    <UserSecretsId>8def8144-27ee-4872-b0b7-0179105823d8</UserSecretsId>
+    <UserSecretsId>89ca5e6a-20be-4a46-8ccc-55ad2d4b2a29</UserSecretsId>
   </PropertyGroup>
 
   <ItemGroup>
@@ -31,5 +31,7 @@
   <ItemGroup>
     <Folder Include="wwwroot\lib\jquery\dist\" />
   </ItemGroup>
+
+  <ProjectExtensions><VisualStudio><UserProperties bundleconfig_1json__JSONSchema="" /></VisualStudio></ProjectExtensions>
 
 </Project>
