@@ -286,7 +286,6 @@ h1 {
 }
 
 .switch {
-    padding-bottom: 20px;
     width: 100%;
 }
 
@@ -437,3 +436,4 @@ a.btn.btn-info.btn-visible {
 .bedpad{
     padding-right: 20px;
 }
+
