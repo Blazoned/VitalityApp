@@ -23,6 +23,21 @@
                         Test Gebruikers Naam
                     </p>
 
+                    <div class="icon-wrapper">
+                        <div class="favourite-group">
+                            <div class="btn-group favourite-btn-group pull-right">
+                                <div class="btn favourite-btn visible">
+                                    <span class="far fa-star"></span>
+                                </div>
+                                <div class="btn favourite-btn hidden">
+                                    <span class="fa fa-star"></span>
+                                </div>
+
+                                <b class="favourites-text">25</b>
+                            </div>
+                        </div>
+                    </div>
+
                     <div class="carousel-inner">
                         <div class="item active">
                             <img class="img-center" src="https://img.grouponcdn.com/deal/8DDtq5XRzVnLXEUnPHPd/p2-2048x1229/v1/c700x420.jpg" />
@@ -35,15 +50,6 @@
                 </div>
 
                 <div class="icon-wrapper">
-                    <div class="btn-group pull-right">
-                        <div class="btn favourite-btn visible">
-                            <span class="far fa-star"></span>
-                        </div>
-                        <div class="btn favourite-btn hidden">
-                            <span class="fa fa-star"></span>
-                        </div>
-                    </div>
-
                     <div class="icon-group">
                         <span class="fa fa-fire calory-icon">
                             <b class="calory-text">450 kcal</b>
@@ -53,8 +59,12 @@
                             <b class="clock-text">15 min</b>
                         </span>
 
-                        <span class="fa fa-users users-icon">
-                            <b class="users-text">25</b>
+                        <span class="fa fa-user user-icon">
+                            <b class="user-text">4</b>
+                        </span>
+
+                        <span class="fab fa-gripfire calories-per-user-icon">
+                            <b class="calories-per-user-text">113 kcal (P.P.)</b>
                         </span>
                     </div>
                 </div>
@@ -81,7 +91,7 @@
                     4. Stap <br />
                 </p>
 
-                <button class="btn btn-primary btnadd" type="button" id="recept-submit-button">Voeg toe aan de calorienteller</button>
+                <button class="btn btn-primary btnadd" type="button" id="recept-submit-button">Voeg toe aan de calorieënteller</button>
 
                 <div class="btnwrapper">
                     <a class="btn btn-primary btnreactions" role="button" id="recept-submit-button" asp-controller="Food" asp-action="RecipeReactions">Reacties</a>

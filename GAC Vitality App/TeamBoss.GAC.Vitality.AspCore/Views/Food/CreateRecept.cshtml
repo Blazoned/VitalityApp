@@ -27,9 +27,27 @@
             </div>
         </div>
 
+        <div class="text-wrapper filterbox-create">
+            <div class="input-group">
+                <div class="input-group-btn">
+                    <button type="button" class="btn btn-primary ignore-focus filterbox-btn" id="food-search-filters-toggle">
+                        Allergiën <span class="animated-transition" id="food-search-filters-caret"><span class="caret"></span></span>
+                    </button>
+                </div>
+            </div>
+            <div class="container-fluid" id="food-search-filters-div" hidden>
+                <div class="input-group filterbox-input-group">
+                    <p class="filterbox-checkbox"><input type="checkbox" />Dairy</p>
+                    <p class="filterbox-checkbox"><input type="checkbox" />Egg</p>
+                    <p class="filterbox-checkbox"><input type="checkbox" />Nuts</p>
+                </div>
+                <hr />
+            </div>
+        </div>
+
         <div id="recept-ingredients-field" class="row section-wrapper">
             <div class="input-group col-xs-12 col-md-4">
-                <textarea class="form-control" rows="10" maxlength="100" placeholder="Ingredienten + Allergenen" id="recept-ingredients-input" required></textarea>
+                <textarea class="form-control" rows="10" maxlength="100" placeholder="Ingredienten" id="recept-ingredients-input" required></textarea>
             </div>
         </div>
 

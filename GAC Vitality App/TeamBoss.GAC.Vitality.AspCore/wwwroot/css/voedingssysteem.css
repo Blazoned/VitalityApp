@@ -116,18 +116,23 @@ p1 {
 .icon-wrapper {
     margin-bottom: 10px;
     margin-top: 5px;
+    width:100%;
 }
 
-    .icon-wrapper .calory-icon, .clock-icon, .users-icon, .favourite-btn {
+    .icon-wrapper .calory-icon, .clock-icon, .favourites-icon, .user-icon, .calories-per-user-icon, .favourite-btn {
         font-size: 160%;
     }
 
-    .icon-wrapper .clock-icon {
-        margin-left: 5%;
+    .icon-wrapper .favourites-icon{
+        color:white;
     }
 
-    .icon-wrapper .users-icon {
-        margin-left: 5%;
+    .icon-wrapper .clock-icon, .user-icon{
+        margin-left: 18%;
+    }
+
+    .icon-wrapper .favourites-icon {
+        float: right;
     }
 
 .favourite-btn {
@@ -145,10 +150,24 @@ p1 {
     display: none;
 }
 
-.calory-text, .clock-text, .users-text {
+.calory-text, .clock-text, .favourites-text, .user-text, .calories-per-user-text, .favourites-text-small {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 14px;
     font-weight: normal;
+}
+
+.favourites-text{
+    color:white;
+    margin-left:3%;
+}
+
+.favourites-text-small{
+    margin-left:3%;
+    position:relative;
+}
+
+.star .favourite-btn{
+    height:5px;
 }
 
 .btn-browse {
@@ -201,14 +220,16 @@ p1 {
     right: 0;
 }
 
-.calories-feed {
-    float: left;
-    margin-left: 0;
-    margin-right: 3%;
+.calories-feed, .preptime-feed, .user-feed, .calories-per-user-feed{
+    float:left;
 }
 
 .calories-feed {
-    float: left;
+    margin-left: 0;
+}
+
+.user-feed{
+    width:20%;
 }
 
 .feed-icon {
@@ -219,22 +240,18 @@ p1 {
 
 
 .feed-info {
-    width: 30%;
-    overflow: hidden;
+    width: 45%;
 }
 
 .feed-info-container {
-    height: 20px;
-    margin-top: 5px;
-    margin-bottom: 25px;
+    height: 40px;
+    margin-top: 8px;
+    margin-bottom: 10px;
+    width:100%;
 }
 
 .feed-icon {
     margin-top: 3px;
-}
-
-.preptime-feed {
-    margin-right: 0;
 }
 
 .feed-info p {
@@ -242,7 +259,6 @@ p1 {
 }
 
 .feed-option {
-    float: right;
     font-size: 20px;
     padding: 0 !important;
 }
@@ -288,12 +304,13 @@ li.checkbox-menu {
 }
 
 .icon-group {
-    width: 90%;
-    margin-top: 15px;
+    width: 100%;
+    margin-top: 10px;
 }
 
 .star {
     float: right;
+    width:25%;
     margin-top: 0px;
     z-index: 2;
     position: relative;
@@ -305,5 +322,49 @@ li.checkbox-menu {
 }
 
 .mini-recept {
-    margin-bottom: 5spx !important;
+    margin-bottom: 5px !important;
+}
+
+.feedyo{
+    margin-bottom:15px;
+}
+
+.list-wrapper-big{
+    margin-top:90px;
+}
+
+.list-wrapper{
+    margin-top:15px;
+}
+
+.filterbox-create{
+    width:100%;
+    padding-top:0 !important;
+    margin-bottom:10px;
+}
+
+.filterbox-btn{
+    width:100%;
+}
+
+.filterbox-checkbox{
+    float:left;
+    margin-right:10%;
+    margin-top:10px;
+}
+
+.filterbox-input-group{
+    width:100%;
+}
+
+.favourite-group{
+    width:100%;
+    margin-top:20px;
+    margin-left:5%;
+    position:absolute;
+    z-index:1000;
+}
+
+.favourite-btn-group{
+    width:25%;
 }
