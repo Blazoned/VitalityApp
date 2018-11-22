@@ -116,18 +116,18 @@ p1 {
 .icon-wrapper {
     margin-bottom: 10px;
     margin-top: 5px;
-    width:100%;
+    width: 100%;
 }
 
     .icon-wrapper .calory-icon, .clock-icon, .favourites-icon, .user-icon, .calories-per-user-icon, .favourite-btn {
         font-size: 160%;
     }
 
-    .icon-wrapper .favourites-icon{
-        color:white;
+    .icon-wrapper .favourites-icon {
+        color: white;
     }
 
-    .icon-wrapper .clock-icon, .user-icon{
+    .icon-wrapper .clock-icon, .user-icon {
         margin-left: 18%;
     }
 
@@ -156,18 +156,18 @@ p1 {
     font-weight: normal;
 }
 
-.favourites-text{
-    color:white;
-    margin-left:3%;
+.favourites-text {
+    color: white;
+    margin-left: 3%;
 }
 
-.favourites-text-small{
-    margin-left:3%;
-    position:relative;
+.favourites-text-small {
+    margin-left: 3%;
+    position: relative;
 }
 
-.star .favourite-btn{
-    height:5px;
+.star .favourite-btn {
+    height: 5px;
 }
 
 .btn-browse {
@@ -220,16 +220,16 @@ p1 {
     right: 0;
 }
 
-.calories-feed, .preptime-feed, .user-feed, .calories-per-user-feed{
-    float:left;
+.calories-feed, .preptime-feed, .user-feed, .calories-per-user-feed {
+    float: left;
 }
 
 .calories-feed {
     margin-left: 0;
 }
 
-.user-feed{
-    width:20%;
+.user-feed {
+    width: 20%;
 }
 
 .feed-icon {
@@ -247,7 +247,7 @@ p1 {
     height: 40px;
     margin-top: 8px;
     margin-bottom: 10px;
-    width:100%;
+    width: 100%;
 }
 
 .feed-icon {
@@ -310,7 +310,7 @@ li.checkbox-menu {
 
 .star {
     float: right;
-    width:25%;
+    width: 25%;
     margin-top: 0px;
     z-index: 2;
     position: relative;
@@ -325,46 +325,53 @@ li.checkbox-menu {
     margin-bottom: 5px !important;
 }
 
-.feedyo{
-    margin-bottom:15px;
+.feedyo {
+    margin-bottom: 15px;
 }
 
-.list-wrapper-big{
-    margin-top:90px;
+.list-wrapper-big {
+    margin-top: 90px;
 }
 
-.list-wrapper{
-    margin-top:15px;
+.list-wrapper {
+    margin-top: 15px;
 }
 
-.filterbox-create{
-    width:100%;
-    padding-top:0 !important;
-    margin-bottom:10px;
+.filterbox-create {
+    width: 100%;
+    padding-top: 0 !important;
+    margin-bottom: 10px;
 }
 
-.filterbox-btn{
-    width:100%;
+.filterbox-btn {
+    width: 100%;
 }
 
-.filterbox-checkbox{
-    float:left;
-    margin-right:10%;
-    margin-top:10px;
+.filterbox-checkbox {
+    float: left;
+    margin-right: 10%;
+    margin-top: 10px;
 }
 
-.filterbox-input-group{
-    width:100%;
+.filterbox-input-group {
+    width: 100%;
 }
 
-.favourite-group{
-    width:100%;
-    margin-top:20px;
-    margin-left:5%;
-    position:absolute;
-    z-index:1000;
+.favourite-group {
+    width: 100%;
+    margin-top: 20px;
+    margin-left: 5%;
+    position: absolute;
+    z-index: 1000;
 }
 
-.favourite-btn-group{
-    width:25%;
+.favourite-btn-group {
+    width: 25%;
+}
+
+.calorie-counter-header {
+    font-weight: bold;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 20px;
 }
