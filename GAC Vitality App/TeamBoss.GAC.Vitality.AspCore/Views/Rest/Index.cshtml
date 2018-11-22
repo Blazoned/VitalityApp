@@ -10,10 +10,11 @@
 @section Scripts{
     <script src="~/js/jquery-clockpicker.js"></script>
     <script src="~/js/Filter.js"></script>
-    <script src="~/js/Timer.js"></script>
     <script type="text/javascript">
         $('.clockpicker').clockpicker();
     </script>
+    <script src="~/js/easytimer.js"></script>
+    <script src="~/js/easytimer-settings.js"></script>   
 }
 
 <div class="container row">
@@ -40,21 +41,24 @@
                             <p>Deze timer houd de tijd bij wanneer je pauze bent houden!</p>            
                             <table class="table">
                                 <thead>
-                                    <tr>
-                                        <th style="padding-left: 0px;">
-                                            <div class="btn-group switch" id="status" data-toggle="buttons">
-                                                <button onclick="Clock(this);" style="font-size:13px"
-                                                        class="btn btn-success " id="start-clock">
-                                                    <i class="fa fa-play"></i>
+                                <tr>
+                                    <th class="timeCss">
+                                        <div id="chronoExample">
+                                            <div class="values">00:00:00</div>
+                                            <div>
+                                                <button class="startButton btn btn-success">
+                                                    <i class="fa fa-play" aria-hidden="true"></i>
                                                 </button>
-                                                <button onclick="stopClock(this);" style="font-size:13px"
-                                                        class="btn btn-danger " id="stop-clock">
-                                                    <i class="fa fa-stop"></i>
+                                                <button class="pauseButton btn btn-primary">
+                                                    <i class="fa fa-pause" aria-hidden="true"></i>
+                                                </button>
+                                                <button class="stopButton btn btn-danger" onclick="test()">
+                                                    <i class="fa fa-stop" aria-hidden="true"></i>
                                                 </button>
                                             </div>
-                                        </th>
-                                        <th id="timer" style="vertical-align:middle; text-align: center">0 s</th>
-                                    </tr>
+                                        </div>
+                                    </th>
+                                </tr>
                                 </thead>                                
                             </table>
                         </div>
@@ -62,7 +66,7 @@
                         
                         <div class="container" style="padding-left: 0px; padding-right:0px;">
                             <h2>Slaap Invoeren</h2>
-                            <p>Deze timer houd de tijd bij wanneer je pauze bent houden!</p>
+                            <p>Voer hier uw slaap tijden in!</p>
                             <div class="input-group clockpicker">
                                 <input type="text" class="form-control" placeholder="Begintijd" readonly>
                                 <span class="input-group-addon">
@@ -99,7 +103,7 @@
                             </div>
                             <button type="button" class="btn btn-primary btn-block add-button"><span class="glyphicon glyphicon-plus"></span></button>
                         </div>
-                        </div>
+                    </div>
                 </div>
 
             </div>
@@ -166,3 +170,9 @@
         </div>
     </div>
 </div>
+
+<script>
+    function test() {
+        document.getElementsByClassName("values").innerHTML = "00:00:00";
+    }
+</script>
