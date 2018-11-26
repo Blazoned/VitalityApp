@@ -23,7 +23,7 @@ function UpdateCalorieCounterCircle() {
         var currentCaloriesInt = parseFloat(currentCalories);
         var targetCaloriesInt = parseFloat(targetCalories);
 
-        var targetPercentageInt = parseInt((targetCaloriesInt * 100) / maxCalorieCount); // The percentage that should be displayed.
+        var targetPercentageInt = parseInt(targetCaloriesInt / maxCalorieCount * 100); // The percentage that should be displayed.
         var currentPercentage = $(calorieCounterProgressCircle).attr("data-progress"); // The percentage actually being displayed.
         var currentPercentageInt = parseInt(currentPercentage);
         
@@ -32,8 +32,10 @@ function UpdateCalorieCounterCircle() {
             currentCaloriesInt += maxCaloriePercentage;
 
             if (currentCaloriesInt > targetCaloriesInt) {
-                currentPercentageInt = 100;
                 currentCaloriesInt = targetCaloriesInt;
+            }
+            if (currentPercentageInt > 100) {
+                currentPercentageInt = 100;
             }
         }
         else {
@@ -41,8 +43,10 @@ function UpdateCalorieCounterCircle() {
             currentCaloriesInt -= maxCaloriePercentage;
 
             if (currentCaloriesInt < targetCaloriesInt) {
-                currentPercentageInt = 0;
                 currentCaloriesInt = targetCaloriesInt;
+            }
+            if (currentPercentageInt < 0) {
+                currentPercentageInt = 0;
             }
         }
 
