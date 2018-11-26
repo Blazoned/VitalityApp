@@ -153,9 +153,3 @@ function ToggleFilterMenu() {
     $("#food-search-filters-div").slideToggle(200);
     $("#food-search-filters-caret").toggleClass("dropup");
 }
-
-$(document).keypress(function (keyEvent) {
-    if (keyEvent.charCode == 49) {
-
-    }
-});

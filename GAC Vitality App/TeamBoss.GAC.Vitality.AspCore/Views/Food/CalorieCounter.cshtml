@@ -12,6 +12,7 @@
 
 @section Scripts{
     <script src="~/js/voedingssysteem.js" asp-append-version="true"></script>
+    <script src="~/js/CalorieCounter.js" asp-append-version="true"></script>
 }
 
 <!-- Modal used to warn the user when they wish to remove a recipe -->
@@ -34,8 +35,9 @@
     <div class="row">
         <div class="heading-wrapper">
             <div class="container text-wrapper">
-                <h3 class="calorie-counter-header">4000 Kcal / 10000 Kcal</h3>
-                <div class="progress-circle" data-progress="40"></div>
+
+                <!-- The progress circle with its data values. Change the data-target-calories value to see the progress circle change accordingly. -->
+                <div class="progress-circle" data-progress="0" data-current-calories="0" data-target-calories="4000" data-max-calories="10000"></div>
 
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ultricies suscipit feugiat. Sed vehicula mauris sit amet semper accumsan.</p>
 
