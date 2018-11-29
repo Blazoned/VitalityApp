@@ -8,171 +8,193 @@
 }
 
 @section Scripts{
-    <script src="~/js/jquery-clockpicker.js"></script>
-    <script src="~/js/Filter.js"></script>
-    <script type="text/javascript">
-        $('.clockpicker').clockpicker();
-    </script>
-    <script src="~/js/easytimer.js"></script>
-    <script src="~/js/easytimer-settings.js"></script>   
+    <script src="~/lib/chart/Chart.bundle.js"></script>
+    <script src="~/lib/chart/Chart.js"></script>
+    <script src="~/js/ChartBuild.js"></script>
+    <script src="~/js/PauseBuild.js"></script>
+    <script src="~/js/rest-script.js"></script>
 }
 
 <div class="container row">
-    <div class="form-group block-wrapper col-md-12 col-md-4">
-        <a class="btn btn-primary btn-block" role="button" href="~/Rest/AddRest" data-toggle="modal" data-target="#myModal">
-            <span class="fa fa-plus"></span>
-        </a>
-
-
-        <div id="myModal" class="modal fade" role="dialog">
-            <div class="modal-dialog">
-
-                <!-- Modal content-->
-                <div class="container row">
-                    <div class="form-group block-wrapper col-md-12 col-md-4">
-                        <a class="btn btn-primary backBtnGroup2" role="button" href="~/Rest/Index">
-                            <span class="glyphicon glyphicon-chevron-left"></span>
-                        </a>
-                        <br />
-                        <br />
-                        
-                        <div class="container" style="padding-left: 0px; padding-right:0px;">
-                            <h2>Pauze Timer</h2>
-                            <p>Deze timer houd de tijd bij wanneer je pauze bent houden!</p>            
-                            <table class="table">
-                                <thead>
-                                <tr>
-                                    <th class="timeCss">
-                                        <div id="chronoExample">
-                                            <div class="values">00:00:00</div>
-                                            <div>
-                                                <button class="startButton btn btn-success">
-                                                    <i class="fa fa-play" aria-hidden="true"></i>
-                                                </button>
-                                                <button class="pauseButton btn btn-primary">
-                                                    <i class="fa fa-pause" aria-hidden="true"></i>
-                                                </button>
-                                                <button class="stopButton btn btn-danger" onclick="test()">
-                                                    <i class="fa fa-stop" aria-hidden="true"></i>
-                                                </button>
-                                            </div>
-                                        </div>
-                                    </th>
-                                </tr>
-                                </thead>                                
-                            </table>
+<div class="form-group block-wrapper col-md-12 col-md-4">  
+<br />
+        <div class="container row">
+            <a class="btn btn-primary backBtnGroup2" role="button" href="~/Rest/Index">
+                <span class="glyphicon glyphicon-chevron-left"></span>
+            </a>
+            <a class="btn btn-primary backBtnGroup3" role="button" href="~/Rest/AddSleep">
+                <span class="glyphicon glyphicon-bed"></span> Slaap Invoeren
+            </a>
+            <br />
+            <br />
+            
+            <h2>Pauze Timer</h2>
+            <p>Deze timer houd de tijd bij wanneer je pauze bent houden!</p>
+            <table class="table">
+                <thead>
+                <tr>
+                    <th class="timeCss">
+                        <div id="chronoExample">
+                            <label id="minutes">00</label>:<label id="seconds">00</label>
+                            <br />
+                            <button id="button-start" class="btn btn-success" onclick="startTime()">
+                                <i class="fa fa-play" aria-hidden="true"></i>
+                            </button>
+                            <button id="button-start" class="btn btn-primary" onclick="pauseTime()">
+                                <i class="fa fa-pause" aria-hidden="true"></i>
+                            </button>
+                            <button id="button-start" class="btn btn-danger" onclick="stopTime()">
+                                <i class="fa fa-stop" aria-hidden="true"></i>
+                            </button>
                         </div>
-
-                        
-                        <div class="container" style="padding-left: 0px; padding-right:0px;">
-                            <h2>Slaap Invoeren</h2>
-                            <p>Voer hier uw slaap tijden in!</p>
-                            <div class="input-group clockpicker">
-                                <input type="text" class="form-control" placeholder="Begintijd" readonly>
-                                <span class="input-group-addon">
-                                    <span class="glyphicon glyphicon-time"></span>
-                                </span>
-                            </div>
-                            <br />
-                            <div class="input-group clockpicker">
-                                <input type="text" class="form-control" placeholder="Eindtijd" readonly>
-                                <span class="input-group-addon">
-                                    <span class="glyphicon glyphicon-time"></span>
-                                </span>
-                            </div>
-                            <br />
-                            <div class="input-group">
-                                <input type="date" class="form-control" placeholder="Datum">
-                                <span class="input-group-addon">
-                                    <span class="glyphicon glyphicon-calendar"></span>
-                                </span>
-                            </div>
-                            <br />
-                            <div class="input-group repeat-checkbox">
-                                <label>Herhalen?</label>
-
-                                <div class="checkbox">
-                                    <label style="padding-right: 20px;"><input type="checkbox" value="">Maandag</label><br />
-                                    <label style="padding-right: 20px;"><input type="checkbox" value="">Dinsdag</label><br />
-                                    <label style="padding-right: 20px;"><input type="checkbox" value="">Woensdag</label><br />
-                                    <label style="padding-right: 20px;"><input type="checkbox" value="">Donderdag</label><br />
-                                    <label style="padding-right: 20px;"><input type="checkbox" value="">Vrijdag</label><br />
-                                    <label style="padding-right: 20px;"><input type="checkbox" value="">Zaterdag</label><br />
-                                    <label style="padding-right: 20px;"><input type="checkbox" value="">Zondag</label><br />
-                                </div>
-                            </div>
-                            <button type="button" class="btn btn-primary btn-block add-button"><span class="glyphicon glyphicon-plus"></span></button>
                         </div>
-                    </div>
-                </div>
+                    </th>
+                </tr>
+                </thead>
+            </table>
+        </div>            
 
-            </div>
-        </div>
+            <h1>Overzicht</h1>
+        <table class="table">
+            <tbody>
+            <tr>
+                <td style="vertical-align:middle"><b/>29-11 t/m 05-12</td>
+                <td>
 
-        <br />
-
-        <div class="container text-wrapper2">
-            <input id="myInput" type="text" placeholder="Search.." class="form-control">
-            <br/>
-            <ul class="list-group checked-list-box">
-                <li class="list-group-item">
-                    <label>Rust Momenten</label>
-                    <table>
-                        <tbody id="myTable">
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#sleepModal"  style="width: 100%">
+                        <span class="glyphicon glyphicon-bed"></span>
+                    </button>
+                </td>
+                <td>
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#pauseModal"  style="width: 100%">
+                        <span class="glyphicon glyphicon-time"></span>
+                    </button>
+                </td>
+            </tr>
+            </tbody>
+        </table>   
+        </div>       
+            <div class="container" style="padding-left: 0px; padding-right:0px;">
+                <div class="modal fade" id="sleepModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <canvas id="sleepChart" width="400" height="400"></canvas>
+                    <table class="table">
+                        <thead>
                         <tr>
+                            <th scope="col">Datum</th>
+                            <th scope="col">Uren Slaap</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td style="vertical-align: middle">29-11</td>
                             <td>
-                                <div class="col-md-2 custom-md">
-                                    <span class="fa fa-bed bedpad"></span>
-                                </div>
-                            </td>
-                            <td>
-                                <div class="col-md-2 custom-md">
-                                    22:00 - 07:00
-                                </div>
-                            </td>
-                            <td>
-                                <div class="col-md-1 custom-md">
-                                    <span class="fa fa-calendar-alt"></span>
-                                </div>
-                            </td>
-                            <td>
-                                <div class="col-md-2 custom-md">
-                                    08-11
-                                </div>
+                                <input type="text" class="form-control" id="" aria-describedby="" placeholder="10">
                             </td>
                         </tr>
                         <tr>
+                            <td style="vertical-align: middle">30-11</td>
                             <td>
-                                <div class="col-md-2 custom-md">
-                                    <span class="fa fa-pause bedpad"></span>
-                                </div>
+                                <input type="text" class="form-control" id="" aria-describedby="" placeholder="8">
                             </td>
+                        </tr>
+                        <tr>
+                            <td style="vertical-align: middle">01-12</td>
                             <td>
-                                <div class="col-md-2 custom-md">
-                                    12:30 - 13:00
-                                </div>
+                                <input type="text" class="form-control" id="" aria-describedby="" placeholder="6">
                             </td>
+                        </tr>
+                        <tr>
+                            <td style="vertical-align: middle">02-12</td>
                             <td>
-                                <div class="col-md-1 custom-md">
-                                    <span class="fa fa-calendar-alt"></span>
-                                </div>
+                                <input type="text" class="form-control" id="" aria-describedby="" placeholder="4">
                             </td>
+                        </tr>
+                        <tr>
+                            <td style="vertical-align: middle">03-12</td>
                             <td>
-                                <div class="col-md-2 custom-md">
-                                    08-12
-                                </div>
+                                <input type="text" class="form-control" id="" aria-describedby="" placeholder="8">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="vertical-align: middle">04-12</td>
+                            <td>
+                                <input type="text" class="form-control" id="" aria-describedby="" placeholder="7">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="vertical-align: middle">05-12</td>
+                            <td>
+                                <input type="text" class="form-control" id="" aria-describedby="" placeholder="5">
                             </td>
                         </tr>
                         </tbody>
                     </table>
-                </li>
-            </ul>
+                    <button type="button" class="btn btn-success opslaanFullWidth">Opslaan</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="pauseModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <canvas id="pauseChart" width="400" height="400"></canvas>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th scope="col">Datum</th>
+                                <th scope="col">Uren Pauze</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td style="vertical-align: middle">29-11</td>
+                                <td>
+                                    <input type="text" class="form-control" id="" aria-describedby="" placeholder="00:30">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="vertical-align: middle">30-11</td>
+                                <td>
+                                    <input type="text" class="form-control" id="" aria-describedby="" placeholder="00:15">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="vertical-align: middle">01-12</td>
+                                <td>
+                                    <input type="text" class="form-control" id="" aria-describedby="" placeholder="1">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="vertical-align: middle">02-12</td>
+                                <td>
+                                    <input type="text" class="form-control" id="" aria-describedby="" placeholder="01:15">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="vertical-align: middle">03-12</td>
+                                <td>
+                                    <input type="text" class="form-control" id="" aria-describedby="" placeholder="00:45">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="vertical-align: middle">04-12</td>
+                                <td>
+                                    <input type="text" class="form-control" id="" aria-describedby="" placeholder="01:45">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="vertical-align: middle">05-12</td>
+                                <td>
+                                    <input type="text" class="form-control" id="" aria-describedby="" placeholder="00:30">
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <button type="button" class="btn btn-success opslaanFullWidth">Opslaan</button>
+                </div>
+            </div>
         </div>
     </div>
 </div>
-
-<script>
-    function test() {
-        document.getElementsByClassName("values").innerHTML = "00:00:00";
-    }
-</script>

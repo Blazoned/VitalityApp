@@ -449,3 +449,28 @@ a.btn.btn-info.btn-visible {
 #chronoExample{
     padding-bottom: 10px;
 }
+
+.backBtnGroup3{
+    float:right;
+}
+
+#sleepModal .modal-content {
+    position: fixed;
+    width: 100%;
+    margin-top: 0px;
+}
+
+#pauseModal .modal-content {
+    position: fixed;
+    width: 100%;
+    margin-top: 0px;
+}
+
+.opslaanFullWidth{
+    width: 100%;
+}
+
+.input-group.repeat-checkbox {
+    text-align: left;
+}
+

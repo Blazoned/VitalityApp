@@ -13,7 +13,7 @@ namespace TeamBoss.GAC.Vitality.AspCore.Controllers
             return View();
         }
 
-        public IActionResult AddRest()
+        public IActionResult AddSleep()
         {
             return View();
         }
