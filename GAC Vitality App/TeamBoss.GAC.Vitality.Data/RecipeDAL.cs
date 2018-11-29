@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace TeamBoss.GAC.Vitality.Data
 {
-    public class Class1
+    public class RecipeDAL
     {
+
     }
 }
