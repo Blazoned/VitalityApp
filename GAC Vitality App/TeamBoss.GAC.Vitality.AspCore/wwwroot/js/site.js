@@ -18,3 +18,7 @@ function SlideRemoveDOMObject(domObj) {
         domObj.remove();
     }, 300);
 }
+
+function ConsoleTest() {
+    console.log("Test");
+}
