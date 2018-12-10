@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+using TeamBoss.GAC.Vitality.DataInterfaces;
+
 namespace TeamBoss.GAC.Vitality.Logic.FoodSystem
 {
     public class Recipe
@@ -18,5 +20,24 @@ namespace TeamBoss.GAC.Vitality.Logic.FoodSystem
         private List<string> imageList { get; set; }
         private int personAmount { get; set; }
         private List<Reaction> reactionList { get; set;}
+
+        public Recipe(RecipeStruct recipeStruct)
+        {
+            username = recipeStruct.Username;
+            name = recipeStruct.Name;
+            description = recipeStruct.Description;
+
+            allergenList = new List<Allergenes>();
+            recipeStruct.AllergeneList.ForEach(allergene => allergenList.Add((Allergenes)allergene));
+
+            ingredientList = recipeStruct.IngredientList;
+            preperationTime = recipeStruct.PreperationTime;
+            totalCalories = recipeStruct.TotalCalories;
+            imageList = recipeStruct.ImageList;
+            personAmount = recipeStruct.PersonAmount;
+
+            reactionList = new List<Reaction>();
+            recipeStruct.ReactionList.ForEach(reaction => reactionList.Add(new Reaction(reaction))); 
+        }
     }
 }
