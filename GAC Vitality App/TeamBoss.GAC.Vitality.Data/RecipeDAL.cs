@@ -6,7 +6,6 @@ using System.Text;
 using System.Threading.Tasks;
 
 using TeamBoss.GAC.Vitality.DataInterfaces;
-using TeamBoss.GAC.Vitality.Structs;
 
 namespace TeamBoss.GAC.Vitality.Data
 {

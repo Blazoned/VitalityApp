@@ -40,18 +40,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="MiniRecipeDAL.cs" />
     <Compile Include="RecipeDAL.cs" />
     <Compile Include="Connection.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\DataInterfaces\TeamBoss.GAC.Vitality.DataInterfaces.csproj">
+    <ProjectReference Include="..\DataInterfaces\%281%29 TeamBoss.GAC.Vitality.DataInterfaces.csproj">
       <Project>{9f2d3c6e-d6fc-4148-9c17-36f0e7d5ca21}</Project>
-      <Name>TeamBoss.GAC.Vitality.DataInterfaces</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Structs\TeamBoss.GAC.Vitality.Structs.csproj">
-      <Project>{a3c43cf4-34cb-436d-9d57-6eddc10da9fb}</Project>
-      <Name>TeamBoss.GAC.Vitality.Structs</Name>
+      <Name>%281%29 TeamBoss.GAC.Vitality.DataInterfaces</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

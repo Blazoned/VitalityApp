@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace TeamBoss.GAC.Vitality.DataInterfaces
 {
-    public interface IRecipeDAL
+    public interface IMiniRecipeDAL
     {
-        List<RecipeStruct> GetRecipeListByUserID(int userID, bool useTestDatabase = false);
+        List<MiniRecipeStruct> GetAllMiniRecipesByUserID(int userID, bool useTestDatabase = false);
     }
 }
