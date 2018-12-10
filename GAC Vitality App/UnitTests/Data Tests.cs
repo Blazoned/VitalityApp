@@ -14,7 +14,7 @@ namespace UnitTests
         [TestMethod]
         public void OpenCloseConnectionTest()
         {
-            Connection testConnection = new Connection("den1.mssql7.gear.host", "1433", "vitalitydatabase", "Eu4q81-5fkU!");
+            Connection testConnection = new Connection(true);
 
             testConnection.Open();
             testConnection.Close();
@@ -23,17 +23,24 @@ namespace UnitTests
         [TestMethod]
         public void ExecuteQueryTest()
         {
-            Connection testConnection = new Connection("den1.mssql7.gear.host", "1433", "vitalitydatabase", "Eu4q81-5fkU!");
+            Connection testConnection = new Connection(true);
             testConnection.Open();
 
             DataTable dataTable = testConnection.ExecuteReader("SELECT * FROM [Recipe]");
 
             testConnection.Close();
 
-            bool actualPizzaName = ((string)dataTable.Rows[0]["Name"] == "Pizza");
-            bool actualSaladeName = ((string)dataTable.Rows[1]["Name"] == "Fruitsalade");
+            bool actualPizzaName = false;
+            foreach(DataRow dataRow in dataTable.Rows)
+            {
+                if(dataRow["Name"].ToString() == "Pizza")
+                {
+                    actualPizzaName = true;
+                    break;
+                }
+            }
 
-            Assert.AreEqual(true, actualPizzaName && actualSaladeName);
+            Assert.AreEqual(true, actualPizzaName);
         }
     }
 }

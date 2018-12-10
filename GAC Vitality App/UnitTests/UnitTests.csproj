@@ -53,11 +53,16 @@
   <ItemGroup>
     <Compile Include="Data Tests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RecipeDAL Tests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Structs\TeamBoss.GAC.Vitality.Structs.csproj">
+      <Project>{a3c43cf4-34cb-436d-9d57-6eddc10da9fb}</Project>
+      <Name>TeamBoss.GAC.Vitality.Structs</Name>
+    </ProjectReference>
     <ProjectReference Include="..\TeamBoss.GAC.Vitality.Data\TeamBoss.GAC.Vitality.Data.csproj">
       <Project>{faefb1ea-1952-4db8-a872-99cddc26aa95}</Project>
       <Name>TeamBoss.GAC.Vitality.Data</Name>

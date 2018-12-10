@@ -42,8 +42,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="IRecipeDAL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Structs\TeamBoss.GAC.Vitality.Structs.csproj">
+      <Project>{a3c43cf4-34cb-436d-9d57-6eddc10da9fb}</Project>
+      <Name>TeamBoss.GAC.Vitality.Structs</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

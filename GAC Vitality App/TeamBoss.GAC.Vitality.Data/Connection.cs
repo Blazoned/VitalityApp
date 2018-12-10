@@ -13,19 +13,20 @@ namespace TeamBoss.GAC.Vitality.Data
         /// <summary>
         /// The connection object.
         /// </summary>
-        private SqlConnection connection;
+        private SqlConnection connection = new SqlConnection();
+        private string normalConnectionString = @"Data Source = den1.mssql7.gear.host; Initial Catalog = vitalitydatabase; User Id = vitalitydatabase; Password = Eu4q81-5fkU!;";
+        private string testConnectionString = @"Data Source = den1.mssql8.gear.host; Initial Catalog = vitalitytestdb2; User Id = vitalitytestdb2; Password = Kh3Tq14~D5?5;";
 
-        /// <summary>
-        /// Creates a new connection object with the given parameters as its connection string.
-        /// </summary>
-        /// <param name="databaseAddress">The address of the database server.</param>
-        /// <param name="databasePort">The port to connect through.</param>
-        /// <param name="userID">The user ID to connect with.</param>
-        /// <param name="password">The password to connect with.</param>
-        public Connection(string databaseAddress, string databasePort, string userID, string password)
+        public Connection(bool useTestDatabase = false)
         {
-            string connectionString = "server=" + databaseAddress + "," + databasePort + ";uid=" + userID + ";password=" + password;
-            connection = new SqlConnection(connectionString);
+            if(useTestDatabase)
+            {
+                connection.ConnectionString = testConnectionString;
+            }
+            else
+            {
+                connection.ConnectionString = normalConnectionString;
+            }
         }
 
         /// <summary>
