@@ -45,6 +45,7 @@
     <Compile Include="IMiniRecipeDAL.cs" />
     <Compile Include="IRecipeDAL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Structs\AllergeneStruct.cs" />
     <Compile Include="Structs\MiniRecipeStruct.cs" />
     <Compile Include="Structs\ReactionStruct.cs" />
     <Compile Include="Structs\RecipeStruct.cs" />
