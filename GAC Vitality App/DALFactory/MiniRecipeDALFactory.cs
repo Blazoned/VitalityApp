@@ -9,9 +9,9 @@ using TeamBoss.GAC.Vitality.DALInterfaces;
 
 namespace TeamBoss.GAC.Vitality.DALFactory
 {
-    public class MiniRecipeFactory
+    public class MiniRecipeDALFactory
     {
-        public static IMiniRecipeDAL CreateMiniRecipeInterface()
+        public static IMiniRecipeDAL CreateMiniRecipeDALInterface()
         {
             return new MiniRecipeDAL();
         }

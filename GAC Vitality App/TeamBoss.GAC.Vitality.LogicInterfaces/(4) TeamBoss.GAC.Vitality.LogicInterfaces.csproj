@@ -41,7 +41,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="IFoodUser.cs" />
+    <Compile Include="ICalorieCounterLogic.cs" />
+    <Compile Include="IFoodUserLogic.cs" />
+    <Compile Include="IMiniRecipeLogic.cs" />
+    <Compile Include="IReactionLogic.cs" />
+    <Compile Include="IRecipeLogic.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

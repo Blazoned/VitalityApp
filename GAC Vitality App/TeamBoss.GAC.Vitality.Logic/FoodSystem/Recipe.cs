@@ -5,10 +5,11 @@ using System.Text;
 using System.Threading.Tasks;
 
 using TeamBoss.GAC.Vitality.DALInterfaces;
+using TeamBoss.GAC.Vitality.LogicInterfaces;
 
 namespace TeamBoss.GAC.Vitality.Logic.FoodSystem
 {
-    public class Recipe
+    public class Recipe : IRecipeLogic
     {
         private string username { get; set; }
         private string name { get; set; }

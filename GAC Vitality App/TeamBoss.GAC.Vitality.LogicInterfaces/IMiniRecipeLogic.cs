@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TeamBoss.GAC.Vitality.LogicInterfaces
 {
-    public interface IFoodUser
+    public interface IMiniRecipeLogic
     {
     }
 }

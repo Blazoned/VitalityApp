@@ -11,17 +11,17 @@ using TeamBoss.GAC.Vitality.LogicInterfaces;
 
 namespace TeamBoss.GAC.Vitality.Logic.FoodSystem
 {
-    public class FoodUser : User, IFoodUser
+    public class FoodUser : User, IFoodUserLogic
     {
-        private List<Recipe> myRecipeList { get; set; }
-        private List<Recipe> favoriteRecipeList { get; set; }
-        private CalorieCounter calorieCounter { get; set; }
+        private List<Recipe> MyRecipeList { get; set; }
+        private List<Recipe> FavoriteRecipeList { get; set; }
+        private CalorieCounter CalorieCounter { get; set; }
 
-        private IRecipeDAL iRecipeDAL = RecipeFactory.CreateRecipeInterface();
+        private IRecipeDAL iRecipeDAL = RecipeDALFactory.CreateRecipeDALInterface();
 
         public FoodUser()
         {
-            myRecipeList = GetMyRecipes();
+            MyRecipeList = GetMyRecipes();
         }
 
         public List<Recipe> GetMyRecipes()
@@ -33,24 +33,24 @@ namespace TeamBoss.GAC.Vitality.Logic.FoodSystem
             return recipes; 
         }
 
-        public void AddRecipe(string username, string name, string description, List<Allergenes> allergeneList, List<string> ingredients, int preperationTime, int totalCalories, List<string> imageList, int personAmount)
+        public bool AddRecipe(string username, string name, string description, List<Allergenes> allergeneList, List<string> ingredients, int preperationTime, int totalCalories, List<string> imageList, int personAmount)
         {
-
+            throw new NotImplementedException();
         }
 
-        public void DeleteRecipe(Recipe recipe)
+        public bool DeleteRecipe(Recipe recipe)
         {
-
+            throw new NotImplementedException();
         }
 
-        public void FavoriteRecipe(Recipe recipe)
+        public bool FavoriteRecipe(Recipe recipe)
         {
-
+            throw new NotImplementedException();
         }
 
-        public void UnfavoriteRecipe(Recipe recipe)
+        public bool UnfavoriteRecipe(Recipe recipe)
         {
-
+            throw new NotImplementedException();
         }
 
     }

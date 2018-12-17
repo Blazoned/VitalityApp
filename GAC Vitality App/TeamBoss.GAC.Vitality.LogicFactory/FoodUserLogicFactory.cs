@@ -9,13 +9,13 @@ using TeamBoss.GAC.Vitality.LogicInterfaces;
 
 namespace TeamBoss.GAC.Vitality.LogicFactory
 {
-    public class FoodUserFactory
+    public class FoodUserLogicFactory
     {
         /// <summary>
-        /// Returns a new IFoodUser interface.
+        /// Returns a new IFoodUserLogic interface.
         /// </summary>
         /// <returns></returns>
-        public static IFoodUser CreateFoodUserInterface()
+        public static IFoodUserLogic CreateFoodUserLogicInterface()
         {
             return new FoodUser();
         }

@@ -16,7 +16,7 @@ namespace TeamBoss.GAC.Vitality.Logic.FoodSystem
         private int calorieAmount { get; set; }
         private int calorieCount { get; set; }
 
-        private IMiniRecipeDAL iMiniRecipeDAL = MiniRecipeFactory.CreateMiniRecipeInterface();
+        private IMiniRecipeDAL iMiniRecipeDAL = MiniRecipeDALFactory.CreateMiniRecipeDALInterface();
 
         public void AddRecipe(Recipe recipe)
         {

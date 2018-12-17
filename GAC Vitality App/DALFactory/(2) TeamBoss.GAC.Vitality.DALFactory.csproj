@@ -41,9 +41,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="MiniRecipeFactory.cs" />
+    <Compile Include="MiniRecipeDALFactory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="RecipeFactory.cs" />
+    <Compile Include="RecipeDALFactory.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DataInterfaces\%281%29 TeamBoss.GAC.Vitality.DALInterfaces.csproj">
