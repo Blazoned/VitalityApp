@@ -36,10 +36,10 @@ namespace TeamBoss.GAC.Vitality.DAL
                 DataTable ingredientTable = connection.ExecuteReader("SELECT * FROM Ingredients WHERE RecipeId = " + recipeID);
                 connection.Close();
 
-                List<int> allergeneList = new List<int>(allergeneTable.Rows.Count);
+                List<AllergeneStruct> allergeneList = new List<AllergeneStruct>(allergeneTable.Rows.Count);
                 foreach (DataRow allergeneRow in allergeneTable.Rows)
                 {
-                    allergeneList.Add((int)allergeneRow["AllergeneId"]);
+                    
                 }
                 List<ReactionStruct> reactionList = new List<ReactionStruct>(reactionTable.Rows.Count);
                 foreach (DataRow reactionRow in reactionTable.Rows)

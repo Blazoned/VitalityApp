@@ -15,7 +15,7 @@ namespace TeamBoss.GAC.Vitality.DALInterfaces
         /// </summary>
         public int PreperationTime { get; private set; }
         public int TotalCalories { get; private set; }
-        public List<int> AllergeneList { get; private set; }
+        public List<AllergeneStruct> AllergeneList { get; private set; }
         public List<ReactionStruct> ReactionList { get; private set; }
         public List<string> ImageList { get; private set; }
         public List<string> IngredientList { get; private set; }
@@ -23,7 +23,7 @@ namespace TeamBoss.GAC.Vitality.DALInterfaces
         public string Name { get; private set; }
         public string Username { get; private set; }
 
-        public RecipeStruct(int id, int personAmount, int preperationTime, int totalCalories, List<int> allergeneList, List<ReactionStruct> reactionList, List<string> imageList, List<string> ingredientList, string description, string name, string username)
+        public RecipeStruct(int id, int personAmount, int preperationTime, int totalCalories, List<AllergeneStruct> allergeneList, List<ReactionStruct> reactionList, List<string> imageList, List<string> ingredientList, string description, string name, string username)
         {
             Id = id;
             PersonAmount = personAmount;
