@@ -14,7 +14,7 @@ namespace UnitTests
         public void GetRecipeByUserIDTest()
         {
             RecipeDAL recipeDAL = new RecipeDAL();
-            recipeDAL.GetRecipeListByUserID(1, true);
+            recipeDAL.GetRecipeListByUserID(1);
         }
     }
 }

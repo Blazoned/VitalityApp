@@ -50,9 +50,9 @@ namespace TeamBoss.GAC.Vitality.Logic
 
         }
 
-        public List<MiniRecipe> GetAllMiniRecipes(int userID, bool useTestDatabase)
+        public List<MiniRecipe> GetAllMiniRecipes(int userID)
         {
-            List<MiniRecipeStruct> miniRecipeStructs = iMiniRecipeDAL.GetAllMiniRecipesByUserID(userID, useTestDatabase);
+            List<MiniRecipeStruct> miniRecipeStructs = iMiniRecipeDAL.GetAllMiniRecipesByUserID(userID);
             List<MiniRecipe> returnMiniRecipes = new List<MiniRecipe>(miniRecipeStructs.Count);
             // TODO: Load properties of mini recipe from miniRecipeStructs
             miniRecipeStructs.ForEach(miniRecipeStruct => returnMiniRecipes.Add(new MiniRecipe()));

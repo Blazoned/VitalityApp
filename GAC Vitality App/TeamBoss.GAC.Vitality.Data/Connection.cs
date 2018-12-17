@@ -17,16 +17,9 @@ namespace TeamBoss.GAC.Vitality.DAL
         private string normalConnectionString = "Data Source = den1.mssql7.gear.host; Initial Catalog = vitalitydatabase; User Id = vitalitydatabase; Password = Eu4q81-5fkU!;";
         private string testConnectionString = "Data Source = den1.mssql8.gear.host; Initial Catalog = vitalitytestdb2; User Id = vitalitytestdb2; Password = Kh3Tq14~D5?5;";
 
-        public Connection(bool useTestDatabase = false)
+        public Connection()
         {
-            if(useTestDatabase)
-            {
-                connection.ConnectionString = testConnectionString;
-            }
-            else
-            {
-                connection.ConnectionString = normalConnectionString;
-            }
+            connection.ConnectionString = testConnectionString; 
         }
 
         /// <summary>

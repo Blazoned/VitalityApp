@@ -9,7 +9,7 @@ using TeamBoss.GAC.Vitality.DALInterfaces;
 
 using TeamBoss.GAC.Vitality.LogicInterfaces;
 
-namespace TeamBoss.GAC.Vitality.Logic.FoodSystem
+namespace TeamBoss.GAC.Vitality.Logic
 {
     public class FoodUser : User, IFoodUserLogic
     {
@@ -19,7 +19,7 @@ namespace TeamBoss.GAC.Vitality.Logic.FoodSystem
 
         private IRecipeDAL iRecipeDAL = RecipeDALFactory.CreateRecipeDALInterface();
 
-        public FoodUser()
+        public FoodUser(int id) : base(id)
         {
             MyRecipeList = GetMyRecipes();
         }
@@ -34,7 +34,7 @@ namespace TeamBoss.GAC.Vitality.Logic.FoodSystem
             return recipes; 
         }
 
-        public bool AddRecipe(string username, string name, string description, List<Allergenes> allergeneList, List<string> ingredients, int preperationTime, int totalCalories, List<string> imageList, int personAmount)
+        public bool AddRecipe(string username, string name, string description, List<Allergene> allergeneList, List<string> ingredients, int preperationTime, int totalCalories, List<string> imageList, int personAmount)
         {
             throw new NotImplementedException();
         }

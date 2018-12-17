@@ -11,7 +11,7 @@ namespace IntegrationTests
     public class CalorieCounterTests
     {
         [TestMethod]
-        public void GetAllMiniRecipes()
+        public void GetAllMiniRecipesTest()
         {
             CalorieCounter calorieCounter = new CalorieCounter();
 
