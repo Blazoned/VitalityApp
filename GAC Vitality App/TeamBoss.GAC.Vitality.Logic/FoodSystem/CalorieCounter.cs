@@ -7,9 +7,11 @@ using System.Threading.Tasks;
 using TeamBoss.GAC.Vitality.DALFactory;
 using TeamBoss.GAC.Vitality.DALInterfaces;
 
-namespace TeamBoss.GAC.Vitality.Logic.FoodSystem
+using TeamBoss.GAC.Vitality.LogicInterfaces;
+
+namespace TeamBoss.GAC.Vitality.Logic
 {
-    public class CalorieCounter
+    public class CalorieCounter : ICalorieCounterLogic
     {
         private List<MiniRecipe> miniRecipeList { get; set; }
         private List<Recipe> recipeList { get; set; }

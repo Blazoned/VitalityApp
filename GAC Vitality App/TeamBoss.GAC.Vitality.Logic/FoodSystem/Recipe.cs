@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using TeamBoss.GAC.Vitality.DALInterfaces;
 using TeamBoss.GAC.Vitality.LogicInterfaces;
 
-namespace TeamBoss.GAC.Vitality.Logic.FoodSystem
+namespace TeamBoss.GAC.Vitality.Logic
 {
     public class Recipe : IRecipeLogic
     {
