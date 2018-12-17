@@ -11,9 +11,9 @@ namespace TeamBoss.GAC.Vitality.DAL
 {
     public class RecipeDAL : IRecipeDAL
     {
-        public List<RecipeStruct> GetRecipeListByUserID(int userID, bool useTestDatabase = false)
+        public List<RecipeStruct> GetRecipeListByUserID(int userID)
         {
-            Connection connection = new Connection(useTestDatabase);
+            Connection connection = new Connection();
 
             connection.Open();
             DataTable table = connection.ExecuteReader("SELECT * FROM Recipe" +
@@ -30,7 +30,9 @@ namespace TeamBoss.GAC.Vitality.DAL
                 int totalCalories = (int)row["TotalCalorieAmount"];
 
                 connection.Open();
-                DataTable allergeneTable = connection.ExecuteReader("SELECT * FROM RecipeAllergene WHERE RecipeId = " + recipeID);
+                DataTable allergeneTable = connection.ExecuteReader("SELECT * FROM RecipeAllergene" +
+                    " INNER JOIN Allergenes ON RecipeAllergene.AllergeneId = Allergenes.Id" +
+                    " WHERE RecipeId = " + recipeID);
                 DataTable reactionTable = connection.ExecuteReader("SELECT * FROM Reaction WHERE RecipeId = " + recipeID);
                 DataTable imageTable = connection.ExecuteReader("SELECT * FROM Image WHERE RecipeId = " + recipeID);
                 DataTable ingredientTable = connection.ExecuteReader("SELECT * FROM Ingredients WHERE RecipeId = " + recipeID);
@@ -39,7 +41,10 @@ namespace TeamBoss.GAC.Vitality.DAL
                 List<AllergeneStruct> allergeneList = new List<AllergeneStruct>(allergeneTable.Rows.Count);
                 foreach (DataRow allergeneRow in allergeneTable.Rows)
                 {
-                    
+                    int allergeneID = (int)allergeneRow["AllergeneId"];
+                    string allergeneName = (string)allergeneRow["Name"];
+
+                    allergeneList.Add(new AllergeneStruct(allergeneID, allergeneName)); 
                 }
                 List<ReactionStruct> reactionList = new List<ReactionStruct>(reactionTable.Rows.Count);
                 foreach (DataRow reactionRow in reactionTable.Rows)

@@ -11,9 +11,9 @@ namespace TeamBoss.GAC.Vitality.DAL
 {
     public class MiniRecipeDAL : IMiniRecipeDAL
     {
-        public List<MiniRecipeStruct> GetAllMiniRecipesByUserID(int userID, bool useTestDatabase = false)
+        public List<MiniRecipeStruct> GetAllMiniRecipesByUserID(int userID)
         {
-            Connection connection = new Connection(useTestDatabase);
+            Connection connection = new Connection();
             connection.Open();
             DataTable dataTable = connection.ExecuteReader("SELECT * FROM [MiniRecipe] WHERE UserId = " + userID);
             connection.Close();

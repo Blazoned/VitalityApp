@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 using TeamBoss.GAC.Vitality.DALInterfaces;
 
-namespace TeamBoss.GAC.Vitality.Logic.FoodSystem
+namespace TeamBoss.GAC.Vitality.Logic
 {
     class Reaction
     {

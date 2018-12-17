@@ -14,7 +14,7 @@ namespace TeamBoss.GAC.Vitality.Logic
         private string username { get; set; }
         private string name { get; set; }
         private string description { get; set; }
-        private List<Allergenes> allergenList { get; set; }
+        private List<Allergene> allergenList { get; set; }
         private List<string> ingredientList { get; set; }
         private int preperationTime { get; set; }
         private int totalCalories { get; set; }
@@ -28,8 +28,8 @@ namespace TeamBoss.GAC.Vitality.Logic
             name = recipeStruct.Name;
             description = recipeStruct.Description;
 
-            allergenList = new List<Allergenes>();
-            recipeStruct.AllergeneList.ForEach(allergene => allergenList.Add((Allergenes)allergene));
+            allergenList = new List<Allergene>();
+            recipeStruct.AllergeneList.ForEach(allergene => allergenList.Add(new Allergene(allergene)));
 
             ingredientList = recipeStruct.IngredientList;
             preperationTime = recipeStruct.PreperationTime;

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-using TeamBoss.GAC.Vitality.Logic.FoodSystem;
+using TeamBoss.GAC.Vitality.Logic;
 
 namespace IntegrationTests
 {
@@ -11,11 +11,11 @@ namespace IntegrationTests
     public class CalorieCounterTests
     {
         [TestMethod]
-        public void GetAllMiniRecipes()
+        public void GetAllMiniRecipesTest()
         {
             CalorieCounter calorieCounter = new CalorieCounter();
 
-            List<MiniRecipe> miniRecipes = calorieCounter.GetAllMiniRecipes(1, true);
+            List<MiniRecipe> miniRecipes = calorieCounter.GetAllMiniRecipes(1);
 
             Assert.AreEqual(3, miniRecipes.Count);
         }

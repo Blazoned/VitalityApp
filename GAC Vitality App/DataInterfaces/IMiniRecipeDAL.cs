@@ -8,6 +8,6 @@ namespace TeamBoss.GAC.Vitality.DALInterfaces
 {
     public interface IMiniRecipeDAL
     {
-        List<MiniRecipeStruct> GetAllMiniRecipesByUserID(int userID, bool useTestDatabase = false);
+        List<MiniRecipeStruct> GetAllMiniRecipesByUserID(int userID);
     }
 }

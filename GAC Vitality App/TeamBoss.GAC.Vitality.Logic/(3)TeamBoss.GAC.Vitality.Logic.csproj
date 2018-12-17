@@ -41,7 +41,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="FoodSystem\CalorieCounter.cs" />
-    <Compile Include="FoodSystem\Allergenes.cs" />
+    <Compile Include="FoodSystem\Allergene.cs" />
     <Compile Include="FoodSystem\FoodUser.cs" />
     <Compile Include="FoodSystem\MiniRecipe.cs" />
     <Compile Include="FoodSystem\Reaction.cs" />
