@@ -15,7 +15,7 @@ namespace UnitTests
         public void GetAllMiniRecipesByUserIDCorrectCountTest()
         {
             IMiniRecipeDAL iMiniRecipeDAL = new MiniRecipeDAL();
-            List<MiniRecipeStruct> miniRecipeList = iMiniRecipeDAL.GetAllMiniRecipesByUserID(1, true);
+            List<MiniRecipeStruct> miniRecipeList = iMiniRecipeDAL.GetAllMiniRecipesByUserID(1);
 
             Assert.AreEqual(3, miniRecipeList.Count);
         }
@@ -24,7 +24,7 @@ namespace UnitTests
         public void GetAllMiniRecipesByUserIDWrongCountTest()
         {
             IMiniRecipeDAL iMiniRecipeDAL = new MiniRecipeDAL();
-            List<MiniRecipeStruct> miniRecipeList = iMiniRecipeDAL.GetAllMiniRecipesByUserID(1, true);
+            List<MiniRecipeStruct> miniRecipeList = iMiniRecipeDAL.GetAllMiniRecipesByUserID(1);
 
             Assert.AreNotEqual(4, miniRecipeList.Count);
         }

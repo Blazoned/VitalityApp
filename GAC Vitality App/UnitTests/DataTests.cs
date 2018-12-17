@@ -14,7 +14,7 @@ namespace UnitTests
         [TestMethod]
         public void OpenCloseConnectionTest()
         {
-            Connection testConnection = new Connection(true);
+            Connection testConnection = new Connection();
 
             testConnection.Open();
             testConnection.Close();
@@ -23,7 +23,7 @@ namespace UnitTests
         [TestMethod]
         public void ExecuteQueryTest()
         {
-            Connection testConnection = new Connection(true);
+            Connection testConnection = new Connection();
             testConnection.Open();
 
             DataTable dataTable = testConnection.ExecuteReader("SELECT * FROM [Recipe]");

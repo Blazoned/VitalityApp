@@ -57,6 +57,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\TeamBoss.GAC.Vitality.LogicInterfaces\%284%29 TeamBoss.GAC.Vitality.LogicInterfaces.csproj">
+      <Project>{0d1ec210-31b3-4ec2-9f97-5b3ab8a6134a}</Project>
+      <Name>%284%29 TeamBoss.GAC.Vitality.LogicInterfaces</Name>
+    </ProjectReference>
     <ProjectReference Include="..\TeamBoss.GAC.Vitality.Logic\%283%29TeamBoss.GAC.Vitality.Logic.csproj">
       <Project>{f99141e8-0cef-404d-843f-a528a2dc6c02}</Project>
       <Name>%283%29TeamBoss.GAC.Vitality.Logic</Name>

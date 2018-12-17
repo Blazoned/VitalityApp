@@ -20,5 +20,6 @@ namespace TeamBoss.GAC.Vitality.LogicInterfaces
         bool FavouriteRecipe();
         bool GetMyRecipes();
         bool UnFavouriteRecipe();
+        void SetProperties();
     }
 }

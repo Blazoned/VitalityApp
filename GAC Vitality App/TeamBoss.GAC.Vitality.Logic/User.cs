@@ -10,7 +10,9 @@ namespace TeamBoss.GAC.Vitality.Logic
     {
         protected int Id { get; private set; }
 
-        public User(int id)
+        public User() { }
+
+        public void SetID(int id)
         {
             Id = id; 
         }

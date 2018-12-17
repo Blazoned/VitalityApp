@@ -83,5 +83,10 @@ namespace TeamBoss.GAC.Vitality.Logic
         {
             throw new NotImplementedException();
         }
+
+        public void SetProperties()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

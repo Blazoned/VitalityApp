@@ -3,9 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 using TeamBoss.GAC.Vitality.Logic;
+using TeamBoss.GAC.Vitality.LogicInterfaces;
 
 namespace IntegrationTests
 {
@@ -17,10 +19,12 @@ namespace IntegrationTests
         public void GetMyRecipesTest()
         {
             //arrange
-            FoodUser user = new FoodUser(1);
+            FoodUser user = new FoodUser();
+            user.SetProperties(); // Set Here
 
             //act
-            int actual = user.GetMyRecipes().Count;
+            user.GetMyRecipes();
+            int actual = user.MyRecipes.Count;
             int expected = 2;
 
             //assert
