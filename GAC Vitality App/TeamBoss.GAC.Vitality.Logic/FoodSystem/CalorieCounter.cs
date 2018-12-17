@@ -13,7 +13,7 @@ namespace TeamBoss.GAC.Vitality.Logic
 {
     public class CalorieCounter : ICalorieCounterLogic
     {
-        private List<MiniRecipe> miniRecipeList { get; set; }
+        /*private List<MiniRecipe> miniRecipeList { get; set; }
         private List<Recipe> recipeList { get; set; }
         private int calorieAmount { get; set; }
         private int calorieCount { get; set; }
@@ -54,9 +54,50 @@ namespace TeamBoss.GAC.Vitality.Logic
         {
             List<MiniRecipeStruct> miniRecipeStructs = iMiniRecipeDAL.GetAllMiniRecipesByUserID(userID, useTestDatabase);
             List<MiniRecipe> returnMiniRecipes = new List<MiniRecipe>(miniRecipeStructs.Count);
-            miniRecipeStructs.ForEach(miniRecipeStruct => returnMiniRecipes.Add(new MiniRecipe(miniRecipeStruct)));
+            // TODO: Load properties of mini recipe from miniRecipeStructs
+            miniRecipeStructs.ForEach(miniRecipeStruct => returnMiniRecipes.Add(new MiniRecipe()));
 
             return returnMiniRecipes;
+        }*/
+
+        public List<IMiniRecipeLogic> MiniRecipes { get; set; }
+        public List<IRecipeLogic> Recipes { get; set; }
+        public int DailyCalorieGoal { get; set; }
+        public int TotalCalorieCount { get; set; }
+
+        public bool AddMiniRecipe()
+        {
+            throw new NotImplementedException();
+        }
+
+        public bool AddRecipe()
+        {
+            throw new NotImplementedException();
+        }
+
+        public bool DeleteMiniRecipe()
+        {
+            throw new NotImplementedException();
+        }
+
+        public bool DeleteRecipe()
+        {
+            throw new NotImplementedException();
+        }
+
+        public bool GetAllMiniRecipes()
+        {
+            throw new NotImplementedException();
+        }
+
+        public bool ResetTotalCalorieCount()
+        {
+            throw new NotImplementedException();
+        }
+
+        public bool SetDailyCalorieGoal()
+        {
+            throw new NotImplementedException();
         }
     }
 }

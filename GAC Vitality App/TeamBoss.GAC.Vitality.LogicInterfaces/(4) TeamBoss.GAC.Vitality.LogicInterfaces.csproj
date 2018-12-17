@@ -48,5 +48,11 @@
     <Compile Include="IRecipeLogic.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DataInterfaces\%281%29 TeamBoss.GAC.Vitality.DALInterfaces.csproj">
+      <Project>{9f2d3c6e-d6fc-4148-9c17-36f0e7d5ca21}</Project>
+      <Name>%281%29 TeamBoss.GAC.Vitality.DALInterfaces</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

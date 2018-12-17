@@ -9,15 +9,15 @@ using TeamBoss.GAC.Vitality.LogicInterfaces;
 
 namespace TeamBoss.GAC.Vitality.LogicFactory
 {
-    public class CalorieCounterLogicFactory
+    public class RecipeLogicFactory
     {
         /// <summary>
-        /// Returns a new ICalorieCounterLogic interface.
+        /// Returns a new IRecipeLogic interface.
         /// </summary>
         /// <returns></returns>
-        public static ICalorieCounterLogic CreateCalorieCounterLogicInterface()
+        public static IRecipeLogic CreateRecipeLogicInterface()
         {
-            return new CalorieCounter();
+            return new Recipe();
         }
     }
 }

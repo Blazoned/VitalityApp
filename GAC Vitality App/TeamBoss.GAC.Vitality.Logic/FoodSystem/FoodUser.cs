@@ -13,7 +13,7 @@ namespace TeamBoss.GAC.Vitality.Logic.FoodSystem
 {
     public class FoodUser : User, IFoodUserLogic
     {
-        private List<Recipe> MyRecipeList { get; set; }
+        /*private List<Recipe> MyRecipeList { get; set; }
         private List<Recipe> FavoriteRecipeList { get; set; }
         private CalorieCounter CalorieCounter { get; set; }
 
@@ -28,7 +28,8 @@ namespace TeamBoss.GAC.Vitality.Logic.FoodSystem
         {
             List<RecipeStruct> recipeStructs = iRecipeDAL.GetRecipeListByUserID(Id);
             List<Recipe> recipes = new List<Recipe>();
-            recipeStructs.ForEach(recipeStruct => recipes.Add(new Recipe(recipeStruct)));
+            // TODO: Setup properties of Recipe with recipe struct.
+            recipeStructs.ForEach(recipeStruct => recipes.Add(new Recipe()));
 
             return recipes; 
         }
@@ -51,7 +52,36 @@ namespace TeamBoss.GAC.Vitality.Logic.FoodSystem
         public bool UnfavoriteRecipe(Recipe recipe)
         {
             throw new NotImplementedException();
+        }*/
+
+        public List<IRecipeLogic> MyRecipes { get; set; }
+        public List<IRecipeLogic> FavouriteRecipes { get; set; }
+        public ICalorieCounterLogic iCalorieCounter { get; set; }
+        public IRecipeDAL iRecipeDAL { get; set; }
+
+        public bool AddRecipe()
+        {
+            throw new NotImplementedException();
         }
 
+        public bool DeleteRecipe()
+        {
+            throw new NotImplementedException();
+        }
+
+        public bool FavouriteRecipe()
+        {
+            throw new NotImplementedException();
+        }
+
+        public bool GetMyRecipes()
+        {
+            throw new NotImplementedException();
+        }
+
+        public bool UnFavouriteRecipe()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

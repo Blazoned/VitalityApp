@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TeamBoss.GAC.Vitality.Logic.FoodSystem
+namespace TeamBoss.GAC.Vitality.Logic
 {
     public enum Allergenes
     {

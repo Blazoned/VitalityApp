@@ -6,17 +6,18 @@ using System.Threading.Tasks;
 
 using TeamBoss.GAC.Vitality.DALInterfaces;
 
+using TeamBoss.GAC.Vitality.LogicInterfaces;
+
 namespace TeamBoss.GAC.Vitality.Logic
 {
-    public class MiniRecipe
+    public class MiniRecipe : IMiniRecipeLogic
     {
-        private int totalCalories { get; set; }
-        private string username { get; set; }
+        public int TotalCalories { get; set; }
+        public string Name { get; set; }
 
-        public MiniRecipe(MiniRecipeStruct miniRecipeStruct)
+        public bool SetProperties()
         {
-            totalCalories = miniRecipeStruct.CalorieAmount;
-            username = miniRecipeStruct.Name;
+            throw new NotImplementedException();
         }
     }
 }
