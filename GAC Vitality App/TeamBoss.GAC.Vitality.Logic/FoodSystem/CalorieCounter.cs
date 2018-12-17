@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 using TeamBoss.GAC.Vitality.DALFactory;
-using TeamBoss.GAC.Vitality.DataInterfaces;
+using TeamBoss.GAC.Vitality.DALInterfaces;
 
 namespace TeamBoss.GAC.Vitality.Logic.FoodSystem
 {

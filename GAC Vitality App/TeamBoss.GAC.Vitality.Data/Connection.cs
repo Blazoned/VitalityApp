@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TeamBoss.GAC.Vitality.Data
+namespace TeamBoss.GAC.Vitality.DAL
 {
     public class Connection
     {
@@ -14,8 +14,8 @@ namespace TeamBoss.GAC.Vitality.Data
         /// The connection object.
         /// </summary>
         private SqlConnection connection = new SqlConnection();
-        private string normalConnectionString = @"Data Source = den1.mssql7.gear.host; Initial Catalog = vitalitydatabase; User Id = vitalitydatabase; Password = Eu4q81-5fkU!;";
-        private string testConnectionString = @"Data Source = den1.mssql8.gear.host; Initial Catalog = vitalitytestdb2; User Id = vitalitytestdb2; Password = Kh3Tq14~D5?5;";
+        private string normalConnectionString = "Data Source = den1.mssql7.gear.host; Initial Catalog = vitalitydatabase; User Id = vitalitydatabase; Password = Eu4q81-5fkU!;";
+        private string testConnectionString = "Data Source = den1.mssql8.gear.host; Initial Catalog = vitalitytestdb2; User Id = vitalitytestdb2; Password = Kh3Tq14~D5?5;";
 
         public Connection(bool useTestDatabase = false)
         {

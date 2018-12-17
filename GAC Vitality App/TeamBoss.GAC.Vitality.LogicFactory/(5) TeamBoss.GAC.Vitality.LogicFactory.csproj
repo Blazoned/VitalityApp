@@ -4,13 +4,14 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{FAEFB1EA-1952-4DB8-A872-99CDDC26AA95}</ProjectGuid>
+    <ProjectGuid>{12E95C54-139E-4FE7-8BB0-095CCDF189AC}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>TeamBoss.GAC.Vitality.Data</RootNamespace>
-    <AssemblyName>TeamBoss.GAC.Vitality.Data</AssemblyName>
+    <RootNamespace>TeamBoss.GAC.Vitality.LogicFactory</RootNamespace>
+    <AssemblyName>TeamBoss.GAC.Vitality.LogicFactory</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -40,15 +41,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="MiniRecipeDAL.cs" />
-    <Compile Include="RecipeDAL.cs" />
-    <Compile Include="Connection.cs" />
+    <Compile Include="FoodUserFactory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\DataInterfaces\%281%29 TeamBoss.GAC.Vitality.DataInterfaces.csproj">
-      <Project>{9f2d3c6e-d6fc-4148-9c17-36f0e7d5ca21}</Project>
-      <Name>%281%29 TeamBoss.GAC.Vitality.DataInterfaces</Name>
+    <ProjectReference Include="..\TeamBoss.GAC.Vitality.LogicInterfaces\%284%29 TeamBoss.GAC.Vitality.LogicInterfaces.csproj">
+      <Project>{0d1ec210-31b3-4ec2-9f97-5b3ab8a6134a}</Project>
+      <Name>%284%29 TeamBoss.GAC.Vitality.LogicInterfaces</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TeamBoss.GAC.Vitality.Logic\%283%29TeamBoss.GAC.Vitality.Logic.csproj">
+      <Project>{f99141e8-0cef-404d-843f-a528a2dc6c02}</Project>
+      <Name>%283%29TeamBoss.GAC.Vitality.Logic</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

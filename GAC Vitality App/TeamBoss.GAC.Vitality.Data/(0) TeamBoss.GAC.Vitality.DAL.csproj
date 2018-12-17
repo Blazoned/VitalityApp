@@ -4,14 +4,13 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{1E4664F6-8715-44CA-A8FB-19869592B5EA}</ProjectGuid>
+    <ProjectGuid>{FAEFB1EA-1952-4DB8-A872-99CDDC26AA95}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>TeamBoss.GAC.Vitality.DALFactory</RootNamespace>
-    <AssemblyName>TeamBoss.GAC.Vitality.DALFactory</AssemblyName>
+    <RootNamespace>TeamBoss.GAC.Vitality.Data</RootNamespace>
+    <AssemblyName>TeamBoss.GAC.Vitality.Data</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <Deterministic>true</Deterministic>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -41,18 +40,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="MiniRecipeFactory.cs" />
+    <Compile Include="MiniRecipeDAL.cs" />
+    <Compile Include="RecipeDAL.cs" />
+    <Compile Include="Connection.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="RecipeFactory.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DataInterfaces\%281%29 TeamBoss.GAC.Vitality.DALInterfaces.csproj">
       <Project>{9f2d3c6e-d6fc-4148-9c17-36f0e7d5ca21}</Project>
       <Name>%281%29 TeamBoss.GAC.Vitality.DALInterfaces</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\TeamBoss.GAC.Vitality.Data\%280%29 TeamBoss.GAC.Vitality.DAL.csproj">
-      <Project>{faefb1ea-1952-4db8-a872-99cddc26aa95}</Project>
-      <Name>%280%29 TeamBoss.GAC.Vitality.DAL</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

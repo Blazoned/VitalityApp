@@ -4,7 +4,7 @@ using System.Data;
 
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-using TeamBoss.GAC.Vitality.Data;
+using TeamBoss.GAC.Vitality.DAL;
 
 namespace UnitTests
 {

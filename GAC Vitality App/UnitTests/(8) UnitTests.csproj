@@ -60,13 +60,13 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\DataInterfaces\%281%29 TeamBoss.GAC.Vitality.DataInterfaces.csproj">
+    <ProjectReference Include="..\DataInterfaces\%281%29 TeamBoss.GAC.Vitality.DALInterfaces.csproj">
       <Project>{9f2d3c6e-d6fc-4148-9c17-36f0e7d5ca21}</Project>
-      <Name>%281%29 TeamBoss.GAC.Vitality.DataInterfaces</Name>
+      <Name>%281%29 TeamBoss.GAC.Vitality.DALInterfaces</Name>
     </ProjectReference>
-    <ProjectReference Include="..\TeamBoss.GAC.Vitality.Data\%280%29 TeamBoss.GAC.Vitality.Data.csproj">
+    <ProjectReference Include="..\TeamBoss.GAC.Vitality.Data\%280%29 TeamBoss.GAC.Vitality.DAL.csproj">
       <Project>{faefb1ea-1952-4db8-a872-99cddc26aa95}</Project>
-      <Name>%280%29 TeamBoss.GAC.Vitality.Data</Name>
+      <Name>%280%29 TeamBoss.GAC.Vitality.DAL</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />

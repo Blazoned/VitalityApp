@@ -5,9 +5,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-using TeamBoss.GAC.Vitality.DataInterfaces;
+using TeamBoss.GAC.Vitality.DALInterfaces;
 
-namespace TeamBoss.GAC.Vitality.Data
+namespace TeamBoss.GAC.Vitality.DAL
 {
     public class RecipeDAL : IRecipeDAL
     {

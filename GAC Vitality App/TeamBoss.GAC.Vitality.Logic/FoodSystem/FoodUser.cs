@@ -5,11 +5,13 @@ using System.Text;
 using System.Threading.Tasks;
 
 using TeamBoss.GAC.Vitality.DALFactory;
-using TeamBoss.GAC.Vitality.DataInterfaces;
+using TeamBoss.GAC.Vitality.DALInterfaces;
+
+using TeamBoss.GAC.Vitality.LogicInterfaces;
 
 namespace TeamBoss.GAC.Vitality.Logic.FoodSystem
 {
-    public class FoodUser : User
+    public class FoodUser : User, IFoodUser
     {
         private List<Recipe> myRecipeList { get; set; }
         private List<Recipe> favoriteRecipeList { get; set; }

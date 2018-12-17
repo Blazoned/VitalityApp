@@ -4,8 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-using TeamBoss.GAC.Vitality.Data;
-using TeamBoss.GAC.Vitality.DataInterfaces;
+using TeamBoss.GAC.Vitality.DAL;
+using TeamBoss.GAC.Vitality.DALInterfaces;
 
 namespace TeamBoss.GAC.Vitality.DALFactory
 {

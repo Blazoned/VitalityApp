@@ -3,8 +3,8 @@ using System.Collections.Generic;
 
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-using TeamBoss.GAC.Vitality.Data;
-using TeamBoss.GAC.Vitality.DataInterfaces;
+using TeamBoss.GAC.Vitality.DAL;
+using TeamBoss.GAC.Vitality.DALInterfaces;
 
 namespace UnitTests
 {
