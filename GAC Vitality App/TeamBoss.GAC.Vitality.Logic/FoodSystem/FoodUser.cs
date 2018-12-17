@@ -21,10 +21,10 @@ namespace TeamBoss.GAC.Vitality.Logic.FoodSystem
 
         public FoodUser()
         {
-            myRecipeList = GetAllRecipes();
+            myRecipeList = GetMyRecipes();
         }
 
-        public List<Recipe> GetAllRecipes()
+        public List<Recipe> GetMyRecipes()
         {
             List<RecipeStruct> recipeStructs = iRecipeDAL.GetRecipeListByUserID(Id);
             List<Recipe> recipes = new List<Recipe>();
