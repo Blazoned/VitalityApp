@@ -11,7 +11,7 @@ using TeamBoss.GAC.Vitality.LogicInterfaces;
 
 namespace TeamBoss.GAC.Vitality.Logic
 {
-    public class FoodUser : User, IFoodUserLogic
+    public class FoodUser : User
     {
         /*private List<Recipe> MyRecipeList { get; set; }
         private List<Recipe> FavoriteRecipeList { get; set; }
@@ -54,9 +54,10 @@ namespace TeamBoss.GAC.Vitality.Logic
             throw new NotImplementedException();
         }*/
 
-        public List<IRecipeLogic> MyRecipes { get; set; }
-        public List<IRecipeLogic> FavouriteRecipes { get; set; }
-        public ICalorieCounterLogic iCalorieCounter { get; set; }
+        public List<Recipe> MyRecipes { get; set; }
+        public List<Recipe> FavouriteRecipes { get; set; }
+        public CalorieCounter iCalorieCounter { get; set; }
+
         public IRecipeDAL iRecipeDAL { get; set; }
 
         public bool AddRecipe()

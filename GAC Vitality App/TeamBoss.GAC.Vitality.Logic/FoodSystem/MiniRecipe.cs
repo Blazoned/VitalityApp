@@ -10,7 +10,7 @@ using TeamBoss.GAC.Vitality.LogicInterfaces;
 
 namespace TeamBoss.GAC.Vitality.Logic
 {
-    public class MiniRecipe : IMiniRecipeLogic
+    public class MiniRecipe 
     {
         public int TotalCalories { get; set; }
         public string Name { get; set; }

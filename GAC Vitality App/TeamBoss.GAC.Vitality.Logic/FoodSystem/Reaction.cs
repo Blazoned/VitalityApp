@@ -9,25 +9,15 @@ using TeamBoss.GAC.Vitality.LogicInterfaces;
 
 namespace TeamBoss.GAC.Vitality.Logic
 {
-    public class Reaction : IReactionLogic
+    public class Reaction 
     {
-        /*private string username { get; set; }
-        private string description { get; set; }
-
-        public Reaction() { }
-
-        public void SetProperties(ReactionStruct reactionStruct)
-        {
-            username = reactionStruct.Username;
-            description = reactionStruct.Description;
-        }*/
-
         public string Username { get; set; }
         public string Message { get; set; }
 
-        public bool SetProperties()
+        public Reaction(string username, string message)
         {
-            throw new NotImplementedException();
+            Username = username;
+            Message = message; 
         }
     }
 }

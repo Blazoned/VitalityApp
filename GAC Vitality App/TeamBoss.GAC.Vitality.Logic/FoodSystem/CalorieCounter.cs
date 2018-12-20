@@ -11,57 +11,10 @@ using TeamBoss.GAC.Vitality.LogicInterfaces;
 
 namespace TeamBoss.GAC.Vitality.Logic
 {
-    public class CalorieCounter : ICalorieCounterLogic
+    public class CalorieCounter 
     {
-        /*private List<MiniRecipe> miniRecipeList { get; set; }
-        private List<Recipe> recipeList { get; set; }
-        private int calorieAmount { get; set; }
-        private int calorieCount { get; set; }
-
-        private IMiniRecipeDAL iMiniRecipeDAL = MiniRecipeDALFactory.CreateMiniRecipeDALInterface();
-
-        public void AddRecipe(Recipe recipe)
-        {
-
-        }
-
-        public void AddMiniRecipe(MiniRecipe miniRecipe)
-        {
-
-        }
-
-        public void DeleteRecipe(Recipe recipe)
-        {
-
-        }
-
-        public void DeleteMiniRecipe(MiniRecipe miniRecipe)
-        {
-
-        }
-
-        public void SetCalorieGoal(int calorieGoal)
-        {
-
-        }
-
-        public void ResetCalorieAmount()
-        {
-
-        }
-
-        public List<MiniRecipe> GetAllMiniRecipes(int userID)
-        {
-            List<MiniRecipeStruct> miniRecipeStructs = iMiniRecipeDAL.GetAllMiniRecipesByUserID(userID);
-            List<MiniRecipe> returnMiniRecipes = new List<MiniRecipe>(miniRecipeStructs.Count);
-            // TODO: Load properties of mini recipe from miniRecipeStructs
-            miniRecipeStructs.ForEach(miniRecipeStruct => returnMiniRecipes.Add(new MiniRecipe()));
-
-            return returnMiniRecipes;
-        }*/
-
-        public List<IMiniRecipeLogic> MiniRecipes { get; set; }
-        public List<IRecipeLogic> Recipes { get; set; }
+        public List<MiniRecipe> MiniRecipes { get; set; }
+        public List<Recipe> Recipes { get; set; }
         public int DailyCalorieGoal { get; set; }
         public int TotalCalorieCount { get; set; }
 

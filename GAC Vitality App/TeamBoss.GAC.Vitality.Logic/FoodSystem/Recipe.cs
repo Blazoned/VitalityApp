@@ -9,55 +9,31 @@ using TeamBoss.GAC.Vitality.LogicInterfaces;
 
 namespace TeamBoss.GAC.Vitality.Logic
 {
-    public class Recipe : IRecipeLogic
+    public class Recipe 
     {
-        /*private string username { get; set; }
-        private string name { get; set; }
-        private string description { get; set; }
-        private List<Allergene> allergenList { get; set; }
-        private List<string> ingredientList { get; set; }
-        private int preperationTime { get; set; }
-        private int totalCalories { get; set; }
-        private List<string> imageList { get; set; }
-        private int personAmount { get; set; }
-        private List<Reaction> reactionList { get; set;}
-
-        public Recipe() { }
-
-        public void SetProperties(RecipeStruct recipeStruct)
-        {
-            username = recipeStruct.Username;
-            name = recipeStruct.Name;
-            description = recipeStruct.Description;
-
-            allergenList = new List<Allergenes>();
-            // TODO: Make it so the struct is correctly loaded into the list.
-            recipeStruct.AllergeneList.ForEach(allergene => allergenList.Add(new Allergenes()));
-
-            ingredientList = recipeStruct.IngredientList;
-            preperationTime = recipeStruct.PreperationTime;
-            totalCalories = recipeStruct.TotalCalories;
-            imageList = recipeStruct.ImageList;
-            personAmount = recipeStruct.PersonAmount;
-
-            reactionList = new List<Reaction>();
-            // TODO: Make it so the reaction structs are loaded into the reactions.
-            recipeStruct.ReactionList.ForEach(reaction => reactionList.Add(new Reaction()));
-        }*/
-
+        public int Id { get; set; }
         public int PreperationTime { get; set; }
         public int TotalCalories { get; set; }
         public int ServingsCount { get; set; }
-        public List<IReactionLogic> Reactions { get; set; }
+        public List<Reaction> Reactions { get; set; }
         public List<string> ImageLinks { get; set; }
         public List<string> Ingredients { get; set; }
         public string CreatorName { get; set; }
         public string Description { get; set; }
         public string Name { get; set; }
 
-        public void SetProperties()
+        public Recipe(int id, int preperationTime, int totalCalories, int servingsCount, List<Reaction> reactions, List<string> imageLinks, List<string> ingredients, string creatorName, string description, string name)
         {
-            throw new NotImplementedException();
+            Id = id; 
+            PreperationTime = preperationTime;
+            TotalCalories = totalCalories;
+            ServingsCount = servingsCount;
+            Reactions = reactions;
+            ImageLinks = imageLinks;
+            Ingredients = ingredients;
+            CreatorName = creatorName;
+            Description = description;
+            Name = name;
         }
     }
 }
