@@ -8,12 +8,17 @@ namespace TeamBoss.GAC.Vitality.AspCore.Controllers
 {
     public class MovementController : Controller
     {
-        public IActionResult Index()
+        public IActionResult CreateChallenge()
         {
             return View();
         }
 
-        public IActionResult CreateChallenge()
+        public IActionResult ChallengeInfo()
+        {
+            return View();
+        }
+
+        public IActionResult Index()
         {
             return View();
         }

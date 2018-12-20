@@ -1,0 +1,65 @@
+﻿
+@{
+    ViewData["Title"] = "Uitdaging Info";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section Css{ 
+    <link rel="stylesheet" href="~/css/movement-system.css" />
+}
+
+<div class="container-fluid">
+    <!-- Title Row -->
+    <div class="row">
+        <div class="heading-wrapper">
+            <div class="container text-wrapper">
+                <h1>Challenge 1</h1>
+                <hr />
+            </div>
+        </div>
+    </div>
+
+    <!-- Progress -->
+    <div class="row">
+        <div class="heading-wrapper">
+            <div class="container text-wrapper">
+                <div class="progress">
+                    <div class="progress-bar" style="width:40%; background-color:#3FC661" aria-valuenow="4" aria-valuemin="0" aria-valuemax="10">40%</div>
+                    <div class="progress-bar" style="width:60%; background-color: #E9ECEF; color: black;" aria-valuenow="6" aria-valuemin="0" aria-valuemax="10">60%</div>
+                </div>
+
+                <p>Huidige Progressie: 4 baantjes</p>
+                <p>Challenge Doel: 10 baantjes</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Challenge Information Row -->
+    <div class="row">
+        <div class="heading-wrapper">
+
+            <!-- Description -->
+            <div class="container text-wrapper">
+                <h4><span class="fa fa-align-center"></span> Beschrijving</h4>
+                <p>Ga je ook mee zwemmen?</p>
+            </div>
+
+            <!-- Locatie -->
+            <div class="container text-wrapper">
+                <h4><span class="fa fa-map-marker"></span> Locatie</h4>
+                <p>Eindhoven</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Challenge Buttons -->
+    <div class="row">
+        <div class="heading-wrapper">
+            <div class="btn-group challenge-button-group">
+                <a class="btn btn-info challenge-button" role="button"><span class="fa fa-edit"></span></a>
+                <a class="btn btn-info challenge-button" role="button"><span class="fa fa-users"></span></a>
+                <a class="btn btn-info challenge-button" role="button"><span class="fa fa-trash"></span></a>
+            </div>
+        </div>
+    </div>
+</div>

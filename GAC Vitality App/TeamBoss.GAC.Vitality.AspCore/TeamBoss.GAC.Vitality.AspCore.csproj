@@ -29,6 +29,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="ViewModels\MovementViewModels\" />
     <Folder Include="wwwroot\lib\jquery\dist\" />
   </ItemGroup>
 

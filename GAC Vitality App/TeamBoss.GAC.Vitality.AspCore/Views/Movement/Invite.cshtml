@@ -3,32 +3,34 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
+@section Scripts{
 <script src="~/lib/jquery/dist/jquery.min.js"></script>
 <script src="~/lib/bootstrap/dist/js/bootstrap.min.js"></script>
 <script src="~/js/DaagUit.js"></script>
+    }
 
-    <div class="container row">
-        <div class="form-group block-wrapper col-xs-12 col-md-4">
-            <a class="btn btn-info backBtnGroup" role="button" href="~/Movement/Index">
-                <span class="glyphicon glyphicon-chevron-left"></span>
-            </a>
+@section Css{ 
+    <link rel="stylesheet" href="~/css/movement-system.css" />
+}
 
-            <div class="container text-wrapper2">
-                <ul class="list-group checked-list-box">
+<div class="container-fluid">
+    <div class="row">
+        <a class="btn btn-primary button-back" role="button" asp-controller="Movement" asp-action="Index"><span class="fa fa-chevron-left"></span></a>
+    </div>
+
+    <div class="row">
+        <div class="heading-wrapper">
+            <div class="container text-wrapper">
+                <ul class="list-group">
+                    <li class="list-group-item">Harry <input type="checkbox" class="pull-right"/></li>
+                    <li class="list-group-item">Henk</li>
                     <li class="list-group-item">Hans</li>
-                    <li class="list-group-item">Peter</li>
-                    <li class="list-group-item">Harry</li>
-                    <li class="list-group-item">Kees</li>
-                    <li class="list-group-item">Rik</li>
-                    <li class="list-group-item">Richard</li>
-                    <li class="list-group-item">Mart</li>
-                    <li class="list-group-item">Tom</li>
-                    <li class="list-group-item">Bryan</li>
                 </ul>
 
-                <div class="btn-group btnDaagUit">
-                    <a class="btn btn-info" role="button" asp-controller="movement" asp-action="index" asp-area="">Daag Uit</a>
+                <div class="btn-group input-group-margin">
+                    <a class="btn btn-info" role="button" asp-controller="Movement" asp-action="Index">Daag Uit</a>
                 </div>
             </div>
         </div>
     </div>
+</div>

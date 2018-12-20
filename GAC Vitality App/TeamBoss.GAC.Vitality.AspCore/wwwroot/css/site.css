@@ -34,18 +34,16 @@
     }
 }
 
-.buttonchallenge {
+.button-challenge {
     margin-top: 15px;
     width: 65%;
-    background-color: #00a1ff;
     border: none; 
     float: left; 
 }
 
-.buttoninvite {
+.button-invite {
     margin-top: 15px;
     width: 34%;
-    background-color: #00a1ff;
     border: none; 
     float: right; 
 }
@@ -136,7 +134,7 @@ li.list-group-item-lose {
     width: 32%;
 }
 
-.selectprivacy{
+.select-privacy{
     width: 48%; 
     float: left; 
 }
@@ -309,4 +307,16 @@ font-size: 25px;
 
 .hidden-description{
     display: none;
+}
+
+.heading-wrapper {
+    width: 100%;
+    height: auto;
+    background-color: #fcfcfc;
+    -webkit-box-shadow: 0 -1px 35px -11px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0 -1px 35px -11px rgba(0,0,0,0.75);
+    box-shadow: 0 -1px 35px -11px rgba(0,0,0,0.75);
+    margin-top: 15px;
+    position: relative;
+    border-radius:5px;
 }

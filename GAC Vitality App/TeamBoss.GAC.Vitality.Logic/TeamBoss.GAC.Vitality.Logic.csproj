@@ -44,10 +44,13 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\TeamBoss.GAC.Vitality.Data\TeamBoss.GAC.Vitality.Data.csproj">
+    <ProjectReference Include="..\TeamBoss.GAC.Vitality.Data\TeamBoss.GAC.Vitality.DAL.csproj">
       <Project>{faefb1ea-1952-4db8-a872-99cddc26aa95}</Project>
-      <Name>TeamBoss.GAC.Vitality.Data</Name>
+      <Name>TeamBoss.GAC.Vitality.DAL</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="MovementSystem\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -5,7 +5,7 @@
 }
 
 @section Css{
-    <link rel="stylesheet" href="~/css/create-challenge.css" />
+    <link rel="stylesheet" href="~/css/movement-system.css" />
 }
 
 @section Scripts{
@@ -14,150 +14,89 @@
     <script src="~/lib/geocomplete/jquery.geocomplete.min.js"></script>
 }
 
-<div class="container row">
-    <div class="form-group block-wrapper col-xs-12 col-md-4">
-        <a class="btn btn-info back-btn-group-2" role="button" href="~/Movement/Index">
-            <span class="glyphicon glyphicon-chevron-left"></span>
-        </a>
+<div class="container-fluid">
+    <div class="row">
+        <a class="btn btn-primary button-back" role="button" asp-controller="Movement" asp-action="Index"><span class="fa fa-chevron-left"></span></a>
+    </div>
 
-        <!-- Header -->
-        <div id="challenge-header" class="row panel-heading">
-            <div class="col-xs-12 col-md-4">
-                <h3 class="text-center">Challenge Aanmaken</h3>
+    <div class="row">
+        <!-- Title -->
+        <div class="heading-wrapper">
+            <div class="container text-wrapper">
+                <h2 class="text-center">Start een Challenge</h2>
+                <hr />
             </div>
         </div>
 
-        <!-- Name -->
-        <div id="challenge-name-field" class="row section-wrapper">
-            <div class="input-group col-xs-12 col-md-4">
-                <span class="input-group-addon"><span class="glyphicon glyphicon-header"></span></span>
-                <input class="form-control" type="text" maxlength="40" placeholder="Naam" id="challenge-name-input" required />
+        <div class="heading-wrapper">
+            <div class="container text-wrapper">
+                <!-- Title -->
+                <div class="input-group input-group-margin">
+                    <span class="input-group-addon"><span class="fa fa-header"></span></span>
+                    <input class="form-control" type="text" maxlength="40" placeholder="Titel" required />
+                </div>
+
+                <!-- Description -->
+                <div class="input-group input-group-margin">
+                    <span class="input-group-addon"><span class="fa fa-align-center"></span></span>
+                    <textarea class="form-control" rows="3" maxlength="250" placeholder="Beschrijving" required></textarea>
+                </div>
+
+                <!-- Challenge Goal-->
+                <div class="input-group input-group-margin">
+                    <span class="input-group-addon"><span class="fa fa-flag"></span></span>
+                    <input class="form-control" type="number" maxlength="40" placeholder="Doel Hoeveelheid" />
+                    <input class="form-control" type="text" maxlength="40" placeholder="Eenheid" />
+                </div>
+
+                <!-- Location -->
+                <div class="input-group input-group-margin">
+                    <span class="input-group-addon"><span class="fa fa-globe"></span></span>
+                    <input class="form-control" type="text" maxlength="40" placeholder="Locatie" />
+                </div>
+
+                <!-- Date/Time -->
+                <div class="input-group input-group-margin">
+                    <span class="input-group-addon"><span class="fa fa-calendar-o"></span></span>
+                    <input class="form-control datetime-input" type="datetime-local" />
+                </div>
+
+                <!-- Repeat -->
+                <div class="input-group input-group-margin">
+                    <span class="input-group-addon"><span class="fa fa-repeat"></span></span>
+                    <select class="form-control">
+                        <option selected>Niet Herhalen</option>
+                        <option>Dagelijks</option>
+                        <option>Weekend</option>
+                    </select>
+                </div>
+
+                <!-- Public or private -->
+                <div class="input-group input-group-margin">
+                    <span class="input-group-addon"><span class="fa fa-lock"></span></span>
+                    <button class="form-control btn btn-success privacy-button privacy-button-success" type="button"><span>Publiek</span></button>
+                    <button class="form-control btn btn-danger privacy-button privacy-button-danger hidden" type="button"><span>Prive</span></button>
+                </div>
+
+                <!-- Add Tag -->
+                <div class="input-group input-group-margin">
+                    <span class="input-group-addon"><span class="fa fa-tag"></span></span>
+                    <input class="form-control challenge-tag-input" type="text" maxlength="15" placeholder="Tag" />
+                    <span class="input-group-btn">
+                        <button class="btn btn-default challenge-tag-button" type="button"><span class="fa fa-plus"></span></button>
+                    </span>
+                </div>
+
+                <!-- Tag List -->
+                <div class="challenge-tag-list input-group-margin">
+                    <ul class="list-unstyled list-inline tag-list"></ul>
+                </div>
+
+                <!-- Add Challenge -->
+                <div class="submit-section input-group-margin">
+                    <button class="btn btn-info add-challenge-button" type="button"><span class="fa fa-plus-circle"></span> Challenge Aanmaken</button>
+                </div>
             </div>
         </div>
-
-        <!-- Summary -->
-        <div id="challenge-summary-field" class="row section-wrapper">
-            <div class="input-group col-xs-12 col-md-4">
-                <textarea class="form-control" rows="2" maxlength="100" placeholder="Beschrijving" id="challenge-summary-input" required></textarea>
-            </div>
-        </div>
-
-        <!-- Goals Label -->
-        <div id="challenge-goals-label" class="row section-wrapper">
-            <div class="input-group col-xs-6 col-md-2">
-                <span class="input-group-addon"><span class="glyphicon glyphicon-flag"></span></span>
-                <span class="form-control horizontal-overflow">
-                    Doelstellingen
-                </span>
-                <span class="input-group-btn">
-                    <button class="btn btn-default" id="challenge-goals-button-add">
-                        <span class="glyphicon glyphicon-plus"></span>
-                    </button>
-                </span>
-            </div>
-        </div>
-
-        <!-- TODO: Outlining of the input fields have to be alligned -->
-        <!-- TODO: Implement a descriptive header item in as a first item in the ul list (with the corresponding alignment -->
-        <!-- TODO: Always have at least one challenge goal item visible in the ul (besides the descriptive header) -->
-        <!-- Goals List -->
-        <div id="challenge-goals-field" class="row section-wrapper">
-            <div class="input-group col-xs-12 col-md-4">
-                <ul id="challenge-goals-list" class="list-unstyled list-group">
-                    <li class="list-group-item list-group-item-text list-group-item-lose challenge-goal-group-item row" id="challenge-goal-header">
-                        <div class="input-group">
-                            <span class="form-control challenge-goal-header-type" type="text" maxlength="40" placeholder="Doelstelling Soort" required></span>
-                            <span class="input-group-btn input-group-empty"></span>
-                            <span class="form-control challenge-goal-header--amount" type="number" min="0" value="0" style="margin-left:-1px" required />
-                            <span class="input-group-btn input-group-empty"></span>
-                            <span class="form-control challenge-goal-header-measurement" style="margin-left:-2px" />
-                            <span class="input-group-btn">
-                                <button class="btn btn-group challenge-goal-button-remove">
-                                    <span class="glyphicon glyphicon-remove"></span>
-                                </button>
-                            </span>
-                        </div>
-                    </li>
-                    <li class="list-group-item list-group-item-text list-group-item-lose challenge-goal-group-item row" id="challenge-goal-0">
-                        <div class="input-group">
-                            <input class="form-control challenge-goal-type" type="text" maxlength="40" placeholder="Doelstelling Soort" required />
-                            <span class="input-group-btn input-group-empty"></span>
-                            <input class="form-control challenge-goal-amount" type="number" min="0" value="0" style="margin-left:-1px" required />
-                            <span class="input-group-btn input-group-empty"></span>
-                            <input class="form-control challenge-goal-measurement" type="text" maxlength="20" placeholder="Meet Eenheid (niet vereist)" style="margin-left:-2px" />
-                            <span class="input-group-btn">
-                                <button class="btn btn-group challenge-goal-button-remove">
-                                    <span class="glyphicon glyphicon-remove"></span>
-                                </button>
-                            </span>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-        </div>
-
-        <!-- Location -->
-        <div id="challenge-location-field" class="row section-wrapper">
-            <div class="input-group col-xs-12 col-md-4">
-                <span class="input-group-addon"><span class="glyphicon glyphicon-globe"></span></span>
-                <input class="form-control" type="text" maxlength="150" placeholder="Locatie" id="challenge-location-input" required />
-            </div>
-        </div>
-
-        <!-- Date Picker -->
-        <div id="challenge-date-time-field" class="row section-wrapper">
-            <div class="input-group col-xs-12 col-md-4">
-                <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
-                <input class="form-control" type="datetime-local" id="challenge-date-time-input" required />
-            </div>
-        </div>
-
-        <!-- Repeat -->
-        <div id="challenge-repeat-field" class="row section-wrapper">
-            <div class="input-group col-xs-12 col-md-4">
-                <span class="input-group-addon"><span class="glyphicon glyphicon-repeat"></span></span>
-                <select class="form-control" id="challenge-repeat-input">
-                    <option selected>Niet Herhalen</option>
-                    <option>Dagelijks</option>
-                    <option>Weekend</option>
-                </select>
-            </div>
-        </div>
-
-        <!-- Listing Type -->
-        <div id="challenge-listing-field" class="row section-wrapper">
-            <div id="challenge-listing-area" class="input-group col-xs-6 col-md-2">
-                <span class="input-group-addon" id="challenge-listing-icon"><span class="glyphicon glyphicon-lock"></span></span>
-                <button class="form-control btn btn-success" type="button" id="challenge-listing-input" data-public-listing=true>
-                    <span id="challenge-listing-button-content">Publiek</span>
-                </button>
-            </div>
-        </div>
-
-
-        <!-- Tags Input -->
-        <div id="challenge-tags-field" class="row section-wrapper">
-            <div class="input-group col-xs-12 col-md-4">
-                <span class="input-group-addon"><span class="glyphicon glyphicon-tag"></span></span>
-                <input class="form-control" type="text" maxlength="35" placeholder="Tag" id="challenge-tag-input" />
-                <span class="input-group-btn">
-                    <button class="btn btn-default" type="button" id="challenge-tag-button">
-                        <span class="glyphicon glyphicon-plus"></span>
-                    </button>
-                </span>
-            </div>
-        </div>
-
-        <!-- Tag List -->
-        <div id="challenge-tag-overview" class="row section-wrapper">
-            <div id="challenge-tag-list" class="col-xs-12 col-md-4">
-                <ul id="tag-list" class="list-unstyled list-inline"></ul>
-            </div>
-        </div>
-
-        <!-- Submit Button -->
-        <div id="challenge-submit" class="row submit-section">
-            <button class="btn btn-primary" type="button" id="challenge-submit-button">Challenge Aanmaken</button>
-        </div>
-    </div>    
+    </div>
 </div>

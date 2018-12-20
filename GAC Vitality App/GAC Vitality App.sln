@@ -5,7 +5,7 @@ VisualStudioVersion = 15.0.27428.2005
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TeamBoss.GAC.Vitality.AspCore", "TeamBoss.GAC.Vitality.AspCore\TeamBoss.GAC.Vitality.AspCore.csproj", "{DD84ED49-1261-4A18-8782-76934500FF8F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TeamBoss.GAC.Vitality.Data", "TeamBoss.GAC.Vitality.Data\TeamBoss.GAC.Vitality.Data.csproj", "{FAEFB1EA-1952-4DB8-A872-99CDDC26AA95}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TeamBoss.GAC.Vitality.DAL", "TeamBoss.GAC.Vitality.Data\TeamBoss.GAC.Vitality.DAL.csproj", "{FAEFB1EA-1952-4DB8-A872-99CDDC26AA95}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TeamBoss.GAC.Vitality.Logic", "TeamBoss.GAC.Vitality.Logic\TeamBoss.GAC.Vitality.Logic.csproj", "{F99141E8-0CEF-404D-843F-A528A2DC6C02}"
 EndProject
