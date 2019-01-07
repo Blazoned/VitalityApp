@@ -5,51 +5,53 @@
 }
 
 @section Css
-{
+    {
     <link href="~/css/movement-system-layout.css" type="text/css" />
 }
 
 @section Scripts
-{
+    {
     <script src="~/js/movement-system-script.js"></script>
 }
 
-    <div class="container-fluid">
-        <!-- Navigation Buttons -->
-        <div class="row">
-            <a class="btn btn-primary button-challenge" role="button" asp-controller="Movement" asp-action="CreateChallenge">Challenge Aanmaken</a>
-            <a class="btn btn-primary button-invite" role="button" asp-controller="Movement" asp-action="Invite">7 Invites</a>
-        </div>
+<div class="modal">
+    <p>yo</p>
+</div>
 
-        <div class="row">
-            <div class="heading-wrapper">
-                <div class="container text-wrapper">
-                    <h1 class="text-center">Mijn Challenges</h1>
-                    <hr />
-                </div>
-            </div>
-        </div>
+<div class="container-fluid">
+    <!-- Navigation Buttons -->
+    <div class="row">
+        <a class="btn btn-primary button-challenge" role="button" asp-controller="Movement" asp-action="CreateChallenge">Challenge Aanmaken</a>
+        <a class="btn btn-primary button-invite" role="button" asp-controller="Movement" asp-action="Invite">7 Invites</a>
+    </div>
 
-        <!-- Challenge Agenda -->
-        <div class="row">
-            <div class="heading-wrapper">
-                <div class="container text-wrapper">
-                    <div class="form-group">
-                        <select class="form-control select-privacy">
-                            <option class="option-privacy" value="Personal">Persoonlijk</option>
-                            <option class="option-privacy" value="Public">Publiek</option>
-                        </select>
-                        <input class="datefield form-control" type="date" id="challenge-agenda-listing-date" />
-                    </div>
-
-                    <div class="list-group listyo">
-                        <a class="list-group-item" asp-controller="Movement" asp-action="ChallengeInfo">Challenge 1</a>
-                        <a class="list-group-item" asp-controller="Movement" asp-action="ChallengeInfo">Challenge 2</a>
-                        <a class="list-group-item" asp-controller="Movement" asp-action="ChallengeInfo">Challenge 3</a>
-                    </div>
-                </div>
+    <div class="row">
+        <div class="heading-wrapper">
+            <div class="container text-wrapper">
+                <h1 class="text-center">Mijn Challenges</h1>
+                <hr />
             </div>
         </div>
     </div>
 
+    <!-- Challenge Agenda -->
+    <div class="row">
+        <div class="heading-wrapper">
+            <div class="container text-wrapper">
+                <div class="form-group">
+                    <select class="form-control select-privacy">
+                        <option class="option-privacy" value="Personal">Persoonlijk</option>
+                        <option class="option-privacy" value="Public">Publiek</option>
+                    </select>
+                    <input class="datefield form-control" type="date" id="challenge-agenda-listing-date" />
+                </div>
 
+                <div class="list-group listyo">
+                    <a class="list-group-item" asp-controller="Movement" asp-action="ChallengeInfo">Challenge 1</a>
+                    <a class="list-group-item" asp-controller="Movement" asp-action="ChallengeInfo">Challenge 2</a>
+                    <a class="list-group-item" asp-controller="Movement" asp-action="ChallengeInfo">Challenge 3</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -6,17 +6,19 @@
 
 @section Css{
     <link rel="stylesheet" href="~/css/movement-system.css" />
+    <link href='https://api.mapbox.com/mapbox-gl-js/v0.52.0/mapbox-gl.css' rel='stylesheet' />
+    <link rel='stylesheet' href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v2.3.0/mapbox-gl-geocoder.css' type='text/css' />
 }
 
 @section Scripts{
+    <script src='https://api.mapbox.com/mapbox-gl-js/v0.52.0/mapbox-gl.js'></script>
+    <script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v2.3.0/mapbox-gl-geocoder.min.js'></script>
     <script src="~/js/movement-system-script.js" asp-append-version="true"></script>
-    <script src="http://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyBgzprJmBuSxyte0NNLezTnUjOJUtbf1Ao"></script>
-    <script src="~/lib/geocomplete/jquery.geocomplete.min.js"></script>
 }
 
 <div class="container-fluid">
     <div class="row">
-        <a class="btn btn-primary button-back" role="button" asp-controller="Movement" asp-action="Index"><span class="fa fa-chevron-left"></span></a>
+        <a class="btn btn-primary button-back" role="button" asp-controller="Movement" asp-action="Index"><span class="fa fa-times"></span></a>
     </div>
 
     <div class="row">
@@ -46,13 +48,12 @@
                 <div class="input-group input-group-margin">
                     <span class="input-group-addon"><span class="fa fa-flag"></span></span>
                     <input class="form-control" type="number" maxlength="40" placeholder="Doel Hoeveelheid" />
-                    <input class="form-control" type="text" maxlength="40" placeholder="Eenheid" />
+                    <input class="form-control" type="text" maxlength="40" placeholder="Doel Eenheid" />
                 </div>
 
                 <!-- Location -->
-                <div class="input-group input-group-margin">
-                    <span class="input-group-addon"><span class="fa fa-globe"></span></span>
-                    <input class="form-control" type="text" maxlength="40" placeholder="Locatie" />
+                <div class="input-group-margin">
+                    <div class="mapboxgl-map" id="map"></div>
                 </div>
 
                 <!-- Date/Time -->

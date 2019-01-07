@@ -4,11 +4,23 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-@section Css{ 
+@section Css{
     <link rel="stylesheet" href="~/css/movement-system.css" />
+    <link href='https://api.mapbox.com/mapbox-gl-js/v0.52.0/mapbox-gl.css' rel='stylesheet' />
+    <link rel='stylesheet' href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v2.3.0/mapbox-gl-geocoder.css' type='text/css' />
+}
+
+@section Scripts{
+    <script src='https://api.mapbox.com/mapbox-gl-js/v0.52.0/mapbox-gl.js'></script>
+    <script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v2.3.0/mapbox-gl-geocoder.min.js'></script>
+    <script src="~/js/movement-system-challenge-info.js" asp-append-version="true"></script>
 }
 
 <div class="container-fluid">
+    <div class="row">
+        <a class="btn btn-primary button-back" role="button" asp-controller="Movement" asp-action="Index"><span class="fa fa-chevron-left"></span></a>
+    </div>
+
     <!-- Title Row -->
     <div class="row">
         <div class="heading-wrapper">
@@ -47,7 +59,7 @@
             <!-- Locatie -->
             <div class="container text-wrapper">
                 <h4><span class="fa fa-map-marker"></span> Locatie</h4>
-                <p>Eindhoven</p>
+                <div id="map" class="mapboxgl-map input-group-margin"></div>
             </div>
         </div>
     </div>
