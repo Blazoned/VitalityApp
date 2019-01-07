@@ -30,18 +30,20 @@
 
 <script>
     function switchEyes() {
+        var d = new Date();
+        var n = d.toLocaleTimeString();
         if ($("#eyes span").hasClass("fa-eye")) {
             $("#eyes span").removeClass("fa-eye")
             $('#eyes span').addClass('fa-eye-slash');
             var x = document.getElementById("sleepStatus");
-            x.innerHTML = "Slaapt";
+            x.innerHTML = "Einde: "+n;
             x.style.color = "red";
         }
         else {
             $("#eyes span").removeClass("fa-eye-slash")
             $('#eyes span').addClass('fa-eye');
             var x = document.getElementById("sleepStatus");
-            x.innerHTML = "Wakker";
+            x.innerHTML = "Begin: "+n;
             x.style.color = "green";
         }
     }
