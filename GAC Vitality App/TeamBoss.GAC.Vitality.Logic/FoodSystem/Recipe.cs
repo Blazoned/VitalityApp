@@ -21,8 +21,9 @@ namespace TeamBoss.GAC.Vitality.Logic
         public string CreatorName { get; set; }
         public string Description { get; set; }
         public string Name { get; set; }
+        public int TotalFavorites { get; set; }
 
-        public Recipe(int id, int preperationTime, int totalCalories, int servingsCount, List<Reaction> reactions, List<string> imageLinks, List<string> ingredients, string creatorName, string description, string name)
+        public Recipe(int id, int preperationTime, int totalCalories, int servingsCount, List<Reaction> reactions, List<string> imageLinks, List<string> ingredients, string creatorName, string description, string name, int totalFavorites)
         {
             Id = id; 
             PreperationTime = preperationTime;
@@ -34,6 +35,7 @@ namespace TeamBoss.GAC.Vitality.Logic
             CreatorName = creatorName;
             Description = description;
             Name = name;
+            TotalFavorites = totalFavorites; 
         }
     }
 }

@@ -153,3 +153,12 @@ function ToggleFilterMenu() {
     $("#food-search-filters-div").slideToggle(200);
     $("#food-search-filters-caret").toggleClass("dropup");
 }
+
+$(document).ready(function () {
+    $('#food-search-text').on("keyup", function () {
+        var value = $(this).val().toLowerCase();
+        $('#challenge-listing li').filter(function () {
+            $(this).toggle($(this).children("#recipename").text().toLowerCase().indexOf(value) > -1)
+        });
+    });
+});
