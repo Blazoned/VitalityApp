@@ -4,57 +4,47 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-@section Css{
-    <link rel="stylesheet" type="text/css" href="~/css/clockpicker.css">
-}
-
-@section Scripts{
-    <script src="~/js/jquery-clockpicker.js"></script>
-    <script type="text/javascript">
-        $('.clockpicker').clockpicker();
-    </script>
-}
-
 <div class="container row">
     <div class="form-group block-wrapper col-md-12 col-md-4" style="text-align: center;">
         <div class="container" style="padding-left: 0px; padding-right:0px;">
-            <h2>Slaap Invoeren</h2>
-            <p>Voer hier uw slaap tijden in!</p>
-            <div class="input-group clockpicker">
-                <input type="text" class="form-control" placeholder="Begintijd" readonly>
-                <span class="input-group-addon">
-                    <span class="glyphicon glyphicon-time"></span>
-                </span>
+            <h2>Slaap Meter</h2>
+            <br/>
+            <div class="col-md-4"></div>
+            <div class="col-md-4">
+                <button type="button" class="btn btn-default" id="eyes" onClick="switchEyes()" style="height: 100%; width: 100%">
+                    <span class="fa fa-eye" style="font-size: 180px"></span>
+                </button><br/><br/>
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th scope="col"><h4>Status: </h4></th>
+                        <th scope="col"><h4 id="sleepStatus" style="color: green; text-align: right">Wakker</h4></th>
+                    </tr>
+                    </thead>
+                </table>
             </div>
-            <br />
-            <div class="input-group clockpicker">
-                <input type="text" class="form-control" placeholder="Eindtijd" readonly>
-                <span class="input-group-addon">
-                    <span class="glyphicon glyphicon-time"></span>
-                </span>
-            </div>
-            <br />
-            <div class="input-group">
-                <input type="date" class="form-control" placeholder="Datum">
-                <span class="input-group-addon">
-                    <span class="glyphicon glyphicon-calendar"></span>
-                </span>
-            </div>
-            <br />
-            <div class="input-group repeat-checkbox">
-                <label>Herhalen?</label>
-
-                <div class="checkbox">
-                    <label style="padding-right: 20px;"><input type="checkbox" value="">Maandag</label><br />
-                    <label style="padding-right: 20px;"><input type="checkbox" value="">Dinsdag</label><br />
-                    <label style="padding-right: 20px;"><input type="checkbox" value="">Woensdag</label><br />
-                    <label style="padding-right: 20px;"><input type="checkbox" value="">Donderdag</label><br />
-                    <label style="padding-right: 20px;"><input type="checkbox" value="">Vrijdag</label><br />
-                    <label style="padding-right: 20px;"><input type="checkbox" value="">Zaterdag</label><br />
-                    <label style="padding-right: 20px;"><input type="checkbox" value="">Zondag</label><br />
-                </div>
-            </div>
-            <button type="button" class="btn btn-primary btn-block add-button"><span class="glyphicon glyphicon-plus"></span></button>
+            <div class="col-md-4"></div>      
         </div>
     </div>
 </div>
+
+<script>
+    function switchEyes() {
+        var d = new Date();
+        var n = d.toLocaleTimeString();
+        if ($("#eyes span").hasClass("fa-eye")) {
+            $("#eyes span").removeClass("fa-eye")
+            $('#eyes span').addClass('fa-eye-slash');
+            var x = document.getElementById("sleepStatus");
+            x.innerHTML = "Einde: "+n;
+            x.style.color = "red";
+        }
+        else {
+            $("#eyes span").removeClass("fa-eye-slash")
+            $('#eyes span').addClass('fa-eye');
+            var x = document.getElementById("sleepStatus");
+            x.innerHTML = "Begin: "+n;
+            x.style.color = "green";
+        }
+    }
+</script>
