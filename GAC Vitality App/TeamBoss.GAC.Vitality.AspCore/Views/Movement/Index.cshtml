@@ -1,4 +1,5 @@
-﻿
+﻿@using TeamBoss.GAC.Vitality.Logic
+
 @{
     ViewData["Title"] = "Bewegen";
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -9,14 +10,9 @@
     <link href="~/css/movement-system-layout.css" type="text/css" />
 }
 
-@section Scripts
-    {
-    <script src="~/js/movement-system-script.js"></script>
+@section Scripts{ 
+    <script src="~/js/movement-system.js"></script>
 }
-
-<div class="modal">
-    <p>yo</p>
-</div>
 
 <div class="container-fluid">
     <!-- Navigation Buttons -->
@@ -40,16 +36,22 @@
             <div class="container text-wrapper">
                 <div class="form-group">
                     <select class="form-control select-privacy">
-                        <option class="option-privacy" value="Personal">Persoonlijk</option>
+                        <option class="option-privacy" value="Personal">Privaat</option>
                         <option class="option-privacy" value="Public">Publiek</option>
                     </select>
-                    <input class="datefield form-control" type="date" id="challenge-agenda-listing-date" />
                 </div>
 
-                <div class="list-group listyo">
-                    <a class="list-group-item" asp-controller="Movement" asp-action="ChallengeInfo">Challenge 1</a>
-                    <a class="list-group-item" asp-controller="Movement" asp-action="ChallengeInfo">Challenge 2</a>
-                    <a class="list-group-item" asp-controller="Movement" asp-action="ChallengeInfo">Challenge 3</a>
+                <div class="list-group listyo public-list" hidden>
+                    @foreach (Challenge challenge in Model.PublicChallenges)
+                    {
+                        <a class="list-group-item" asp-controller="Movement" asp-action="ChallengeInfo" asp-route-idD="@challenge.ID">@challenge.Name</a>
+                    }
+                </div>
+                <div class="list-group listyo private-list">
+                    @foreach (Challenge challenge in Model.PrivateChallenges)
+                    {
+                        <a class="list-group-item" asp-controller="Movement" asp-action="ChallengeInfo" asp-route-idD="@challenge.ID">@challenge.Name</a>
+                    }
                 </div>
             </div>
         </div>

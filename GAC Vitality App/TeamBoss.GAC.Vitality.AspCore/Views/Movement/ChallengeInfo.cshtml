@@ -1,4 +1,5 @@
-﻿
+﻿@using TeamBoss.GAC.Vitality.Logic;
+
 @{
     ViewData["Title"] = "Uitdaging Info";
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -13,7 +14,7 @@
 @section Scripts{
     <script src='https://api.mapbox.com/mapbox-gl-js/v0.52.0/mapbox-gl.js'></script>
     <script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v2.3.0/mapbox-gl-geocoder.min.js'></script>
-    <script src="~/js/movement-system-challenge-info.js" asp-append-version="true"></script>
+    <script src="~/js/movement-system-challenge-info.js"></script>
 }
 
 <div class="container-fluid">
@@ -25,7 +26,7 @@
     <div class="row">
         <div class="heading-wrapper">
             <div class="container text-wrapper">
-                <h1>Challenge 1</h1>
+                <h1>@Model.SelectedChallenge.Name</h1>
                 <hr />
             </div>
         </div>
@@ -36,12 +37,12 @@
         <div class="heading-wrapper">
             <div class="container text-wrapper">
                 <div class="progress">
-                    <div class="progress-bar" style="width:40%; background-color:#3FC661" aria-valuenow="4" aria-valuemin="0" aria-valuemax="10">40%</div>
-                    <div class="progress-bar" style="width:60%; background-color: #E9ECEF; color: black;" aria-valuenow="6" aria-valuemin="0" aria-valuemax="10">60%</div>
+                    <div class="progress-bar" style="width:@Model.PercentageDone%; background-color:#3FC661">@Model.PercentageDone%</div>
+                <div class="progress-bar" style="width:@Model.PercentageToGo%; background-color: #E9ECEF; color: black;">@Model.PercentageToGo%</div>
                 </div>
 
-                <p>Huidige Progressie: 4 baantjes</p>
-                <p>Challenge Doel: 10 baantjes</p>
+                <p>Huidige Progressie: @Model.SelectedChallenge.Progress @Model.SelectedChallenge.GoalUnitName</p>
+                <p>Challenge Doel: @Model.SelectedChallenge.Goal @Model.SelectedChallenge.GoalUnitName</p>
             </div>
         </div>
     </div>
@@ -53,12 +54,13 @@
             <!-- Description -->
             <div class="container text-wrapper">
                 <h4><span class="fa fa-align-center"></span> Beschrijving</h4>
-                <p>Ga je ook mee zwemmen?</p>
+                <p>@Model.SelectedChallenge.Description</p>
             </div>
 
             <!-- Locatie -->
             <div class="container text-wrapper">
                 <h4><span class="fa fa-map-marker"></span> Locatie</h4>
+                <p class="map-location">@Model.SelectedChallenge.Location</p>
                 <div id="map" class="mapboxgl-map input-group-margin"></div>
             </div>
         </div>

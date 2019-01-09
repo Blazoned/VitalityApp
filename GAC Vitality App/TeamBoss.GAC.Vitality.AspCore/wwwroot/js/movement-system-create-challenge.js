@@ -60,15 +60,17 @@ var map = new mapboxgl.Map({
     zoom: 0
 });
 
-map.addControl(new MapboxGeocoder({
-    accessToken: mapboxgl.accessToken
-}));
-
 var geocoder = new MapboxGeocoder({
     accessToken: mapboxgl.accessToken
 });
 
+map.addControl(geocoder);
+
 map.on('load', function () {
+    OnMapLoad();
+});
+
+function OnMapLoad() {
     map.addSource('single-point', {
         "type": "geojson",
         "data": {
@@ -86,8 +88,8 @@ map.on('load', function () {
             "circle-color": "#007cbf"
         }
     });
-    
+
     geocoder.on('result', function (ev) {
         map.getSource('single-point').setData(ev.result.geometry);
     });
-});
+}
