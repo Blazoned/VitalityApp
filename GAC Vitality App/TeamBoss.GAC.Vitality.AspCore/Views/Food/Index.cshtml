@@ -1,0 +1,105 @@
+﻿@model TeamBoss.GAC.Vitality.AspCore.ViewModels.FoodViewModels.IndexViewModel
+
+@{
+    ViewData["Title"] = "Mijn Recepten";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section Css{
+    <link rel="stylesheet" href="~/css/voedingssysteem.css" />
+}
+
+@section Scripts{
+    <script src="~/js/voedingssysteem.js" asp-append-version="true"></script>
+}
+
+<!-- Modal used to warn the user when they wish to remove a recipe -->
+<div class="modal pop-up-modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <p>25 vinden dit recept geweldig!</p>
+        <p>Weet je zeker dat je dit recept wilt verwijderen?</p>
+
+        <div class="btn-group">
+            <button class="btn btn-success">Ja</button>
+            <button class="btn btn-danger">Nee</button>
+        </div>
+    </div>
+
+</div>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="heading-wrapper">
+            <div class="container text-wrapper">
+                <h1>Mijn recepten</h1>
+                <hr />
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                </p>
+            </div>
+            <div class="col-md-4 text-center">
+                <a class="btn btn-info buttonrecept" href="~/Food/CreateRecept">Maak een recept</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="text-wrapper list-wrapper">
+            <ul class="list-group" id="challenge-listing">
+
+                @foreach(var recipe in Model.recipes)
+                {
+                    <!-- Item Pizza Hawaii -->
+                    <li class="list-group-item feedyo clearfix">
+
+                        <!-- Link covering the entire list-group-item -->
+                        <a class="list-item-link" asp-controller="Food" asp-action="ViewRecept" asp-route-recipeId="@recipe.Id"></a>
+
+                        <p1>@recipe.Name</p1>
+
+                        <!-- Dropdown menu containing the options to edit or remove the recipe -->
+                        <div class="dropdown pull-right">
+                            <span class="btn fa fa-ellipsis-v dropdown-toggle" data-toggle="dropdown"></span>
+                            <ul class="dropdown-menu">
+                                <li><a href="~/Food/CreateRecept">Pas Aan</a></li>
+                                <li><a class="modal-button">Verwijderen</a></li>
+                            </ul>
+                        </div>
+
+                        <!-- Container containing the recipe data icons -->
+                        <div class="feed-info-container">
+                            <div class="calories-feed feed-info">
+                                <span class="fa fa-fire feed-icon"></span>
+                                <p>@recipe.TotalCalories Kcal</p>
+                            </div>
+                            <div class="preptime-feed feed-info">
+                                <span class="fa fa-clock feed-icon"></span>
+                                <p>@recipe.PreperationTime min</p>
+                            </div>
+                            <div class="calories-per-user-feed feed-info">
+                                <span class="fab fa-gripfire feed-icon"></span>
+                                <p>@(recipe.TotalCalories/recipe.ServingsCount) Kcal p.p</p>
+                            </div>
+                            <div class="user-feed feed-info">
+                                <span class="fa fa-user feed-icon"></span>
+                                <p>@recipe.ServingsCount</p>
+                            </div>
+                        </div>
+
+                        <!-- Container containing the image -->
+                        <div class="image-container">
+                            <div class="image-feed">
+                                <img class="img-center" src=@recipe.ImageLinks[0] />
+                            </div>
+                        </div>
+                    </li>
+                }
+            </ul>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,113 @@
+﻿@model TeamBoss.GAC.Vitality.AspCore.ViewModels.FoodViewModels.SavedRecipesViewModel
+
+@{
+    ViewData["Title"] = "Opgeslagen Recepten";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section Css{
+    <link rel="stylesheet" href="~/css/voedingssysteem.css" />
+}
+
+@section Scripts{
+    <script src="~/js/voedingssysteem.js" asp-append-version="true"></script>
+}
+
+<div class="container-fluid jojo">
+    <div class="row">
+        <div class="challenge-wrapper navbar-food">
+            <div class="container text-wrapper filterbox">
+                <h3>Favoriete Recepten</h3>
+                <hr />
+
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Recept Zoeken..." id="food-search-text" />
+                    <div class="input-group-btn">
+                        <button type="button" class="btn btn-primary ignore-focus" id="food-search-filters-toggle">
+                            Filters <span class="animated-transition" id="food-search-filters-caret"><span class="caret"></span></span>
+                        </button>
+                    </div>
+                </div>
+                <div class="container-fluid" id="food-search-filters-div" hidden>
+                    <hr />
+                    <div class="input-group">
+                        <div class="input-group-btn">
+                            <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="food-search-filters-allergies">
+                                <span class="fa fa-allergies"></span> &ensp;Allergieën <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu dropdown-menu-checkbox">
+                                <li class="checkbox-menu"><a href="#" data-value="dairy" tabindex="-1"><span>Zuivel</span><input type="checkbox" /></a></li>
+                                <li class="checkbox-menu"><a href="#" data-value="egg" tabindex="-1"><span>Ei</span><input type="checkbox" /></a></li>
+                                <li class="checkbox-menu"><a href="#" data-value="nuts" tabindex="-1"><span>Noten</span><input type="checkbox" /></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <hr />
+                    <div class="input-group">
+                        <div class="input-group-btn">
+                            <button class="btn btn-info" type="button" id="food-search-filters-apply">
+                                Filters Toepassen
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="text-wrapper list-wrapper-big">
+            <ul class="list-group" id="challenge-listing">
+
+                @foreach (var recipe in Model.recipes)
+                {
+                    <!-- Item Pizza Hawaii -->
+                    <li class="list-group-item feedyo clearfix">
+
+                        <!-- Link covering the entire list-group-item -->
+                        <a class="list-item-link" href="~/Food/ViewRecept"></a>
+
+                        <!-- fav -->
+                        <div class="star">
+                            <div class="favourite-btn hidden feed-option">
+                                <span class="far fa-star feed-icon"></span>
+                            </div>
+                            <div class="favourite-btn visible feed-option">
+                                <span class="fa fa-star feed-icon"></span>
+                            </div>
+
+                            <b class="favourites-text-small">@recipe.TotalFavorites</b>
+                        </div>
+
+                        <p1>@recipe.Name</p1>
+
+                        <!-- Container containing the recipe data icons -->
+                        <div class="feed-info-container">
+                            <div class="calories-feed feed-info">
+                                <span class="fa fa-fire feed-icon"></span>
+                                <p>@recipe.TotalCalories Kcal</p>
+                            </div>
+                            <div class="preptime-feed feed-info">
+                                <span class="fa fa-clock feed-icon"></span>
+                                <p>@recipe.PreperationTime min</p>
+                            </div>
+                            <div class="calories-per-user-feed feed-info">
+                                <span class="fab fa-gripfire feed-icon"></span>
+                                <p>@(recipe.TotalCalories/recipe.ServingsCount) Kcal p.p</p>
+                            </div>
+                            <div class="user-feed feed-info">
+                                <span class="fa fa-user feed-icon"></span>
+                                <p>@recipe.ServingsCount</p>
+                            </div>
+                        </div>
+
+                        <!-- Container containing the image -->
+                        <div class="image-container">
+                            <div class="image-feed">
+                                <img class="img-center" src=@recipe.ImageLinks[0] />
+                            </div>
+                        </div>
+                    </li>
+                }
+            </ul>
+        </div>
+    </div>
+</div>

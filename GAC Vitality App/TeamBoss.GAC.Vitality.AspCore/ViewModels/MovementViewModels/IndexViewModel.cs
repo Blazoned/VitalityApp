@@ -2,16 +2,19 @@
 
 using TeamBoss.GAC.Vitality.Logic;
 
-public class IndexViewModel
+namespace TeamBoss.GAC.Vitality.AspCore.ViewModels.MovementViewModels
 {
-    public List<Challenge> PublicChallenges
+    public class IndexViewModel
     {
-        get;
-        set;
-    }
-    public List<Challenge> PrivateChallenges
-    {
-        get;
-        set;
+        public List<Challenge> PublicChallenges
+        {
+            get;
+            set;
+        }
+        public List<Challenge> PrivateChallenges
+        {
+            get;
+            set;
+        }
     }
 }

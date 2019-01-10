@@ -4,9 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TeamBoss.GAC.Vitality.Data
+namespace TeamBoss.GAC.Vitality.Logic
 {
-    public class Class1
+    public enum Allergenes
     {
+        jo,
+        yo,
     }
 }

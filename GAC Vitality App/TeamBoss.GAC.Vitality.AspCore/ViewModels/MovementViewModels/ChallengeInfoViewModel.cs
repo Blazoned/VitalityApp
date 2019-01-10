@@ -2,21 +2,24 @@
 
 using TeamBoss.GAC.Vitality.Logic;
 
-public class ChallengeInfoViewModel
+namespace TeamBoss.GAC.Vitality.AspCore.ViewModels.MovementViewModels
 {
-    public Challenge SelectedChallenge
+    public class ChallengeInfoViewModel
     {
-        get;
-        set;
-    }
-    public float PercentageDone
-    {
-        get;
-        set;
-    }
-    public float PercentageToGo
-    {
-        get;
-        set;
+        public Challenge SelectedChallenge
+        {
+            get;
+            set;
+        }
+        public float PercentageDone
+        {
+            get;
+            set;
+        }
+        public float PercentageToGo
+        {
+            get;
+            set;
+        }
     }
 }

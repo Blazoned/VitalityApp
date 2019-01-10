@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 
 using TeamBoss.GAC.Vitality.Logic;
+using TeamBoss.GAC.Vitality.AspCore.ViewModels.MovementViewModels;
 
 namespace TeamBoss.GAC.Vitality.AspCore.Controllers
 {

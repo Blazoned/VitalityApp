@@ -4,13 +4,14 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{F99141E8-0CEF-404D-843F-A528A2DC6C02}</ProjectGuid>
+    <ProjectGuid>{12E95C54-139E-4FE7-8BB0-095CCDF189AC}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>TeamBoss.GAC.Vitality.Logic</RootNamespace>
-    <AssemblyName>TeamBoss.GAC.Vitality.Logic</AssemblyName>
+    <RootNamespace>TeamBoss.GAC.Vitality.LogicFactory</RootNamespace>
+    <AssemblyName>TeamBoss.GAC.Vitality.LogicFactory</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -40,22 +41,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="MovementSystem\Challenge.cs" />
-    <Compile Include="FoodSystem\CalorieCounter.cs" />
-    <Compile Include="FoodSystem\Allergene.cs" />
-    <Compile Include="FoodSystem\FoodUser.cs" />
-    <Compile Include="FoodSystem\MiniRecipe.cs" />
-    <Compile Include="FoodSystem\Reaction.cs" />
-    <Compile Include="FoodSystem\Recipe.cs" />
+    <Compile Include="CalorieCounterLogicFactory.cs" />
+    <Compile Include="FoodUserLogicFactory.cs" />
+    <Compile Include="MiniRecipeLogicFactory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="User.cs" />
+    <Compile Include="ReactionLogicFactory.cs" />
+    <Compile Include="RecipeLogicFactory.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\TeamBoss.GAC.Vitality.Data\TeamBoss.GAC.Vitality.DAL.csproj">
-      <Project>{faefb1ea-1952-4db8-a872-99cddc26aa95}</Project>
-      <Name>TeamBoss.GAC.Vitality.DAL</Name>
+    <ProjectReference Include="..\TeamBoss.GAC.Vitality.LogicInterfaces\%284%29 TeamBoss.GAC.Vitality.LogicInterfaces.csproj">
+      <Project>{0d1ec210-31b3-4ec2-9f97-5b3ab8a6134a}</Project>
+      <Name>%284%29 TeamBoss.GAC.Vitality.LogicInterfaces</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TeamBoss.GAC.Vitality.Logic\%283%29TeamBoss.GAC.Vitality.Logic.csproj">
+      <Project>{f99141e8-0cef-404d-843f-a528a2dc6c02}</Project>
+      <Name>%283%29TeamBoss.GAC.Vitality.Logic</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

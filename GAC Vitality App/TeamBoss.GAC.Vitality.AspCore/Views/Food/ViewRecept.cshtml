@@ -1,0 +1,93 @@
+﻿@model TeamBoss.GAC.Vitality.AspCore.ViewModels.FoodViewModels.ViewReceptViewModel
+
+@{
+    ViewData["Title"] = "ViewRecept";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section Css{
+    <link rel="stylesheet" href="~/css/voedingssysteem.css" />
+}
+
+@section Scripts{
+    <script src="~/js/voedingssysteem.js" asp-append-version="true"></script>
+}
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="challenge-wrapper">
+            <div class="container text-wrapper">
+
+                <div id="carouselControl" style="background-color:#000000;" class="carousel slide text-wrapper-shadow" data-ride="carousel" data-wrap="true">
+                    <h1 class="recept-header">@Model.recipe.Name</h1>
+                    <p class="recept-user">
+                        @Model.recipe.CreatorName
+                    </p>
+
+                    <div class="icon-wrapper">
+                        <div class="favourite-group">
+                            <div class="btn-group favourite-btn-group pull-right">
+                                <div class="btn favourite-btn visible">
+                                    <span class="far fa-star"></span>
+                                </div>
+                                <div class="btn favourite-btn hidden">
+                                    <span class="fa fa-star"></span>
+                                </div>
+
+                                <b class="favourites-text">25</b>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="carousel-inner">
+                        @foreach (var path in Model.recipe.ImageLinks)
+                        {
+                            <div class="item active">
+                                <img class="img-center" src=@path />
+                            </div>
+                        }
+                    </div>
+                </div>
+
+                <div class="icon-wrapper">
+                    <div class="icon-group">
+                        <span class="fa fa-fire calory-icon">
+                            <b class="calory-text">@Model.recipe.TotalCalories Kcal</b>
+                        </span>
+
+                        <span class="fa fa-clock clock-icon">
+                            <b class="clock-text">@Model.recipe.PreperationTime min</b>
+                        </span>
+
+                        <span class="fa fa-user user-icon">
+                            <b class="user-text">4</b>
+                        </span>
+
+                        <span class="fab fa-gripfire calories-per-user-icon">
+                            <b class="calories-per-user-text">113 kcal (P.P.)</b>
+                        </span>
+                    </div>
+                </div>
+
+                <p1>Bereiding:</p1>
+                <p>
+                    @Model.recipe.Description
+                </p>
+
+                <p1>Ingredienten + allergenen:</p1>
+                @foreach (var ingredient in Model.recipe.Ingredients)
+                {
+                    <p>- @ingredient</p>
+                }
+
+
+                <button class="btn btn-primary btnadd" type="button" id="recept-submit-button">Voeg toe aan de calorieënteller</button>
+
+                <div class="btnwrapper">
+                    <a class="btn btn-primary btnreactions" role="button" id="recept-submit-button" asp-controller="Food" asp-action="RecipeReactions">Reacties</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

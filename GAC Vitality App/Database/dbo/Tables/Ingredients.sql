@@ -1,0 +1,15 @@
+﻿CREATE TABLE [dbo].[Ingredients](
+	[Id] [int] IDENTITY(1,1) NOT NULL,
+	[RecipeId] [int] NOT NULL,
+	[Name] [nvarchar](max) NOT NULL,
+ CONSTRAINT [PK_Ingredients] PRIMARY KEY CLUSTERED 
+(
+	[Id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+GO
+ALTER TABLE [dbo].[Ingredients]  WITH CHECK ADD  CONSTRAINT [FK_Ingredients_Recipe] FOREIGN KEY([RecipeId])
+REFERENCES [dbo].[Recipe] ([Id])
+GO
+
+ALTER TABLE [dbo].[Ingredients] CHECK CONSTRAINT [FK_Ingredients_Recipe]

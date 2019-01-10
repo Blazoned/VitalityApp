@@ -16,6 +16,8 @@
 
   <ItemGroup>
     <None Include="wwwroot\css\create-challenge.css" />
+    <None Include="wwwroot\images\FoodSystem\PizzaSalami.JPG" />
+    <None Include="wwwroot\images\FoodSystem\PizzaSalami2.jpg" />
   </ItemGroup>
 
   <ItemGroup>

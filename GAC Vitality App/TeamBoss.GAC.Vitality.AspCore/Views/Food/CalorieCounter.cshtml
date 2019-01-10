@@ -1,0 +1,150 @@
+﻿@model TeamBoss.GAC.Vitality.AspCore.ViewModels.FoodViewModels.CalorieCounterViewModel
+
+@{
+    ViewData["Title"] = "CalorieCounter";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+@section Css{
+    <link rel="stylesheet" href="~/css/voedingssysteem.css" />
+    <link rel="stylesheet" href="~/css/CalorieCounter.css" />
+}
+
+@section Scripts{
+    <script src="~/js/voedingssysteem.js" asp-append-version="true"></script>
+    <script src="~/js/CalorieCounter.js" asp-append-version="true"></script>
+}
+
+<!-- Modal used to warn the user when they wish to remove a recipe -->
+<div class="modal pop-up-modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <p>Weet u zeker dat u dit recept wilt verwijderen uit de calorienteller?</p>
+
+        <div class="btn-group">
+            <button class="btn btn-success">Yes</button>
+            <button class="btn btn-danger">No</button>
+        </div>
+    </div>
+
+</div>
+
+<!-- Modal used to warn the user when they wish to remove a recipe -->
+<div class="modal edit-max-calorie-modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <p>Geef het nieuwe aantal maximale calorien voor de dag aan.</p>
+
+        <input class="form-control edit-max-calorie-text" type="number" maxlength="40" placeholder="Max Calories" />
+        <a class="btn btn-info edit-max-calorie-btn">Pas Aan</a>
+    </div>
+
+</div>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="heading-wrapper">
+            <div class="container text-wrapper">
+                <h1>Calorie Teller</h1>
+                <hr />
+
+                <span class="btn fa fa-edit pull-right edit-max-calorie-modal-btn"></span>
+
+                <!-- The progress circle with its data values. Change the data-target-calories value to see the progress circle change accordingly. -->
+                <div class="progress-circle" data-progress="0" data-current-calories="0" data-target-calories="4000" data-max-calories="10000"></div>
+
+                <hr />
+
+                <div class="input-group col-xs-12 col-md-4 input-field">
+                    <span class="input-group-addon"><span class="glyphicon glyphicon-header"></span></span>
+                    <input class="form-control" type="text" maxlength="40" placeholder="Titel" id="recept-name-input" required />
+                </div>
+                <div class="input-group col-xs-12 col-md-4 input-field">
+                    <span class="input-group-addon"><span class="fa fa-fire"></span></span>
+                    <input class="form-control" type="number" maxlength="40" placeholder="Calorien" id="recept-name-input" min="0" required />
+                </div>
+            </div>
+            <div class="col-md-4 text-center">
+                <a class="btn btn-info buttonrecept">Mini-Recept Toevoegen</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="heading-wrapper">
+            <div class="container text-wrapper">
+                <ul class="list-group" id="challenge-listing">
+
+                    @foreach (var recipe in Model.recipes)
+                    {
+                        <!-- Item Ovenschotel -->
+                        <li class="list-group-item clearfix">
+
+                            <!-- Link covering the entire list-group-item -->
+                            <a class="list-item-link" href="~/Food/ViewRecept"></a>
+
+                            <!-- trash -->
+                            <div class="pull-right trash-icon modal-button">
+                                <span class="fa fa-trash-alt"></span>
+                            </div>
+
+                            <p1>@recipe.Name</p1>
+
+                            <!-- Container containing the recipe data icons -->
+                            <div class="feed-info-container">
+                                <div class="calories-feed feed-info">
+                                    <span class="fa fa-fire feed-icon"></span>
+                                    <p>@recipe.TotalCalories Kcal</p>
+                                </div>
+                                <div class="preptime-feed feed-info">
+                                    <span class="fa fa-clock feed-icon"></span>
+                                    <p>@recipe.PreperationTime min</p>
+                                </div>
+                                <div class="calories-per-user-feed feed-info">
+                                    <span class="fab fa-gripfire feed-icon"></span>
+                                    <p>@(recipe.TotalCalories/recipe.ServingsCount) Kcal p.p</p>
+                                </div>
+                                <div class="user-feed feed-info">
+                                    <span class="fa fa-user feed-icon"></span>
+                                    <p>@recipe.ServingsCount</p>
+                                </div>
+                            </div>
+
+                            <!-- Container containing the image -->
+                            <div class="image-container">
+                                <div class="image-feed">
+                                    <img class="img-center" src=@recipe.ImageLinks[0] />
+                                </div>
+                            </div>
+                        </li>
+                    }
+
+                    <!-- Item Apple -->
+                    <li class="list-group-item feedyo clearfix">
+
+                        <!-- trash -->
+                        <div class="pull-right trash-icon modal-button">
+                            <span class="fa fa-trash-alt"></span>
+                        </div>
+
+                        <p1>Appel</p1>
+
+                        <!-- Container containing the recipe data icons -->
+                        <div class="feed-info-container mini-recept">
+                            <div class="calories-feed feed-info">
+                                <span class="fa fa-fire feed-icon"></span>
+                                <p>170 Kcal</p>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+

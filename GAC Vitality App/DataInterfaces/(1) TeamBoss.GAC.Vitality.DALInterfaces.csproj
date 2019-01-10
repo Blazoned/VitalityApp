@@ -4,13 +4,15 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{F99141E8-0CEF-404D-843F-A528A2DC6C02}</ProjectGuid>
+    <ProjectGuid>{9F2D3C6E-D6FC-4148-9C17-36F0E7D5CA21}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>TeamBoss.GAC.Vitality.Logic</RootNamespace>
-    <AssemblyName>TeamBoss.GAC.Vitality.Logic</AssemblyName>
+    <RootNamespace>TeamBoss.GAC.Vitality.DataInterfaces</RootNamespace>
+    <AssemblyName>TeamBoss.GAC.Vitality.DataInterfaces</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -40,22 +42,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="MovementSystem\Challenge.cs" />
-    <Compile Include="FoodSystem\CalorieCounter.cs" />
-    <Compile Include="FoodSystem\Allergene.cs" />
-    <Compile Include="FoodSystem\FoodUser.cs" />
-    <Compile Include="FoodSystem\MiniRecipe.cs" />
-    <Compile Include="FoodSystem\Reaction.cs" />
-    <Compile Include="FoodSystem\Recipe.cs" />
+    <Compile Include="IMiniRecipeDAL.cs" />
+    <Compile Include="IRecipeDAL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="User.cs" />
+    <Compile Include="Structs\AllergeneStruct.cs" />
+    <Compile Include="Structs\MiniRecipeStruct.cs" />
+    <Compile Include="Structs\ReactionStruct.cs" />
+    <Compile Include="Structs\RecipeStruct.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\TeamBoss.GAC.Vitality.Data\TeamBoss.GAC.Vitality.DAL.csproj">
-      <Project>{faefb1ea-1952-4db8-a872-99cddc26aa95}</Project>
-      <Name>TeamBoss.GAC.Vitality.DAL</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
