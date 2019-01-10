@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TeamBoss.GAC.Vitality.AspCo
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "-deprecated- TeamBoss.GAC.Vitality", "TeamBoss.GAC.Vitality\-deprecated- TeamBoss.GAC.Vitality.csproj", "{5946E58F-9FF1-43A3-BD0B-4E5D44C762FB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TeamBoss.GAC.Vitality.Logic", "TeamBoss.GAC.Vitality.Logic\TeamBoss.GAC.Vitality.Logic.csproj", "{F99141E8-0CEF-404D-843F-A528A2DC6C02}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{5946E58F-9FF1-43A3-BD0B-4E5D44C762FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5946E58F-9FF1-43A3-BD0B-4E5D44C762FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5946E58F-9FF1-43A3-BD0B-4E5D44C762FB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F99141E8-0CEF-404D-843F-A528A2DC6C02}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F99141E8-0CEF-404D-843F-A528A2DC6C02}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F99141E8-0CEF-404D-843F-A528A2DC6C02}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F99141E8-0CEF-404D-843F-A528A2DC6C02}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

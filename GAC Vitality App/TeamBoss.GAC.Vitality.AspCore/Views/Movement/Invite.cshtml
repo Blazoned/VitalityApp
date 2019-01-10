@@ -1,0 +1,36 @@
+﻿@{
+    ViewData["Title"] = "DaagUit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section Scripts{
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script src="~/lib/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="~/js/DaagUit.js"></script>
+    }
+
+@section Css{ 
+    <link rel="stylesheet" href="~/css/movement-system.css" />
+}
+
+<div class="container-fluid">
+    <div class="row">
+        <a class="btn btn-primary button-back" role="button" asp-controller="Movement" asp-action="Index"><span class="fa fa-chevron-left"></span></a>
+    </div>
+
+    <div class="row">
+        <div class="heading-wrapper">
+            <div class="container text-wrapper">
+                <ul class="list-group">
+                    <li class="list-group-item">Harry <input type="checkbox" class="pull-right"/></li>
+                    <li class="list-group-item">Henk</li>
+                    <li class="list-group-item">Hans</li>
+                </ul>
+
+                <div class="btn-group input-group-margin">
+                    <a class="btn btn-info" role="button" asp-controller="Movement" asp-action="Index">Daag Uit</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

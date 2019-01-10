@@ -1,0 +1,79 @@
+﻿@using TeamBoss.GAC.Vitality.Logic;
+
+@{
+    ViewData["Title"] = "Uitdaging Info";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section Css{
+    <link rel="stylesheet" href="~/css/movement-system.css" />
+    <link href='https://api.mapbox.com/mapbox-gl-js/v0.52.0/mapbox-gl.css' rel='stylesheet' />
+    <link rel='stylesheet' href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v2.3.0/mapbox-gl-geocoder.css' type='text/css' />
+}
+
+@section Scripts{
+    <script src='https://api.mapbox.com/mapbox-gl-js/v0.52.0/mapbox-gl.js'></script>
+    <script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v2.3.0/mapbox-gl-geocoder.min.js'></script>
+    <script src="~/js/movement-system-challenge-info.js"></script>
+}
+
+<div class="container-fluid">
+    <div class="row">
+        <a class="btn btn-primary button-back" role="button" asp-controller="Movement" asp-action="Index"><span class="fa fa-chevron-left"></span></a>
+    </div>
+
+    <!-- Title Row -->
+    <div class="row">
+        <div class="heading-wrapper">
+            <div class="container text-wrapper">
+                <h1>@Model.SelectedChallenge.Name</h1>
+                <hr />
+            </div>
+        </div>
+    </div>
+
+    <!-- Progress -->
+    <div class="row">
+        <div class="heading-wrapper">
+            <div class="container text-wrapper">
+                <div class="progress">
+                    <div class="progress-bar" style="width:@Model.PercentageDone%; background-color:#3FC661">@Model.PercentageDone%</div>
+                <div class="progress-bar" style="width:@Model.PercentageToGo%; background-color: #E9ECEF; color: black;">@Model.PercentageToGo%</div>
+                </div>
+
+                <p>Huidige Progressie: @Model.SelectedChallenge.Progress @Model.SelectedChallenge.GoalUnitName</p>
+                <p>Challenge Doel: @Model.SelectedChallenge.Goal @Model.SelectedChallenge.GoalUnitName</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Challenge Information Row -->
+    <div class="row">
+        <div class="heading-wrapper">
+
+            <!-- Description -->
+            <div class="container text-wrapper">
+                <h4><span class="fa fa-align-center"></span> Beschrijving</h4>
+                <p>@Model.SelectedChallenge.Description</p>
+            </div>
+
+            <!-- Locatie -->
+            <div class="container text-wrapper">
+                <h4><span class="fa fa-map-marker"></span> Locatie</h4>
+                <p class="map-location">@Model.SelectedChallenge.Location</p>
+                <div id="map" class="mapboxgl-map input-group-margin"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Challenge Buttons -->
+    <div class="row">
+        <div class="heading-wrapper">
+            <div class="btn-group challenge-button-group">
+                <a class="btn btn-info challenge-button" role="button"><span class="fa fa-edit"></span></a>
+                <a class="btn btn-info challenge-button" role="button"><span class="fa fa-users"></span></a>
+                <a class="btn btn-info challenge-button" role="button"><span class="fa fa-trash"></span></a>
+            </div>
+        </div>
+    </div>
+</div>

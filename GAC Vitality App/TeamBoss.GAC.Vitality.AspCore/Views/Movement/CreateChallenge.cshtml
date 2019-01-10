@@ -1,0 +1,103 @@
+﻿
+@{
+    ViewData["Title"] = "Challenge Aanmaken";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section Css{
+    <link rel="stylesheet" href="~/css/movement-system.css" />
+    <link href='https://api.mapbox.com/mapbox-gl-js/v0.52.0/mapbox-gl.css' rel='stylesheet' />
+    <link rel='stylesheet' href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v2.3.0/mapbox-gl-geocoder.css' type='text/css' />
+}
+
+@section Scripts{
+    <script src='https://api.mapbox.com/mapbox-gl-js/v0.52.0/mapbox-gl.js'></script>
+    <script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v2.3.0/mapbox-gl-geocoder.min.js'></script>
+    <script src="~/js/movement-system-create-challenge.js" asp-append-version="true"></script>
+}
+
+<div class="container-fluid">
+    <div class="row">
+        <a class="btn btn-primary button-back" role="button" asp-controller="Movement" asp-action="Index"><span class="fa fa-times"></span></a>
+    </div>
+
+    <div class="row">
+        <!-- Title -->
+        <div class="heading-wrapper">
+            <div class="container text-wrapper">
+                <h2 class="text-center">Start een Challenge</h2>
+                <hr />
+            </div>
+        </div>
+
+        <div class="heading-wrapper">
+            <div class="container text-wrapper">
+                <!-- Title -->
+                <div class="input-group input-group-margin">
+                    <span class="input-group-addon"><span class="fa fa-header"></span></span>
+                    <input class="form-control" type="text" maxlength="40" placeholder="Titel" required />
+                </div>
+
+                <!-- Description -->
+                <div class="input-group input-group-margin">
+                    <span class="input-group-addon"><span class="fa fa-align-center"></span></span>
+                    <textarea class="form-control" rows="3" maxlength="250" placeholder="Beschrijving" required></textarea>
+                </div>
+
+                <!-- Challenge Goal-->
+                <div class="input-group input-group-margin">
+                    <span class="input-group-addon"><span class="fa fa-flag"></span></span>
+                    <input class="form-control" type="number" maxlength="40" placeholder="Doel Hoeveelheid" />
+                    <input class="form-control" type="text" maxlength="40" placeholder="Doel Eenheid" />
+                </div>
+
+                <!-- Location -->
+                <div class="input-group-margin">
+                    <div class="mapboxgl-map" id="map"></div>
+                </div>
+
+                <!-- Date/Time -->
+                <div class="input-group input-group-margin">
+                    <span class="input-group-addon"><span class="fa fa-calendar-o"></span></span>
+                    <input class="form-control datetime-input" type="datetime-local" />
+                </div>
+
+                <!-- Repeat -->
+                <div class="input-group input-group-margin">
+                    <span class="input-group-addon"><span class="fa fa-repeat"></span></span>
+                    <select class="form-control">
+                        <option selected>Niet Herhalen</option>
+                        <option>Dagelijks</option>
+                        <option>Weekend</option>
+                    </select>
+                </div>
+
+                <!-- Public or private -->
+                <div class="input-group input-group-margin">
+                    <span class="input-group-addon"><span class="fa fa-lock"></span></span>
+                    <button class="form-control btn btn-success privacy-button privacy-button-success" type="button"><span>Publiek</span></button>
+                    <button class="form-control btn btn-danger privacy-button privacy-button-danger hidden" type="button"><span>Prive</span></button>
+                </div>
+
+                <!-- Add Tag -->
+                <div class="input-group input-group-margin">
+                    <span class="input-group-addon"><span class="fa fa-tag"></span></span>
+                    <input class="form-control challenge-tag-input" type="text" maxlength="15" placeholder="Tag" />
+                    <span class="input-group-btn">
+                        <button class="btn btn-default challenge-tag-button" type="button"><span class="fa fa-plus"></span></button>
+                    </span>
+                </div>
+
+                <!-- Tag List -->
+                <div class="challenge-tag-list input-group-margin">
+                    <ul class="list-unstyled list-inline tag-list"></ul>
+                </div>
+
+                <!-- Add Challenge -->
+                <div class="submit-section input-group-margin">
+                    <button class="btn btn-info add-challenge-button" type="button"><span class="fa fa-plus-circle"></span> Challenge Aanmaken</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
