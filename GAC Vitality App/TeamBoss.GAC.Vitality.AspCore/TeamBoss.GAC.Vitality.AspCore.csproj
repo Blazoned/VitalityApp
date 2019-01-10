@@ -22,4 +22,8 @@
     <Folder Include="wwwroot\lib\jquery\dist\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\TeamBoss.GAC.Vitality.Logic\TeamBoss.GAC.Vitality.Logic.csproj" />
+  </ItemGroup>
+
 </Project>
