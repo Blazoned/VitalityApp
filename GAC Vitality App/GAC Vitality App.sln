@@ -5,10 +5,6 @@ VisualStudioVersion = 15.0.27428.2005
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TeamBoss.GAC.Vitality.AspCore", "TeamBoss.GAC.Vitality.AspCore\TeamBoss.GAC.Vitality.AspCore.csproj", "{DD84ED49-1261-4A18-8782-76934500FF8F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TeamBoss.GAC.Vitality.Data", "TeamBoss.GAC.Vitality.Data\TeamBoss.GAC.Vitality.Data.csproj", "{FAEFB1EA-1952-4DB8-A872-99CDDC26AA95}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TeamBoss.GAC.Vitality.Logic", "TeamBoss.GAC.Vitality.Logic\TeamBoss.GAC.Vitality.Logic.csproj", "{F99141E8-0CEF-404D-843F-A528A2DC6C02}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "-deprecated- TeamBoss.GAC.Vitality", "TeamBoss.GAC.Vitality\-deprecated- TeamBoss.GAC.Vitality.csproj", "{5946E58F-9FF1-43A3-BD0B-4E5D44C762FB}"
 EndProject
 Global
@@ -21,14 +17,6 @@ Global
 		{DD84ED49-1261-4A18-8782-76934500FF8F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DD84ED49-1261-4A18-8782-76934500FF8F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DD84ED49-1261-4A18-8782-76934500FF8F}.Release|Any CPU.Build.0 = Release|Any CPU
-		{FAEFB1EA-1952-4DB8-A872-99CDDC26AA95}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{FAEFB1EA-1952-4DB8-A872-99CDDC26AA95}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{FAEFB1EA-1952-4DB8-A872-99CDDC26AA95}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{FAEFB1EA-1952-4DB8-A872-99CDDC26AA95}.Release|Any CPU.Build.0 = Release|Any CPU
-		{F99141E8-0CEF-404D-843F-A528A2DC6C02}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F99141E8-0CEF-404D-843F-A528A2DC6C02}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F99141E8-0CEF-404D-843F-A528A2DC6C02}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F99141E8-0CEF-404D-843F-A528A2DC6C02}.Release|Any CPU.Build.0 = Release|Any CPU
 		{5946E58F-9FF1-43A3-BD0B-4E5D44C762FB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{5946E58F-9FF1-43A3-BD0B-4E5D44C762FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5946E58F-9FF1-43A3-BD0B-4E5D44C762FB}.Release|Any CPU.ActiveCfg = Release|Any CPU

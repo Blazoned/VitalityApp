@@ -19,16 +19,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\TeamBoss.GAC.Vitality.Logic\TeamBoss.GAC.Vitality.Logic.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Content Update="Views\Movement\CreateChallenge.cshtml">
-      <Pack>$(IncludeRazorContentInPack)</Pack>
-    </Content>
-  </ItemGroup>
-
-  <ItemGroup>
     <Folder Include="wwwroot\lib\jquery\dist\" />
   </ItemGroup>
 
