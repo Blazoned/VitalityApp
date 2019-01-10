@@ -4,9 +4,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-using TeamBoss.GAC.Vitality.DALInterfaces;
-using TeamBoss.GAC.Vitality.LogicInterfaces;
-
 namespace TeamBoss.GAC.Vitality.Logic
 {
     public class Reaction 

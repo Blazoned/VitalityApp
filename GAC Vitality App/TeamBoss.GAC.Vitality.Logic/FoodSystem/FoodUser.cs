@@ -4,11 +4,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-using TeamBoss.GAC.Vitality.DALFactory;
-using TeamBoss.GAC.Vitality.DALInterfaces;
-
-using TeamBoss.GAC.Vitality.LogicInterfaces;
-
 namespace TeamBoss.GAC.Vitality.Logic
 {
     public class FoodUser : User
@@ -57,8 +52,6 @@ namespace TeamBoss.GAC.Vitality.Logic
         public List<Recipe> MyRecipes { get; set; }
         public List<Recipe> FavouriteRecipes { get; set; }
         public CalorieCounter iCalorieCounter { get; set; }
-
-        public IRecipeDAL iRecipeDAL { get; set; }
 
         public bool AddRecipe()
         {

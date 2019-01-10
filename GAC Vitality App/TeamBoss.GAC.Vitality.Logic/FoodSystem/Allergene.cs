@@ -4,8 +4,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-using TeamBoss.GAC.Vitality.DALInterfaces;
-
 namespace TeamBoss.GAC.Vitality.Logic
 {
     public class Allergene
@@ -18,12 +16,5 @@ namespace TeamBoss.GAC.Vitality.Logic
             Id = id;
             Name = name; 
         }
-
-        public Allergene(AllergeneStruct allergeneStruct)
-        {
-            Id = allergeneStruct.Id;
-            Name = allergeneStruct.Name; 
-        }
-
     }
 }
