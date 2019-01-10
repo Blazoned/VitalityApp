@@ -14,7 +14,7 @@ namespace TeamBoss.GAC.Vitality.AspCore.Controllers
         Challenge challenge2 = new Challenge(true, 25, 1, 5, "Joggen voor je gezondheid!", "KM", "Joggen", "Rachelsmolen R1, Eindhoven, Noord-Brabant 5612, Netherlands");
         Challenge challenge3 = new Challenge(false, 3, 2, 2, "Tennissen!", "Sets", "Sets Tennissen", "Anconalaan 1, 5632 Eindhoven, Netherlands");
 
-        [HttpPost]
+        [HttpGet]
         public IActionResult CreateChallenge()
         {
             return View();
