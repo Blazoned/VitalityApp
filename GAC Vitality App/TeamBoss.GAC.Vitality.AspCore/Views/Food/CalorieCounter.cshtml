@@ -82,8 +82,8 @@
 
                     @foreach (var recipe in Model.recipes)
                     {
-                        <!-- Item Pizza Hawaii -->
-                        <li class="list-group-item feedyo clearfix">
+                        <!-- Item Ovenschotel -->
+                        <li class="list-group-item clearfix">
 
                             <!-- Link covering the entire list-group-item -->
                             <a class="list-item-link" href="~/Food/ViewRecept"></a>
@@ -92,19 +92,6 @@
                             <div class="pull-right trash-icon modal-button">
                                 <span class="fa fa-trash-alt"></span>
                             </div>
-                            <div class="preptime-feed feed-info">
-                                <span class="fa fa-clock feed-icon"></span>
-                                <p>60 min</p>
-                            </div>
-                            <div class="calories-per-user-feed feed-info">
-                                <span class="fab fa-gripfire feed-icon"></span>
-                                <p>113 kcal (P.P.)</p>
-                            </div>
-                            <div class="user-feed feed-info">
-                                <span class="fa fa-user feed-icon"></span>
-                                <p>4</p>
-                            </div>
-                        </div>
 
                             <p1>@recipe.Name</p1>
 
@@ -112,30 +99,21 @@
                             <div class="feed-info-container">
                                 <div class="calories-feed feed-info">
                                     <span class="fa fa-fire feed-icon"></span>
-                                    <p>@recipe.TotalCalories</p>
+                                    <p>@recipe.TotalCalories Kcal</p>
                                 </div>
                                 <div class="preptime-feed feed-info">
                                     <span class="fa fa-clock feed-icon"></span>
                                     <p>@recipe.PreperationTime min</p>
                                 </div>
-                                <div class="favourites-feed feed-info">
-                                    <span class="fa fa-users feed-icon"></span>
+                                <div class="calories-per-user-feed feed-info">
+                                    <span class="fab fa-gripfire feed-icon"></span>
+                                    <p>@(recipe.TotalCalories/recipe.ServingsCount) Kcal p.p</p>
+                                </div>
+                                <div class="user-feed feed-info">
+                                    <span class="fa fa-user feed-icon"></span>
                                     <p>@recipe.ServingsCount</p>
                                 </div>
                             </div>
-                            <div class="preptime-feed feed-info">
-                                <span class="fa fa-clock feed-icon"></span>
-                                <p>15 min</p>
-                            </div>
-                            <div class="calories-per-user-feed feed-info">
-                                <span class="fab fa-gripfire feed-icon"></span>
-                                <p>50 kcal (P.P.)</p>
-                            </div>
-                            <div class="user-feed feed-info">
-                                <span class="fa fa-user feed-icon"></span>
-                                <p>2</p>
-                            </div>
-                        </div>
 
                             <!-- Container containing the image -->
                             <div class="image-container">
@@ -145,88 +123,6 @@
                             </div>
                         </li>
                     }
-
-                    <!-- Item Biefstuk -->
-                    <li class="list-group-item clearfix">
-
-                        <!-- Link covering the entire list-group-item -->
-                        <a class="list-item-link" href="~/Food/ViewRecept"></a>
-
-                        <!-- trash -->
-                        <div class="pull-right trash-icon modal-button">
-                            <span class="fa fa-trash-alt"></span>
-                        </div>
-
-                        <p1>Biefstuk</p1>
-
-                        <!-- Container containing the recipe data icons -->
-                        <div class="feed-info-container">
-                            <div class="calories-feed feed-info">
-                                <span class="fa fa-fire feed-icon"></span>
-                                <p>500 Kcal</p>
-                            </div>
-                            <div class="preptime-feed feed-info">
-                                <span class="fa fa-clock feed-icon"></span>
-                                <p>90 min</p>
-                            </div>
-                            <div class="calories-per-user-feed feed-info">
-                                <span class="fab fa-gripfire feed-icon"></span>
-                                <p>500 kcal (P.P.)</p>
-                            </div>
-                            <div class="user-feed feed-info">
-                                <span class="fa fa-user feed-icon"></span>
-                                <p>1</p>
-                            </div>
-                        </div>
-
-                        <!-- Container containing the image -->
-                        <div class="image-container">
-                            <div class="image-feed">
-                                <img class="img-center" src="https://eenvandaag.avrotros.nl/fileadmin/_processed_/5/a/csm_Biefstuk_23dfa76775.jpg" />
-                            </div>
-                        </div>
-                    </li>
-
-                    <!-- Item Ovenschotel -->
-                    <li class="list-group-item clearfix">
-
-                        <!-- Link covering the entire list-group-item -->
-                        <a class="list-item-link" href="~/Food/ViewRecept"></a>
-
-                        <!-- trash -->
-                        <div class="pull-right trash-icon modal-button">
-                            <span class="fa fa-trash-alt"></span>
-                        </div>
-
-                        <p1>Ovenschotel</p1>
-
-                        <!-- Container containing the recipe data icons -->
-                        <div class="feed-info-container">
-                            <div class="calories-feed feed-info">
-                                <span class="fa fa-fire feed-icon"></span>
-                                <p>1250 Kcal</p>
-                            </div>
-                            <div class="preptime-feed feed-info">
-                                <span class="fa fa-clock feed-icon"></span>
-                                <p>45 min</p>
-                            </div>
-                            <div class="calories-per-user-feed feed-info">
-                                <span class="fab fa-gripfire feed-icon"></span>
-                                <p>250 kcal (P.P.)</p>
-                            </div>
-                            <div class="user-feed feed-info">
-                                <span class="fa fa-user feed-icon"></span>
-                                <p>5</p>
-                            </div>
-                        </div>
-
-                        <!-- Container containing the image -->
-                        <div class="image-container">
-                            <div class="image-feed">
-                                <img class="img-center" src="https://www.keukenliefde.nl/wp-content/uploads/2017/10/Ovenschotel-met-sperziebonen-en-gehakt-3934.jpg" />
-                            </div>
-                        </div>
-                    </li>
 
                     <!-- Item Apple -->
                     <li class="list-group-item feedyo clearfix">
