@@ -1,16 +1,14 @@
-﻿@model TeamBoss.GAC.Vitality.AspCore.ViewModels.FoodViewModels.SearchRecipesViewModel
-
-@{
+﻿@{
     ViewData["Title"] = "Zoek Recepten";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
 @section Css{
-    <link rel="stylesheet" href="~/css/voedingssysteem.css" />
+<link rel="stylesheet" href="~/css/voedingssysteem.css" />
 }
 
 @section Scripts{
-    <script src="~/js/voedingssysteem.js" asp-append-version="true"></script>
+<script src="~/js/voedingssysteem.js" asp-append-version="true"></script>
 }
 
 <div class="modal pop-up-modal">
@@ -27,6 +25,9 @@
     <div class="row">
         <div class="challenge-wrapper navbar-food">
             <div class="container text-wrapper filterbox">
+                <h3>Zoek Nieuwe Recepten</h3>
+                <hr />
+
                 <div class="input-group">
                     <input type="text" class="form-control" placeholder="Recept Zoeken..." id="food-search-text" />
                     <div class="input-group-btn">
@@ -62,56 +63,201 @@
             </div>
         </div>
 
-        <div class="challenge-wrapper move-below">
-            <div class="container text-wrapper">
-                <ul class="list-group" id="challenge-listing">
+        <div class="text-wrapper list-wrapper-big">
+            <ul class="list-group" id="challenge-listing">
 
-                    @foreach (var recipe in Model.recipes)
-                    {
-                        <!-- Item -->
-                        <li class="list-group-item feedyo clearfix" id="recipeitemitem">
+                <!-- Item Pizza Hawaii -->
+                <li class="list-group-item feedyo clearfix">
 
-                            <!-- Link covering the entire list-group-item -->
-                            <a class="list-item-link" href="~/Food/ViewRecept"></a>
+                    <!-- Link covering the entire list-group-item -->
+                    <a class="list-item-link" href="~/Food/ViewRecept"></a>
 
-                            <!-- fav -->
-                            <div class="star">
-                                <div class="favourite-btn hidden feed-option">
-                                    <span class="far fa-star feed-icon"></span>
-                                </div>
-                                <div class="favourite-btn visible feed-option">
-                                    <span class="fa fa-star feed-icon"></span>
-                                </div>
-                            </div>
+                    <!-- fav -->
+                    <div class="star">
+                        <div class="favourite-btn visible feed-option">
+                            <span class="far fa-star feed-icon"></span>
+                        </div>
+                        <div class="favourite-btn hidden feed-option">
+                            <span class="fa fa-star feed-icon"></span>
+                        </div>
 
-                            <p1 id="recipename">@recipe.Name</p1>
+                        <b class="favourites-text-small">25</b>
+                    </div>
 
-                            <!-- Container containing the recipe data icons -->
-                            <div class="feed-info-container">
-                                <div class="calories-feed feed-info">
-                                    <span class="fa fa-fire feed-icon"></span>
-                                    <p>@recipe.TotalCalories</p>
-                                </div>
-                                <div class="preptime-feed feed-info">
-                                    <span class="fa fa-clock feed-icon"></span>
-                                    <p>@recipe.PreperationTime</p>
-                                </div>
-                                <div class="favourites-feed feed-info">
-                                    <span class="fa fa-users feed-icon"></span>
-                                    <p>@recipe.TotalFavorites</p>
-                                </div>
-                            </div>
+                    <p1>Pizza Hawaii</p1>
 
-                            <!-- Container containing the image -->
-                            <div class="image-container">
-                                <div class="image-feed">
-                                    <img class="img-center" src=@recipe.ImageLinks[0] />
-                                </div>
-                            </div>
-                        </li>
-                    }
-                </ul>
-            </div>
+                    <!-- Container containing the recipe data icons -->
+                    <div class="feed-info-container">
+                        <div class="calories-feed feed-info">
+                            <span class="fa fa-fire feed-icon"></span>
+                            <p>450 Kcal</p>
+                        </div>
+                        <div class="preptime-feed feed-info">
+                            <span class="fa fa-clock feed-icon"></span>
+                            <p>60 min</p>
+                        </div>
+                        <div class="calories-per-user-feed feed-info">
+                            <span class="fab fa-gripfire feed-icon"></span>
+                            <p>113 kcal (P.P.)</p>
+                        </div>
+                        <div class="user-feed feed-info">
+                            <span class="fa fa-user feed-icon"></span>
+                            <p>4</p>
+                        </div>
+                    </div>
+
+                    <!-- Container containing the image -->
+                    <div class="image-container">
+                        <div class="image-feed">
+                            <img class="img-center" src="https://img.grouponcdn.com/deal/8DDtq5XRzVnLXEUnPHPd/p2-2048x1229/v1/c700x420.jpg" />
+                        </div>
+                    </div>
+                </li>
+
+                <!-- Item Pasta -->
+                <li class="list-group-item feedyo clearfix">
+
+                    <!-- Link covering the entire list-group-item -->
+                    <a class="list-item-link" href="~/Food/ViewRecept"></a>
+
+                    <!-- fav -->
+                    <div class="star">
+                        <div class="favourite-btn visible feed-option">
+                            <span class="far fa-star feed-icon"></span>
+                        </div>
+                        <div class="favourite-btn hidden feed-option">
+                            <span class="fa fa-star feed-icon"></span>
+                        </div>
+
+                        <b class="favourites-text-small">5</b>
+                    </div>
+
+                    <p1>Pasta</p1>
+
+                    <!-- Container containing the recipe data icons -->
+                    <div class="feed-info-container">
+                        <div class="calories-feed feed-info">
+                            <span class="fa fa-fire feed-icon"></span>
+                            <p>100 Kcal</p>
+                        </div>
+                        <div class="preptime-feed feed-info">
+                            <span class="fa fa-clock feed-icon"></span>
+                            <p>15 min</p>
+                        </div>
+                        <div class="calories-per-user-feed feed-info">
+                            <span class="fab fa-gripfire feed-icon"></span>
+                            <p>50 kcal (P.P.)</p>
+                        </div>
+                        <div class="user-feed feed-info">
+                            <span class="fa fa-user feed-icon"></span>
+                            <p>2</p>
+                        </div>
+                    </div>
+
+                    <!-- Container containing the image -->
+                    <div class="image-container">
+                        <div class="image-feed">
+                            <img class="img-center" src="https://www.budgetbytes.com/wp-content/uploads/2016/07/Pasta-with-Butter-Tomato-Sauce-and-Toasted-Bread-Crumbs-utensils.jpg" />
+                        </div>
+                    </div>
+                </li>
+
+                <!-- Item Biefstuk -->
+                <li class="list-group-item feedyo clearfix">
+
+                    <!-- Link covering the entire list-group-item -->
+                    <a class="list-item-link" href="~/Food/ViewRecept"></a>
+
+                    <!-- fav -->
+                    <div class="star">
+                        <div class="favourite-btn visible feed-option">
+                            <span class="far fa-star feed-icon"></span>
+                        </div>
+                        <div class="favourite-btn hidden feed-option">
+                            <span class="fa fa-star feed-icon"></span>
+                        </div>
+
+                        <b class="favourites-text-small">150</b>
+                    </div>
+
+                    <p1>Biefstuk</p1>
+
+                    <!-- Container containing the recipe data icons -->
+                    <div class="feed-info-container">
+                        <div class="calories-feed feed-info">
+                            <span class="fa fa-fire feed-icon"></span>
+                            <p>500 Kcal</p>
+                        </div>
+                        <div class="preptime-feed feed-info">
+                            <span class="fa fa-clock feed-icon"></span>
+                            <p>90 min</p>
+                        </div>
+                        <div class="calories-per-user-feed feed-info">
+                            <span class="fab fa-gripfire feed-icon"></span>
+                            <p>500 kcal (P.P.)</p>
+                        </div>
+                        <div class="user-feed feed-info">
+                            <span class="fa fa-user feed-icon"></span>
+                            <p>1</p>
+                        </div>
+                    </div>
+
+                    <!-- Container containing the image -->
+                    <div class="image-container">
+                        <div class="image-feed">
+                            <img class="img-center" src="https://eenvandaag.avrotros.nl/fileadmin/_processed_/5/a/csm_Biefstuk_23dfa76775.jpg" />
+                        </div>
+                    </div>
+                </li>
+
+                <!-- Item Ovenschotel -->
+                <li class="list-group-item feedyo clearfix">
+
+                    <!-- Link covering the entire list-group-item -->
+                    <a class="list-item-link" href="~/Food/ViewRecept"></a>
+
+                    <!-- fav -->
+                    <div class="star">
+                        <div class="favourite-btn visible feed-option">
+                            <span class="far fa-star feed-icon"></span>
+                        </div>
+                        <div class="favourite-btn hidden feed-option">
+                            <span class="fa fa-star feed-icon"></span>
+                        </div>
+
+                        <b class="favourites-text-small">3500</b>
+                    </div>
+
+                    <p1>Ovenschotel</p1>
+
+                    <!-- Container containing the recipe data icons -->
+                    <div class="feed-info-container">
+                        <div class="calories-feed feed-info">
+                            <span class="fa fa-fire feed-icon"></span>
+                            <p>1250 Kcal</p>
+                        </div>
+                        <div class="preptime-feed feed-info">
+                            <span class="fa fa-clock feed-icon"></span>
+                            <p>45 min</p>
+                        </div>
+                        <div class="calories-per-user-feed feed-info">
+                            <span class="fab fa-gripfire feed-icon"></span>
+                            <p>250 kcal (P.P.)</p>
+                        </div>
+                        <div class="user-feed feed-info">
+                            <span class="fa fa-user feed-icon"></span>
+                            <p>5</p>
+                        </div>
+                    </div>
+
+                    <!-- Container containing the image -->
+                    <div class="image-container">
+                        <div class="image-feed">
+                            <img class="img-center" src="https://www.keukenliefde.nl/wp-content/uploads/2017/10/Ovenschotel-met-sperziebonen-en-gehakt-3934.jpg" />
+                        </div>
+                    </div>
+                </li>
+            </ul>
         </div>
     </div>
 </div>

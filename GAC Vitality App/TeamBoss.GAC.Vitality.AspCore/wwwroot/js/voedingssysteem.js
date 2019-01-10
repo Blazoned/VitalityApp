@@ -149,16 +149,52 @@ $(".close").click(function () {
     $(".pop-up-modal").css("display", "none");
 });
 
+/* MODAL RELATED FUNCTIONS */
+// When the user clicks anywhere in the html document it checks if it hit the modal and if not it closes the modal
+$(document).click(function (event) {
+    if (event.target.classList.contains(".edit-max-calorie-modal")) {
+        $(".edit-max-calorie-modal").css("display", "none");
+    }
+});
+
+// When the user clicks the button, open the modal 
+$(".edit-max-calorie-modal-btn").click(function () {
+    $(".edit-max-calorie-modal").css("display", "block");
+});
+
+// When the user clicks on <span> (x), close the modal
+$(".close").click(function () {
+    $(".edit-max-calorie-modal").css("display", "none");
+});
+
 function ToggleFilterMenu() {
     $("#food-search-filters-div").slideToggle(200);
     $("#food-search-filters-caret").toggleClass("dropup");
 }
 
-$(document).ready(function () {
-    $('#food-search-text').on("keyup", function () {
-        var value = $(this).val().toLowerCase();
-        $('#challenge-listing li').filter(function () {
-            $(this).toggle($(this).children("#recipename").text().toLowerCase().indexOf(value) > -1)
-        });
-    });
-});
+// Add Tags
+function AddTag() {
+    let label = $(".ingredient-input").val();
+
+    // TODO: Validate label
+
+    if (label !== "" && typeof (label) !== "undefined") {
+        label = label.toLowerCase().replace(/^\w/, c => c.toUpperCase());
+
+        $(".ingredient-list").append(
+            '<li class="ingredient-list-item">' +
+            '<span class="ingredient-label">' + label + '&nbsp;&nbsp;&ensp;</span>' +
+            '<span class="remove-ingredient glyphicon glyphicon-remove"></span>' +
+            '</li>'
+        );
+
+        $(".remove-ingredient").click(RemoveTag);
+    }
+
+    $(".ingredient-input").val(null);
+}
+
+// Remove Tags
+function RemoveTag() {
+    FadeRemoveDOMObject($(this).parent());
+}
